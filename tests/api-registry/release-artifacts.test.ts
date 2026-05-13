@@ -23,22 +23,22 @@ function readRegistry(): { records: ApiRecord[]; aliases: Aliases; manifest: Reg
   };
 }
 
-const LINKEDIN_TEMPLATE = `Built a local API Registry skill for Claude Code.
+const LINKEDIN_TEMPLATE = `Building a new Claude Code session? You hit an API that needs auth, turns out it's paid, swap it out, find another manually. Repeat.
 
-You describe an app idea. It returns a ranked shortlist of public APIs that fit.
+So I built an API Registry skill that auto-loads 32+ curated public APIs on first run — no manual import needed.
 
-Works as a reusable layer for any Claude Code skill that needs to plan API-backed apps.
+Describe your app idea:
+\`\`\`
+/api-registry search "anime app" --profile frontend-only
+\`\`\`
 
-Commands:
-  /api-registry search "anime app" --profile frontend-only
-  /api-registry export "weather dashboard" --format json
-  /api-registry import public-apis
+Get a ranked list scored by auth type, CORS, pricing, and fit. All free, all public, all verified.
 
-Stores everything locally. No cloud. No keys. Just a clean JSON registry with fit scores, confidence, and source provenance.
+Everything stored locally. Reusable across any Claude Code skill that needs to plan API-backed apps.
 
-GitHub: [repo link]
+Open source → github.com/lunaticbugbear/api-registry
 
-#ClaudeCode #AI #DeveloperTools #PublicAPIs #OpenSource`;
+#ClaudeCode #AI #DeveloperTools #OpenSource #PublicAPIs`;
 
 describe('release artifacts', () => {
   describe('apis.json seed data', () => {
@@ -203,7 +203,7 @@ describe('release artifacts', () => {
         'agent-contract.md': ['api-researcher', 'input contract', 'output contract', 'malformed output'],
         'source-policy.md': ['official public/free API catalogs', 'source provenance', 'concrete quality problem'],
         'release-checklist.md': ['npm test', 'npm run typecheck', 'registry audit', 'example validation', 'documentation freshness'],
-        'linkedin-post.md': ['Built a local API Registry skill for Claude Code.', LINKEDIN_TEMPLATE],
+        'linkedin-post.md': ['API Registry skill that auto-loads 32+ curated public APIs on first run', LINKEDIN_TEMPLATE],
       };
 
       for (const [fileName, requiredText] of Object.entries(docs)) {
