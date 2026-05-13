@@ -1,10 +1,28 @@
-import { existsSync, mkdirSync, writeFileSync } from 'fs';
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'fs';
+import { fileURLToPath } from 'url';
 import { registryFilePath, registryRoot, readJsonFile } from './paths.js';
 import { AUTH_VALUES, CORS_VALUES, PRICING_VALUES, STATUS_VALUES, CONSUMER_PROFILES, FIT_KEYS, CURRENT_DATE, DEFAULT_FRESHNESS_DAYS } from './constants.js';
 import type { Aliases, Contracts } from './types.js';
 
 export { registryFilePath, registryRoot, readJsonFile } from './paths.js';
 export { validateApiRecord, validateRegistryManifest, validateContracts, validateCategories, validateAliases } from './validation.js';
+
+function bundledApisPath(): string {
+  return fileURLToPath(new URL('../../data/api-registry/apis.json', import.meta.url));
+}
+
+function seedBundledApis(cwd: string): void {
+  const apisPath = registryFilePath('apis.json', cwd);
+  if (existsSync(apisPath)) return;
+
+  const seedPath = bundledApisPath();
+  if (!existsSync(seedPath)) {
+    writeFileSync(apisPath, '[]');
+    return;
+  }
+
+  writeFileSync(apisPath, readFileSync(seedPath, 'utf-8'));
+}
 
 export function bootstrapRegistry(cwd = process.cwd()): void {
   const root = registryRoot(cwd);
@@ -93,6 +111,8 @@ export function bootstrapRegistry(cwd = process.cwd()): void {
     };
     writeFileSync(contractsPath, JSON.stringify(contracts, null, 2));
   }
+
+  seedBundledApis(cwd);
 
   const sourcesPath = registryFilePath('sources.json', cwd);
   if (!existsSync(sourcesPath)) {

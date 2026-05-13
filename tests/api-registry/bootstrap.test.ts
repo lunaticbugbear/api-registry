@@ -280,12 +280,14 @@ describe('bootstrap', () => {
       const aliasesPath = registryFilePath('aliases.json', tempDir);
       const contractsPath = registryFilePath('contracts.json', tempDir);
       const sourcesPath = registryFilePath('sources.json', tempDir);
+      const apisPath = registryFilePath('apis.json', tempDir);
 
       expect(existsSync(registryPath)).toBe(true);
       expect(existsSync(categoriesPath)).toBe(true);
       expect(existsSync(aliasesPath)).toBe(true);
       expect(existsSync(contractsPath)).toBe(true);
       expect(existsSync(sourcesPath)).toBe(true);
+      expect(existsSync(apisPath)).toBe(true);
     });
 
     it('creates registry.json with correct schema', () => {
@@ -339,6 +341,13 @@ describe('bootstrap', () => {
       bootstrapRegistry(tempDir);
       const registry = readJsonFile(registryFilePath('registry.json', tempDir));
       expect(() => validateRegistryManifest(registry)).not.toThrow();
+    });
+
+    it('creates apis.json seeded with bundled public API records', () => {
+      bootstrapRegistry(tempDir);
+      const apis = readJsonFile<unknown[]>(registryFilePath('apis.json', tempDir));
+      expect(Array.isArray(apis)).toBe(true);
+      expect(apis.length).toBeGreaterThan(0);
     });
 
     it('does not overwrite existing files', () => {

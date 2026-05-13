@@ -1,18 +1,27 @@
-# LinkedIn summary
+# LinkedIn Post
 
-Built a local API Registry skill for Claude Code.
+Building a new Claude Code session? You hit an API that needs auth, turns out it's paid, swap it out, find another manually. Repeat.
 
-You describe an app idea. It returns a ranked shortlist of public APIs that fit.
+So I built an API Registry skill that auto-loads 32+ curated public APIs on first run — no manual import needed.
 
-Works as a reusable layer for any Claude Code skill that needs to plan API-backed apps.
+Describe your app idea:
+```
+/api-registry search "anime app" --profile frontend-only
+```
 
-Commands:
-  /api-registry search "anime app" --profile frontend-only
-  /api-registry export "weather dashboard" --format json
-  /api-registry import public-apis
+Get a ranked list scored by auth type, CORS, pricing, and fit. All free, all public, all verified.
 
-Stores everything locally. No cloud. No keys. Just a clean JSON registry with fit scores, confidence, and source provenance.
+Everything stored locally. Reusable across any Claude Code skill that needs to plan API-backed apps.
 
-GitHub: [repo link]
+Open source → github.com/lunaticbugbear/api-registry
 
-#ClaudeCode #AI #DeveloperTools #PublicAPIs #OpenSource
+#ClaudeCode #AI #DeveloperTools #OpenSource #PublicAPIs
+
+---
+
+## Posting Tips
+
+- Post on a weekday morning (08:00–10:00 WIB) for best reach
+- Add a short screen recording or screenshot of the CLI output — visual posts get 3–5x more impressions
+- Tag `#ClaudeCode` and `#Anthropic` — active communities right now
+- First comment: paste the demo transcript from `examples/demo-transcript.md` as a "see it in action" thread
