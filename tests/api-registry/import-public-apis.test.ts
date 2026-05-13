@@ -109,7 +109,7 @@ describe('importPublicApis', () => {
 
     expect(report.records).toEqual([]);
     expect(report.rejected).toHaveLength(1);
-    expect(report.rejected[0].reason).toContain('Expected 7 columns');
+    expect(report.rejected[0].reason).toContain('Missing markdown API name or link');
   });
 
   it('uses merge rules for duplicate rows', () => {

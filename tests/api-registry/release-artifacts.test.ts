@@ -25,21 +25,18 @@ function readRegistry(): { records: ApiRecord[]; aliases: Aliases; manifest: Reg
 
 const LINKEDIN_TEMPLATE = `Building a new Claude Code session? You hit an API that needs auth, turns out it's paid, swap it out, find another manually. Repeat.
 
-So I built an API Registry skill that starts with 32+ curated public APIs — and can import the full 1000+ from public-apis/public-apis.
+So I built an API Registry skill that automatically imports the full public-apis/public-apis catalog on first run, then keeps everything local.
 
 Describe your app idea:
 \`\`\`
 /api-registry search "anime app" --profile frontend-only
 \`\`\`
 
-Get a ranked list scored by auth type, CORS, pricing, and fit. All free, all public, all verified.
+Get a ranked list scored by auth type, CORS, pricing, and fit. Public sources get normalized, ranked, and marked with confidence so weak or paid/auth-heavy options do not silently become the default.
 
 Everything stored locally. Reusable across any Claude Code skill that needs to plan API-backed apps.
 
-Import more:
-\`\`\`
-/api-registry import public-apis
-\`\`\`
+Works in Claude Code now, with install instructions for Codex CLI and other AI agents.
 
 Open source → github.com/lunaticbugbear/api-registry
 
@@ -192,8 +189,11 @@ describe('release artifacts', () => {
       expect((quickStart.match(/^\d+\./gm) ?? []).length).toBeLessThanOrEqual(3);
       expect(quickStart).toContain('npm install');
       expect(quickStart).toContain('npm run registry -- search "anime app" --profile frontend-only');
-      expect(quickStart).toContain('npm run registry -- import public-apis');
-      expect(readme).toContain(transcript);
+      expect(quickStart).toContain('First run auto-imports the full public-apis catalog');
+      expect(readme).toContain('## Demo transcript');
+      expect(readme).toContain('$ npm run registry -- search "anime app" --profile frontend-only');
+      expect(readme).toContain('$ npm run registry -- export "weather dashboard" --format json');
+      expect(transcript).toContain('$ npm run registry -- search "anime app" --profile frontend-only');
       expect(readme).toContain('## Command reference');
       for (const command of ['add', 'search', 'import', 'refresh', 'audit', 'export']) {
         expect(readme).toContain(`\`${command}\``);
@@ -208,7 +208,7 @@ describe('release artifacts', () => {
         'agent-contract.md': ['api-researcher', 'input contract', 'output contract', 'malformed output'],
         'source-policy.md': ['official public/free API catalogs', 'source provenance', 'concrete quality problem'],
         'release-checklist.md': ['npm test', 'npm run typecheck', 'registry audit', 'example validation', 'documentation freshness'],
-        'linkedin-post.md': ['starts with 32+ curated public APIs', 'import the full 1000+ from public-apis/public-apis', LINKEDIN_TEMPLATE],
+        'linkedin-post.md': ['automatically imports the full public-apis/public-apis catalog on first run', LINKEDIN_TEMPLATE],
       };
 
       for (const [fileName, requiredText] of Object.entries(docs)) {
@@ -252,11 +252,13 @@ describe('release artifacts', () => {
       const searchOutput = await runCli(['search', 'anime app', '--profile', 'frontend-only'], process.cwd());
       const exportOutput = await runCli(['export', 'weather dashboard', '--format', 'json'], process.cwd());
 
-      expect(transcript).toBe(`$ npm run registry -- search "anime app" --profile frontend-only
+      const expected = `$ npm run registry -- search "anime app" --profile frontend-only
 ${searchOutput}
 
 $ npm run registry -- export "weather dashboard" --format json
-${exportOutput}`);
+${exportOutput}`;
+
+      expect(transcript).toBe(expected);
     });
   });
 });

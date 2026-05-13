@@ -1,5 +1,5 @@
 import { describe, expect, it, beforeEach, afterEach, vi } from 'vitest';
-import { mkdtempSync, rmSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdtempSync, rmSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { tmpdir } from 'node:os';
 import { runCli } from '../../src/api-registry/cli.js';
@@ -66,6 +66,49 @@ describe('runCli', () => {
     const output = await runCli(['import', importPath], tempDir);
 
     expect(output).toBe('import: source=public-apis added=1 updated=0 skipped=0 duplicate=0 needs_review=0');
+  });
+
+  it('auto-imports public-apis on first run when records.json is missing', async () => {
+    const freshDir = mkdtempSync(join(tmpdir(), 'registry-auto-'));
+    try {
+      bootstrapRegistry(freshDir);
+      expect(existsSync(join(freshDir, 'data', 'api-registry', 'records.json'))).toBe(false);
+
+      const fetchMock = vi.spyOn(globalThis, 'fetch').mockResolvedValue({
+        ok: true,
+        text: async () => '| API | Description | Auth | HTTPS | CORS | Link | Category |\n| --- | --- | --- | --- | --- | --- | --- |\n| Cat Facts | Daily cat facts | No | Yes | Yes | https://catfact.ninja | Animals |',
+      } as Response);
+
+      try {
+        const output = await runCli(['search', 'cat'], freshDir);
+        expect(fetchMock).toHaveBeenCalledWith('https://raw.githubusercontent.com/public-apis/public-apis/master/README.md');
+        expect(existsSync(join(freshDir, 'data', 'api-registry', 'records.json'))).toBe(true);
+        expect(output).toContain('search: cat');
+      } finally {
+        fetchMock.mockRestore();
+      }
+    } finally {
+      rmSync(freshDir, { recursive: true, force: true });
+    }
+  });
+
+  it('falls back to seed apis.json when public-apis fetch fails', async () => {
+    const freshDir = mkdtempSync(join(tmpdir(), 'registry-fallback-'));
+    try {
+      bootstrapRegistry(freshDir);
+
+      const fetchMock = vi.spyOn(globalThis, 'fetch').mockRejectedValue(new Error('network error'));
+
+      try {
+        const output = await runCli(['search', 'weather'], freshDir);
+        expect(existsSync(join(freshDir, 'data', 'api-registry', 'records.json'))).toBe(true);
+        expect(output).toContain('search: weather');
+      } finally {
+        fetchMock.mockRestore();
+      }
+    } finally {
+      rmSync(freshDir, { recursive: true, force: true });
+    }
   });
 
   it('imports public-apis markdown from GitHub source alias', async () => {

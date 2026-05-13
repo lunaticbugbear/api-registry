@@ -10,23 +10,37 @@ import { selectStaleRecords } from './refresh.js';
 import { auditRegistry } from './audit.js';
 import type { Aliases, ApiRecord, Contracts, RegistryManifest } from './types.js';
 
-function loadRegistry(cwd: string): { records: ApiRecord[]; manifest: RegistryManifest; aliases: Aliases; contracts: Contracts; categories: string[] } {
+async function fetchPublicApisMarkdown(): Promise<string> {
+  const response = await fetch('https://raw.githubusercontent.com/public-apis/public-apis/master/README.md');
+  if (!response.ok) throw new Error(`import: failed to fetch public-apis (${response.status})`);
+  return response.text();
+}
+
+async function loadRegistry(cwd: string): Promise<{ records: ApiRecord[]; manifest: RegistryManifest; aliases: Aliases; contracts: Contracts; categories: string[] }> {
   bootstrapRegistry(cwd);
   const manifest = readJsonFile<RegistryManifest>(registryFilePath('registry.json', cwd));
   const aliases = readJsonFile<Aliases>(registryFilePath('aliases.json', cwd));
   const contracts = readJsonFile<Contracts>(registryFilePath('contracts.json', cwd));
   const categories = readJsonFile<string[]>(registryFilePath('categories.json', cwd));
   const recordsPath = registryFilePath('records.json', cwd);
-  let records: ApiRecord[] = existsSync(recordsPath) ? readJsonFile<ApiRecord[]>(recordsPath) : [];
 
-  // Fallback to apis.json if records.json is empty
-  if (records.length === 0) {
-    const apisPath = registryFilePath('apis.json', cwd);
-    if (existsSync(apisPath)) {
-      records = readJsonFile<ApiRecord[]>(apisPath);
-    }
+  if (existsSync(recordsPath)) {
+    return { records: readJsonFile<ApiRecord[]>(recordsPath), manifest, aliases, contracts, categories };
   }
 
+  let records: ApiRecord[] = [];
+  try {
+    const markdown = await fetchPublicApisMarkdown();
+    const seedPath = registryFilePath('apis.json', cwd);
+    const seedRecords = existsSync(seedPath) ? readJsonFile<ApiRecord[]>(seedPath) : [];
+    const report = importPublicApis({ markdown, existingRecords: seedRecords, categories, today: new Date().toISOString().slice(0, 10) });
+    records = report.records;
+  } catch {
+    const apisPath = registryFilePath('apis.json', cwd);
+    records = existsSync(apisPath) ? readJsonFile<ApiRecord[]>(apisPath) : [];
+  }
+
+  saveRecords(records, cwd);
   return { records, manifest, aliases, contracts, categories };
 }
 
@@ -54,7 +68,7 @@ async function cmdAdd(args: string[], cwd: string): Promise<string> {
   if (!filePath) throw new Error('add: missing file path argument');
   const raw = JSON.parse(readFileSync(resolve(cwd, filePath), 'utf-8'));
   const record = validateApiRecord(raw);
-  const { records } = loadRegistry(cwd);
+  const { records } = await loadRegistry(cwd);
   if (records.some((r) => r.id === record.id)) {
     return `add: skipped ${record.id} (already exists)`;
   }
@@ -66,7 +80,7 @@ async function cmdAdd(args: string[], cwd: string): Promise<string> {
 async function cmdSearch(args: string[], flags: Record<string, string>, cwd: string): Promise<string> {
   const query = args.join(' ');
   if (!query) throw new Error('search: missing query');
-  const { records, manifest, aliases } = loadRegistry(cwd);
+  const { records, manifest, aliases } = await loadRegistry(cwd);
   const limit = flags.limit ? parseInt(flags.limit, 10) : 10;
   const consumer_profile = flags.profile as any;
   const result = searchApis({ query, limit, consumer_profile }, records, aliases, manifest);
@@ -79,11 +93,7 @@ async function cmdSearch(args: string[], flags: Record<string, string>, cwd: str
 }
 
 async function readImportSource(source: string, cwd: string): Promise<string> {
-  if (source === 'public-apis') {
-    const response = await fetch('https://raw.githubusercontent.com/public-apis/public-apis/master/README.md');
-    if (!response.ok) throw new Error(`import: failed to fetch public-apis (${response.status})`);
-    return response.text();
-  }
+  if (source === 'public-apis') return fetchPublicApisMarkdown();
 
   return readFileSync(resolve(cwd, source), 'utf-8');
 }
@@ -92,7 +102,7 @@ async function cmdImport(args: string[], cwd: string): Promise<string> {
   const [source] = args;
   if (!source) throw new Error('import: missing file path or public-apis source argument');
   const markdown = await readImportSource(source, cwd);
-  const { records, categories } = loadRegistry(cwd);
+  const { records, categories } = await loadRegistry(cwd);
   const today = new Date().toISOString().slice(0, 10);
   const report = importPublicApis({ markdown, existingRecords: records, categories, today });
   saveRecords(report.records, cwd);
@@ -100,7 +110,7 @@ async function cmdImport(args: string[], cwd: string): Promise<string> {
 }
 
 async function cmdRefresh(cwd: string): Promise<string> {
-  const { records, manifest } = loadRegistry(cwd);
+  const { records, manifest } = await loadRegistry(cwd);
   const today = new Date().toISOString().slice(0, 10);
   const stale = selectStaleRecords(records, manifest, today);
   const lines = [`refresh: stale=${stale.length}`];
@@ -111,7 +121,7 @@ async function cmdRefresh(cwd: string): Promise<string> {
 }
 
 async function cmdAudit(cwd: string): Promise<string> {
-  const { records, manifest, categories } = loadRegistry(cwd);
+  const { records, manifest, categories } = await loadRegistry(cwd);
   const today = new Date().toISOString().slice(0, 10);
   const summary = auditRegistry({ records, manifest, categories, now: today, cwd, updateManifest: true });
   const health = summary.health;
@@ -122,7 +132,7 @@ async function cmdExport(args: string[], flags: Record<string, string>, cwd: str
   const query = args.join(' ');
   if (!query) throw new Error('export: missing query');
   const format = (flags.format ?? 'markdown') as 'json' | 'markdown';
-  const { records, manifest, aliases, contracts } = loadRegistry(cwd);
+  const { records, manifest, aliases, contracts } = await loadRegistry(cwd);
   return exportShortlist({ query, format }, records, aliases, manifest, contracts);
 }
 

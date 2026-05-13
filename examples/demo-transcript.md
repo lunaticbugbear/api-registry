@@ -3,6 +3,13 @@ search: anime app
 1. AniList [entertainment] score=265
 2. Jikan [entertainment] score=265
 3. TVMaze [entertainment] score=175
+4. MyAnimeList [data] score=148.5
+5. AnimeFacts [data] score=138.5
+6. AnimeNewsNetwork [data] score=138.5
+7. Danbooru Anime [data] score=131
+8. MangaDex [data] score=123.5
+9. Mangapi [data] score=123.5
+10. Rappi [data] score=123.5
 
 $ npm run registry -- export "weather dashboard" --format json
 {
@@ -264,11 +271,3251 @@ $ npm run registry -- export "weather dashboard" --format json
         "weather"
       ],
       "warnings": []
+    },
+    {
+      "record": {
+        "name": "MetaWeather",
+        "description": "Weather",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://www.metaweather.com/api/",
+        "auth": "No",
+        "cors": "no",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://www.metaweather.com/api/",
+            "title": "MetaWeather",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [MetaWeather](https://www.metaweather.com/api/) | Weather | No | Yes | No |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "metaweather",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 113.5,
+      "matched_fields": [
+        "name",
+        "description"
+      ],
+      "matched_terms": [
+        "weather"
+      ],
+      "warnings": [
+        "metaweather: missing docsUrl",
+        "metaweather: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Pirate Weather",
+        "description": "Free weather API with forecast data similar to Dark Sky",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://pirateweather.net/en/latest/",
+        "auth": "No",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://pirateweather.net/en/latest/",
+            "title": "Pirate Weather",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Pirate Weather](https://pirateweather.net/en/latest/) | Free weather API with forecast data similar to Dark Sky | No | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "pirate-weather",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 113.5,
+      "matched_fields": [
+        "name",
+        "description"
+      ],
+      "matched_terms": [
+        "weather"
+      ],
+      "warnings": [
+        "pirate-weather: missing docsUrl",
+        "pirate-weather: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "US Weather",
+        "description": "US National Weather Service",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://www.weather.gov/documentation/services-web-api",
+        "auth": "No",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://www.weather.gov/documentation/services-web-api",
+            "title": "US Weather",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [US Weather](https://www.weather.gov/documentation/services-web-api) | US National Weather Service | No | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "us-weather",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 113.5,
+      "matched_fields": [
+        "name",
+        "description"
+      ],
+      "matched_terms": [
+        "weather"
+      ],
+      "warnings": [
+        "us-weather: missing docsUrl",
+        "us-weather: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "weather-api",
+        "description": "A RESTful free API to check the weather",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://github.com/robertoduessmann/weather-api",
+        "auth": "No",
+        "cors": "no",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://github.com/robertoduessmann/weather-api",
+            "title": "weather-api",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [weather-api](https://github.com/robertoduessmann/weather-api) | A RESTful free API to check the weather | No | Yes | No |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "weather-api",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 113.5,
+      "matched_fields": [
+        "name",
+        "description"
+      ],
+      "matched_terms": [
+        "weather"
+      ],
+      "warnings": [
+        "weather-api: missing docsUrl",
+        "weather-api: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "HG Weather",
+        "description": "Provides weather forecast data for cities in Brazil",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://hgbrasil.com/status/weather",
+        "auth": "unknown",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://hgbrasil.com/status/weather",
+            "title": "HG Weather",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [HG Weather](https://hgbrasil.com/status/weather) | Provides weather forecast data for cities in Brazil | `apiKey` | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "hg-weather",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 106,
+      "matched_fields": [
+        "name",
+        "description"
+      ],
+      "matched_terms": [
+        "weather"
+      ],
+      "warnings": [
+        "hg-weather: missing docsUrl",
+        "hg-weather: low average confidence 5.7",
+        "hg-weather: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "QWeather",
+        "description": "Location-based weather data",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://dev.qweather.com/en/",
+        "auth": "unknown",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://dev.qweather.com/en/",
+            "title": "QWeather",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [QWeather](https://dev.qweather.com/en/) | Location-based weather data | `apiKey` | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "qweather",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 106,
+      "matched_fields": [
+        "name",
+        "description"
+      ],
+      "matched_terms": [
+        "weather"
+      ],
+      "warnings": [
+        "qweather: missing docsUrl",
+        "qweather: low average confidence 5.7",
+        "qweather: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "WeatherAPI",
+        "description": "Weather API with other stuff like Astronomy and Geolocation API",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://www.weatherapi.com/",
+        "auth": "unknown",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://www.weatherapi.com/",
+            "title": "WeatherAPI",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [WeatherAPI](https://www.weatherapi.com/) | Weather API with other stuff like Astronomy and Geolocation API | `apiKey` | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "weatherapi",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 106,
+      "matched_fields": [
+        "name",
+        "description"
+      ],
+      "matched_terms": [
+        "weather"
+      ],
+      "warnings": [
+        "weatherapi: missing docsUrl",
+        "weatherapi: low average confidence 5.7",
+        "weatherapi: needs review before production use"
+      ]
     }
   ],
-  "alternatives": [],
+  "alternatives": [
+    {
+      "record": {
+        "name": "Yandex.Weather",
+        "description": "Assesses weather condition in specific locations",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://yandex.com/dev/weather/",
+        "auth": "unknown",
+        "cors": "no",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://yandex.com/dev/weather/",
+            "title": "Yandex.Weather",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Yandex.Weather](https://yandex.com/dev/weather/) | Assesses weather condition in specific locations | `apiKey` | Yes | No |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "yandexweather",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 106,
+      "matched_fields": [
+        "name",
+        "description"
+      ],
+      "matched_terms": [
+        "weather"
+      ],
+      "warnings": [
+        "yandexweather: missing docsUrl",
+        "yandexweather: low average confidence 5.7",
+        "yandexweather: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "AviationWeather",
+        "description": "NOAA aviation weather forecasts and observations",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://www.aviationweather.gov/dataserver",
+        "auth": "No",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://www.aviationweather.gov/dataserver",
+            "title": "AviationWeather",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [AviationWeather](https://www.aviationweather.gov/dataserver) | NOAA aviation weather forecasts and observations | No | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "aviationweather",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 102,
+      "matched_fields": [
+        "name",
+        "description"
+      ],
+      "matched_terms": [
+        "weather"
+      ],
+      "warnings": [
+        "aviationweather: missing docsUrl",
+        "aviationweather: low average confidence 5.7",
+        "aviationweather: cors is unknown",
+        "aviationweather: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "ODWeather",
+        "description": "Weather and weather webcams",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "http://api.oceandrivers.com/static/docs.html",
+        "auth": "No",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "http://api.oceandrivers.com/static/docs.html",
+            "title": "ODWeather",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [ODWeather](http://api.oceandrivers.com/static/docs.html) | Weather and weather webcams | No | No | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "public-apis HTTPS is not Yes",
+          "Unknown public-apis category: Index"
+        ],
+        "id": "odweather",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 102,
+      "matched_fields": [
+        "name",
+        "description"
+      ],
+      "matched_terms": [
+        "weather"
+      ],
+      "warnings": [
+        "odweather: missing docsUrl",
+        "odweather: low average confidence 5.7",
+        "odweather: cors is unknown",
+        "odweather: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "AccuWeather",
+        "description": "Weather and forecast data",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://developer.accuweather.com/apis",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://developer.accuweather.com/apis",
+            "title": "AccuWeather",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [AccuWeather](https://developer.accuweather.com/apis) | Weather and forecast data | `apiKey` | No | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "public-apis HTTPS is not Yes",
+          "Unknown public-apis category: Index"
+        ],
+        "id": "accuweather",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 98.5,
+      "matched_fields": [
+        "name",
+        "description"
+      ],
+      "matched_terms": [
+        "weather"
+      ],
+      "warnings": [
+        "accuweather: missing docsUrl",
+        "accuweather: low average confidence 4.5",
+        "accuweather: cors is unknown",
+        "accuweather: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Micro Weather",
+        "description": "Real time weather forecasts and historic data",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://m3o.com/weather/api",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://m3o.com/weather/api",
+            "title": "Micro Weather",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Micro Weather](https://m3o.com/weather/api) | Real time weather forecasts and historic data | `apiKey` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "micro-weather",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 98.5,
+      "matched_fields": [
+        "name",
+        "description"
+      ],
+      "matched_terms": [
+        "weather"
+      ],
+      "warnings": [
+        "micro-weather: missing docsUrl",
+        "micro-weather: low average confidence 4.5",
+        "micro-weather: cors is unknown",
+        "micro-weather: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "OpenWeatherMap",
+        "description": "Weather",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://openweathermap.org/api",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://openweathermap.org/api",
+            "title": "OpenWeatherMap",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [OpenWeatherMap](https://openweathermap.org/api) | Weather | `apiKey` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "openweathermap",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 98.5,
+      "matched_fields": [
+        "name",
+        "description"
+      ],
+      "matched_terms": [
+        "weather"
+      ],
+      "warnings": [
+        "openweathermap: missing docsUrl",
+        "openweathermap: low average confidence 4.5",
+        "openweathermap: cors is unknown",
+        "openweathermap: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Weatherbit",
+        "description": "Weather",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://www.weatherbit.io/api",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://www.weatherbit.io/api",
+            "title": "Weatherbit",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Weatherbit](https://www.weatherbit.io/api) | Weather | `apiKey` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "weatherbit",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 98.5,
+      "matched_fields": [
+        "name",
+        "description"
+      ],
+      "matched_terms": [
+        "weather"
+      ],
+      "warnings": [
+        "weatherbit: missing docsUrl",
+        "weatherbit: low average confidence 4.5",
+        "weatherbit: cors is unknown",
+        "weatherbit: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Weatherstack",
+        "description": "Retrieve instant, accurate weather information for any location in the world in lightweight JSON format",
+        "category": "data",
+        "tags": [
+          "apilayer apis",
+          "index"
+        ],
+        "homepage": "https://weatherstack.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://weatherstack.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers",
+            "title": "Weatherstack",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Weatherstack](https://weatherstack.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers) | Retrieve instant, accurate weather information for any location in the world in lightweight JSON format | [<img src=\"https://run.pstmn.io/button.svg\" alt=\"Run In Postman\" style=\"width: 128px; height: 32px;\">](https://god.gw.postman.com/run-collection/10131015-276c4312-f682-425d-b6b1-0f82c0a7f2b3?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D10131015-276c4312-f682-425d-b6b1-0f82c0a7f2b3%26entityType%3Dcollection%26workspaceId%3D2b7498b6-6d91-4fa8-817f-608441fe42a8)|"
+          },
+          {
+            "url": "https://weatherstack.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers",
+            "title": "Weatherstack",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Weatherstack](https://weatherstack.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers) | Real-Time & Historical World Weather Data API | `apiKey` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: APILayer APIs"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: APILayer APIs",
+          "Unknown public-apis category: Index"
+        ],
+        "id": "weatherstack",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 98.5,
+      "matched_fields": [
+        "name",
+        "description"
+      ],
+      "matched_terms": [
+        "weather"
+      ],
+      "warnings": [
+        "weatherstack: missing docsUrl",
+        "weatherstack: low average confidence 4.5",
+        "weatherstack: cors is unknown",
+        "weatherstack: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "AviationAPI",
+        "description": "FAA Aeronautical Charts and Publications, Airport Information, and Airport Weather",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://docs.aviationapi.com",
+        "auth": "No",
+        "cors": "no",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://docs.aviationapi.com",
+            "title": "AviationAPI",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [AviationAPI](https://docs.aviationapi.com) | FAA Aeronautical Charts and Publications, Airport Information, and Airport Weather | No | Yes | No |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "aviationapi",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 78.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "weather"
+      ],
+      "warnings": [
+        "aviationapi: missing docsUrl",
+        "aviationapi: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Open-Meteo",
+        "description": "Global weather forecast API for non-commercial use",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://open-meteo.com/",
+        "auth": "No",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://open-meteo.com/",
+            "title": "Open-Meteo",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Open-Meteo](https://open-meteo.com/) | Global weather forecast API for non-commercial use | No | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "open-meteo",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 78.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "weather"
+      ],
+      "warnings": [
+        "open-meteo: missing docsUrl",
+        "open-meteo: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "openSenseMap",
+        "description": "Data from Personal Weather Stations called senseBoxes",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://api.opensensemap.org/",
+        "auth": "No",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://api.opensensemap.org/",
+            "title": "openSenseMap",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [openSenseMap](https://api.opensensemap.org/) | Data from Personal Weather Stations called senseBoxes | No | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "opensensemap",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 78.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "weather"
+      ],
+      "warnings": [
+        "opensensemap: missing docsUrl",
+        "opensensemap: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "wttr.in",
+        "description": "Weather in your terminal, supports JSON output",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://wttr.in/:help",
+        "auth": "No",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://wttr.in/:help",
+            "title": "wttr.in",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [wttr.in](https://wttr.in/:help) | Weather in your terminal, supports JSON output | No | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "wttrin",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 78.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "weather"
+      ],
+      "warnings": [
+        "wttrin: missing docsUrl",
+        "wttrin: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Apache Superset",
+        "description": "API to manage your BI dashboards and data sources on Superset",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://superset.apache.org/docs/api",
+        "auth": "unknown",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://superset.apache.org/docs/api",
+            "title": "Apache Superset",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Apache Superset](https://superset.apache.org/docs/api) | API to manage your BI dashboards and data sources on Superset | `apiKey` | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "apache-superset",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 71,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "dashboard"
+      ],
+      "warnings": [
+        "apache-superset: missing docsUrl",
+        "apache-superset: low average confidence 5.7",
+        "apache-superset: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "ColorfulClouds",
+        "description": "Weather",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://open.caiyunapp.com/ColorfulClouds_Weather_API",
+        "auth": "unknown",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://open.caiyunapp.com/ColorfulClouds_Weather_API",
+            "title": "ColorfulClouds",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [ColorfulClouds](https://open.caiyunapp.com/ColorfulClouds_Weather_API) | Weather | `apiKey` | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "colorfulclouds",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 71,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "weather"
+      ],
+      "warnings": [
+        "colorfulclouds: missing docsUrl",
+        "colorfulclouds: low average confidence 5.7",
+        "colorfulclouds: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Oikolab",
+        "description": "70+ years of global, hourly historical and forecast weather data from NOAA and ECMWF",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://docs.oikolab.com",
+        "auth": "unknown",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://docs.oikolab.com",
+            "title": "Oikolab",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Oikolab](https://docs.oikolab.com) | 70+ years of global, hourly historical and forecast weather data from NOAA and ECMWF | `apiKey` | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "oikolab",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 71,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "weather"
+      ],
+      "warnings": [
+        "oikolab: missing docsUrl",
+        "oikolab: low average confidence 5.7",
+        "oikolab: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Redash",
+        "description": "Access your queries and dashboards on Redash",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://redash.io/help/user-guide/integrations-and-api/api",
+        "auth": "unknown",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://redash.io/help/user-guide/integrations-and-api/api",
+            "title": "Redash",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Redash](https://redash.io/help/user-guide/integrations-and-api/api) | Access your queries and dashboards on Redash | `apiKey` | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "redash",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 71,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "dashboard"
+      ],
+      "warnings": [
+        "redash: missing docsUrl",
+        "redash: low average confidence 5.7",
+        "redash: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Storm Glass",
+        "description": "Global marine weather from multiple sources",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://stormglass.io/",
+        "auth": "unknown",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://stormglass.io/",
+            "title": "Storm Glass",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Storm Glass](https://stormglass.io/) | Global marine weather from multiple sources | `apiKey` | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "storm-glass",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 71,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "weather"
+      ],
+      "warnings": [
+        "storm-glass: missing docsUrl",
+        "storm-glass: low average confidence 5.7",
+        "storm-glass: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Visual Crossing",
+        "description": "Global historical and weather forecast data",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://www.visualcrossing.com/weather-api",
+        "auth": "unknown",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://www.visualcrossing.com/weather-api",
+            "title": "Visual Crossing",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Visual Crossing](https://www.visualcrossing.com/weather-api) | Global historical and weather forecast data | `apiKey` | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "visual-crossing",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 71,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "weather"
+      ],
+      "warnings": [
+        "visual-crossing: missing docsUrl",
+        "visual-crossing: low average confidence 5.7",
+        "visual-crossing: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "7Timer!",
+        "description": "Weather, especially for Astroweather",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "http://www.7timer.info/doc.php?lang=en",
+        "auth": "No",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "http://www.7timer.info/doc.php?lang=en",
+            "title": "7Timer!",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [7Timer!](http://www.7timer.info/doc.php?lang=en) | Weather, especially for Astroweather | No | No | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "public-apis HTTPS is not Yes",
+          "Unknown public-apis category: Index"
+        ],
+        "id": "7timer",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 67,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "weather"
+      ],
+      "warnings": [
+        "7timer: missing docsUrl",
+        "7timer: low average confidence 5.7",
+        "7timer: cors is unknown",
+        "7timer: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Hong Kong Obervatory",
+        "description": "Provide weather information, earthquake information, and climate data",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://www.hko.gov.hk/en/abouthko/opendata_intro.htm",
+        "auth": "No",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://www.hko.gov.hk/en/abouthko/opendata_intro.htm",
+            "title": "Hong Kong Obervatory",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Hong Kong Obervatory](https://www.hko.gov.hk/en/abouthko/opendata_intro.htm) | Provide weather information, earthquake information, and climate data | No | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "hong-kong-obervatory",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 67,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "weather"
+      ],
+      "warnings": [
+        "hong-kong-obervatory: missing docsUrl",
+        "hong-kong-obervatory: low average confidence 5.7",
+        "hong-kong-obervatory: cors is unknown",
+        "hong-kong-obervatory: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "IPMA",
+        "description": "Portuguese weather and climate data",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://api.ipma.pt/open-data/",
+        "auth": "No",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://api.ipma.pt/open-data/",
+            "title": "IPMA",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [IPMA](https://api.ipma.pt/open-data/) | Portuguese weather and climate data | No | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "ipma",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 67,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "weather"
+      ],
+      "warnings": [
+        "ipma: missing docsUrl",
+        "ipma: low average confidence 5.7",
+        "ipma: cors is unknown",
+        "ipma: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Aemet",
+        "description": "Weather and forecast data from Spain",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://opendata.aemet.es/centrodedescargas/inicio",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://opendata.aemet.es/centrodedescargas/inicio",
+            "title": "Aemet",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Aemet](https://opendata.aemet.es/centrodedescargas/inicio) | Weather and forecast data from Spain | `apiKey` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "aemet",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 63.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "weather"
+      ],
+      "warnings": [
+        "aemet: missing docsUrl",
+        "aemet: low average confidence 4.5",
+        "aemet: cors is unknown",
+        "aemet: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "APIXU",
+        "description": "Weather",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://www.apixu.com/doc/request.aspx",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://www.apixu.com/doc/request.aspx",
+            "title": "APIXU",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [APIXU](https://www.apixu.com/doc/request.aspx) | Weather | `apiKey` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "apixu",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 63.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "weather"
+      ],
+      "warnings": [
+        "apixu: missing docsUrl",
+        "apixu: low average confidence 4.5",
+        "apixu: cors is unknown",
+        "apixu: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Foreca",
+        "description": "Weather",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://developer.foreca.com",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://developer.foreca.com",
+            "title": "Foreca",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Foreca](https://developer.foreca.com) | Weather | `OAuth` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "foreca",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 63.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "weather"
+      ],
+      "warnings": [
+        "foreca: missing docsUrl",
+        "foreca: low average confidence 4.5",
+        "foreca: cors is unknown",
+        "foreca: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "IQAir",
+        "description": "Air quality and weather data",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://www.iqair.com/air-pollution-data-api",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://www.iqair.com/air-pollution-data-api",
+            "title": "IQAir",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [IQAir](https://www.iqair.com/air-pollution-data-api) | Air quality and weather data | `apiKey` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "iqair",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 63.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "weather"
+      ],
+      "warnings": [
+        "iqair: missing docsUrl",
+        "iqair: low average confidence 4.5",
+        "iqair: cors is unknown",
+        "iqair: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Meteorologisk Institutt",
+        "description": "Weather and climate data",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://api.met.no/weatherapi/documentation",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://api.met.no/weatherapi/documentation",
+            "title": "Meteorologisk Institutt",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Meteorologisk Institutt](https://api.met.no/weatherapi/documentation) | Weather and climate data | `User-Agent` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "meteorologisk-institutt",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 63.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "weather"
+      ],
+      "warnings": [
+        "meteorologisk-institutt: missing docsUrl",
+        "meteorologisk-institutt: low average confidence 4.5",
+        "meteorologisk-institutt: cors is unknown",
+        "meteorologisk-institutt: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Tomorrow",
+        "description": "Weather API Powered by Proprietary Technology",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://docs.tomorrow.io",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://docs.tomorrow.io",
+            "title": "Tomorrow",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Tomorrow](https://docs.tomorrow.io) | Weather API Powered by Proprietary Technology | `apiKey` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "tomorrow",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 63.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "weather"
+      ],
+      "warnings": [
+        "tomorrow: missing docsUrl",
+        "tomorrow: low average confidence 4.5",
+        "tomorrow: cors is unknown",
+        "tomorrow: needs review before production use"
+      ]
+    }
+  ],
   "rejected": [],
-  "warnings": [],
+  "warnings": [
+    "metaweather: missing docsUrl",
+    "metaweather: needs review before production use",
+    "pirate-weather: missing docsUrl",
+    "pirate-weather: needs review before production use",
+    "us-weather: missing docsUrl",
+    "us-weather: needs review before production use",
+    "weather-api: missing docsUrl",
+    "weather-api: needs review before production use",
+    "hg-weather: missing docsUrl",
+    "hg-weather: low average confidence 5.7",
+    "hg-weather: needs review before production use",
+    "qweather: missing docsUrl",
+    "qweather: low average confidence 5.7",
+    "qweather: needs review before production use",
+    "weatherapi: missing docsUrl",
+    "weatherapi: low average confidence 5.7",
+    "weatherapi: needs review before production use",
+    "yandexweather: missing docsUrl",
+    "yandexweather: low average confidence 5.7",
+    "yandexweather: needs review before production use",
+    "aviationweather: missing docsUrl",
+    "aviationweather: low average confidence 5.7",
+    "aviationweather: cors is unknown",
+    "aviationweather: needs review before production use",
+    "odweather: missing docsUrl",
+    "odweather: low average confidence 5.7",
+    "odweather: cors is unknown",
+    "odweather: needs review before production use",
+    "accuweather: missing docsUrl",
+    "accuweather: low average confidence 4.5",
+    "accuweather: cors is unknown",
+    "accuweather: needs review before production use",
+    "micro-weather: missing docsUrl",
+    "micro-weather: low average confidence 4.5",
+    "micro-weather: cors is unknown",
+    "micro-weather: needs review before production use",
+    "openweathermap: missing docsUrl",
+    "openweathermap: low average confidence 4.5",
+    "openweathermap: cors is unknown",
+    "openweathermap: needs review before production use",
+    "weatherbit: missing docsUrl",
+    "weatherbit: low average confidence 4.5",
+    "weatherbit: cors is unknown",
+    "weatherbit: needs review before production use",
+    "weatherstack: missing docsUrl",
+    "weatherstack: low average confidence 4.5",
+    "weatherstack: cors is unknown",
+    "weatherstack: needs review before production use",
+    "aviationapi: missing docsUrl",
+    "aviationapi: needs review before production use",
+    "open-meteo: missing docsUrl",
+    "open-meteo: needs review before production use",
+    "opensensemap: missing docsUrl",
+    "opensensemap: needs review before production use",
+    "wttrin: missing docsUrl",
+    "wttrin: needs review before production use",
+    "apache-superset: missing docsUrl",
+    "apache-superset: low average confidence 5.7",
+    "apache-superset: needs review before production use",
+    "colorfulclouds: missing docsUrl",
+    "colorfulclouds: low average confidence 5.7",
+    "colorfulclouds: needs review before production use",
+    "oikolab: missing docsUrl",
+    "oikolab: low average confidence 5.7",
+    "oikolab: needs review before production use",
+    "redash: missing docsUrl",
+    "redash: low average confidence 5.7",
+    "redash: needs review before production use",
+    "storm-glass: missing docsUrl",
+    "storm-glass: low average confidence 5.7",
+    "storm-glass: needs review before production use",
+    "visual-crossing: missing docsUrl",
+    "visual-crossing: low average confidence 5.7",
+    "visual-crossing: needs review before production use",
+    "7timer: missing docsUrl",
+    "7timer: low average confidence 5.7",
+    "7timer: cors is unknown",
+    "7timer: needs review before production use",
+    "hong-kong-obervatory: missing docsUrl",
+    "hong-kong-obervatory: low average confidence 5.7",
+    "hong-kong-obervatory: cors is unknown",
+    "hong-kong-obervatory: needs review before production use",
+    "ipma: missing docsUrl",
+    "ipma: low average confidence 5.7",
+    "ipma: cors is unknown",
+    "ipma: needs review before production use",
+    "aemet: missing docsUrl",
+    "aemet: low average confidence 4.5",
+    "aemet: cors is unknown",
+    "aemet: needs review before production use",
+    "apixu: missing docsUrl",
+    "apixu: low average confidence 4.5",
+    "apixu: cors is unknown",
+    "apixu: needs review before production use",
+    "foreca: missing docsUrl",
+    "foreca: low average confidence 4.5",
+    "foreca: cors is unknown",
+    "foreca: needs review before production use",
+    "iqair: missing docsUrl",
+    "iqair: low average confidence 4.5",
+    "iqair: cors is unknown",
+    "iqair: needs review before production use",
+    "meteorologisk-institutt: missing docsUrl",
+    "meteorologisk-institutt: low average confidence 4.5",
+    "meteorologisk-institutt: cors is unknown",
+    "meteorologisk-institutt: needs review before production use",
+    "tomorrow: missing docsUrl",
+    "tomorrow: low average confidence 4.5",
+    "tomorrow: cors is unknown",
+    "tomorrow: needs review before production use"
+  ],
   "registry_health": {
     "schema_version": "api-registry",
     "last_imported_at": "2026-05-13",

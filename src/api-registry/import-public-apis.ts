@@ -49,47 +49,73 @@ function isSeparator(cells: string[]): boolean {
   return cells.every((cell) => /^:?-{3,}:?$/.test(cell));
 }
 
+function extractMarkdownLink(cell: string): { name: string; url: string } {
+  const match = cell.match(/\[([^\]]+)\]\(([^)]+)\)/);
+  if (!match) return { name: cell.replace(/`/g, '').trim(), url: '' };
+  return { name: match[1].trim(), url: match[2].trim() };
+}
+
 export function parsePublicApisMarkdown(markdown: string): PublicApisRow[] {
   const rows: PublicApisRow[] = [];
   const lines = markdown.split(/\r?\n/);
-  let inTable = false;
+  let currentCategory = '';
+  let headers: string[] = [];
 
   lines.forEach((line, index) => {
-    if (!line.trim().startsWith('|')) return;
-
-    const cells = splitMarkdownRow(line);
-    const lower = cells.map((cell) => cell.toLowerCase());
-    if (lower.includes('api') && lower.includes('description') && lower.includes('auth')) {
-      inTable = true;
+    const heading = line.match(/^##\s+(.+)$/);
+    if (heading) {
+      currentCategory = heading[1].trim();
+      headers = [];
       return;
     }
-    if (!inTable || isSeparator(cells)) return;
 
-    if (cells.length !== 7) {
+    if (!line.trim().startsWith('|') && !line.trim().startsWith('API |')) return;
+
+    const cells = splitMarkdownRow(line);
+    const lower = cells.map((cell) => cell.toLowerCase().replace(/`/g, '').trim());
+    if (lower[0] === 'api' && lower.includes('description')) {
+      headers = lower;
+      return;
+    }
+    if (headers.length === 0 || isSeparator(cells)) return;
+
+    const apiCell = cells[0] ?? '';
+    const link = extractMarkdownLink(apiCell);
+    const authIndex = headers.indexOf('auth');
+    const httpsIndex = headers.indexOf('https');
+    const corsIndex = headers.indexOf('cors');
+    const descriptionIndex = headers.indexOf('description');
+    const linkIndex = headers.indexOf('link');
+    const categoryIndex = headers.indexOf('category');
+    const apiName = link.name || apiCell.trim();
+    const apiUrl = link.url || (linkIndex >= 0 ? cells[linkIndex] ?? '' : '');
+    const category = categoryIndex >= 0 ? cells[categoryIndex] ?? currentCategory : currentCategory;
+
+    if (!apiName || !apiUrl) {
       rows.push({
-        api: cells[0] ?? '',
-        description: cells[1] ?? '',
-        auth: cells[2] ?? '',
-        https: cells[3] ?? '',
-        cors: cells[4] ?? '',
-        link: cells[5] ?? '',
-        category: cells[6] ?? '',
+        api: apiName,
+        description: cells[descriptionIndex] ?? '',
+        auth: authIndex >= 0 ? cells[authIndex] ?? '' : 'unknown',
+        https: httpsIndex >= 0 ? cells[httpsIndex] ?? '' : 'Yes',
+        cors: corsIndex >= 0 ? cells[corsIndex] ?? '' : 'Unknown',
+        link: apiUrl,
+        category,
         raw: line,
         rowNumber: index + 1,
         malformed: true,
-        reason: `Expected 7 columns, got ${cells.length}`,
+        reason: 'Missing markdown API name or link',
       });
       return;
     }
 
     rows.push({
-      api: cells[0],
-      description: cells[1],
-      auth: cells[2],
-      https: cells[3],
-      cors: cells[4],
-      link: cells[5],
-      category: cells[6],
+      api: apiName,
+      description: cells[descriptionIndex] ?? '',
+      auth: authIndex >= 0 ? cells[authIndex] ?? '' : 'unknown',
+      https: httpsIndex >= 0 ? cells[httpsIndex] ?? '' : 'Yes',
+      cors: corsIndex >= 0 ? cells[corsIndex] ?? '' : 'Unknown',
+      link: apiUrl,
+      category,
       raw: line,
       rowNumber: index + 1,
     });
