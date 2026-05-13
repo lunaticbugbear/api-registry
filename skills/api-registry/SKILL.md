@@ -18,12 +18,12 @@ Supported commands:
 
 ```bash
 npm run registry -- add <record-json-file>
-npm run registry -- search <query> [--limit 10] [--consumer-profile frontend-only]
+npm run registry -- search <query> [--limit 10] [--profile frontend-only]
 npm run registry -- import public-apis
 npm run registry -- import <public-apis-markdown-file>
 npm run registry -- refresh
 npm run registry -- audit
-npm run registry -- export <query> [--format markdown|json] [--consumer-profile frontend-only]
+npm run registry -- export <query> [--format markdown|json] [--profile frontend-only]
 npm run demo
 npm run release:check
 ```
@@ -182,11 +182,11 @@ Other skills must integrate through this pattern:
 
 1. Ask API Registry first for shortlist:
    ```bash
-   npm run registry -- search "<need>" --consumer-profile <profile> --limit 10
+   npm run registry -- search "<need>" --profile <profile> --limit 10
    ```
 2. If building prompt/context, request export:
    ```bash
-   npm run registry -- export "<need>" --format markdown --consumer-profile <profile>
+   npm run registry -- export "<need>" --format markdown --profile <profile>
    ```
 3. Use local results if adequate.
 4. Call `api-researcher` agent only when search result is weak/missing or explicit refresh/verification is needed.

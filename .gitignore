@@ -1,6 +1,7 @@
 node_modules/
 dist/
 data/api-registry/records.json
+data/api-registry/*.bak
 .env
 .env.local
 __pycache__/

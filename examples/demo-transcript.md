@@ -1,15 +1,15 @@
 $ npm run registry -- search "anime app" --profile frontend-only
 search: anime app
-1. AniList [entertainment] score=265
-2. Jikan [entertainment] score=265
-3. TVMaze [entertainment] score=175
-4. MyAnimeList [data] score=148.5
-5. AnimeFacts [data] score=138.5
-6. AnimeNewsNetwork [data] score=138.5
-7. Danbooru Anime [data] score=131
-8. MangaDex [data] score=123.5
-9. Mangapi [data] score=123.5
-10. Rappi [data] score=123.5
+1. Jikan [data] score=193.5
+2. AniList [data] score=192.375
+3. MyAnimeList [data] score=148.5
+4. AnimeFacts [data] score=138.5
+5. AnimeNewsNetwork [data] score=138.5
+6. Danbooru Anime [data] score=131
+7. MangaDex [data] score=123.5
+8. Mangapi [data] score=123.5
+9. Rappi [data] score=123.5
+10. Application Environment Verification [data] score=106
 
 $ npm run registry -- export "weather dashboard" --format json
 {
@@ -106,12 +106,13 @@ $ npm run registry -- export "weather dashboard" --format json
       "record": {
         "id": "weatherapi",
         "name": "WeatherAPI",
-        "description": "Weather forecast, history, astronomy, and air quality API.",
-        "category": "weather",
+        "description": "Weather API with other stuff like Astronomy and Geolocation API",
+        "category": "data",
         "tags": [
           "forecast",
           "weather",
-          "air-quality"
+          "air-quality",
+          "index"
         ],
         "homepage": "https://www.weatherapi.com",
         "docsUrl": "https://www.weatherapi.com/docs/",
@@ -120,13 +121,13 @@ $ npm run registry -- export "weather dashboard" --format json
         "pricing": "free_tier",
         "status": "trusted",
         "fit": {
-          "frontend": 8,
-          "backend": 9,
-          "prototype": 9,
-          "production": 8,
-          "mobile": 8,
-          "dashboard": 8,
-          "automation": 8
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
         },
         "consumerProfiles": [
           "frontend-only",
@@ -144,6 +145,12 @@ $ npm run registry -- export "weather dashboard" --format json
             "title": "WeatherAPI documentation",
             "checkedAt": "2026-05-13",
             "excerpt": "Official API documentation or developer reference confirms public API details."
+          },
+          {
+            "url": "https://www.weatherapi.com/",
+            "title": "WeatherAPI",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [WeatherAPI](https://www.weatherapi.com/) | Weather API with other stuff like Astronomy and Geolocation API | `apiKey` | Yes | Yes |"
           }
         ],
         "confidence": [
@@ -164,23 +171,41 @@ $ npm run registry -- export "weather dashboard" --format json
           },
           {
             "field": "cors",
-            "confidence": 7,
-            "source": "https://www.weatherapi.com/docs/"
+            "confidence": 9,
+            "source": "public-apis"
           },
           {
             "field": "pricing",
             "confidence": 7,
             "source": "https://www.weatherapi.com/docs/"
+          },
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
           }
         ],
-        "updatedAt": "2026-05-13",
-        "createdAt": "2026-05-13"
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13",
+        "notes": [
+          "Unknown public-apis category: Index"
+        ]
       },
-      "score": 195,
+      "score": 163.125,
       "matched_fields": [
         "name",
         "description",
-        "category",
         "tags"
       ],
       "matched_terms": [
@@ -192,11 +217,12 @@ $ npm run registry -- export "weather dashboard" --format json
       "record": {
         "id": "open-meteo",
         "name": "Open-Meteo",
-        "description": "Open weather forecast API with no API key for non-commercial use.",
-        "category": "weather",
+        "description": "Global weather forecast API for non-commercial use",
+        "category": "data",
         "tags": [
           "forecast",
-          "weather"
+          "weather",
+          "index"
         ],
         "homepage": "https://open-meteo.com",
         "docsUrl": "https://open-meteo.com/en/docs",
@@ -205,13 +231,13 @@ $ npm run registry -- export "weather dashboard" --format json
         "pricing": "free",
         "status": "trusted",
         "fit": {
-          "frontend": 8,
-          "backend": 9,
-          "prototype": 9,
-          "production": 8,
-          "mobile": 8,
-          "dashboard": 8,
-          "automation": 8
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
         },
         "consumerProfiles": [
           "frontend-only",
@@ -229,6 +255,12 @@ $ npm run registry -- export "weather dashboard" --format json
             "title": "Open-Meteo documentation",
             "checkedAt": "2026-05-13",
             "excerpt": "Official API documentation or developer reference confirms public API details."
+          },
+          {
+            "url": "https://open-meteo.com/",
+            "title": "Open-Meteo",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Open-Meteo](https://open-meteo.com/) | Global weather forecast API for non-commercial use | No | Yes | Yes |"
           }
         ],
         "confidence": [
@@ -244,27 +276,45 @@ $ npm run registry -- export "weather dashboard" --format json
           },
           {
             "field": "auth",
-            "confidence": 8,
-            "source": "https://open-meteo.com/en/docs"
+            "confidence": 9,
+            "source": "public-apis"
           },
           {
             "field": "cors",
-            "confidence": 7,
-            "source": "https://open-meteo.com/en/docs"
+            "confidence": 9,
+            "source": "public-apis"
           },
           {
             "field": "pricing",
             "confidence": 7,
             "source": "https://open-meteo.com/en/docs"
+          },
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
           }
         ],
-        "updatedAt": "2026-05-13",
-        "createdAt": "2026-05-13"
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13",
+        "notes": [
+          "Unknown public-apis category: Index"
+        ]
       },
-      "score": 160,
+      "score": 128.5,
       "matched_fields": [
         "description",
-        "category",
         "tags"
       ],
       "matched_terms": [
@@ -822,100 +872,6 @@ $ npm run registry -- export "weather dashboard" --format json
     },
     {
       "record": {
-        "name": "WeatherAPI",
-        "description": "Weather API with other stuff like Astronomy and Geolocation API",
-        "category": "data",
-        "tags": [
-          "index"
-        ],
-        "homepage": "https://www.weatherapi.com/",
-        "auth": "unknown",
-        "cors": "yes",
-        "pricing": "free",
-        "status": "needs_review",
-        "consumerProfiles": [
-          "prototype"
-        ],
-        "source": {
-          "name": "public-apis",
-          "url": "https://github.com/public-apis/public-apis",
-          "importedAt": "2026-05-13T00:00:00Z"
-        },
-        "evidence": [
-          {
-            "url": "https://www.weatherapi.com/",
-            "title": "WeatherAPI",
-            "checkedAt": "2026-05-13T00:00:00Z",
-            "excerpt": "| [WeatherAPI](https://www.weatherapi.com/) | Weather API with other stuff like Astronomy and Geolocation API | `apiKey` | Yes | Yes |"
-          }
-        ],
-        "confidence": [
-          {
-            "field": "name",
-            "confidence": 8,
-            "source": "public-apis"
-          },
-          {
-            "field": "description",
-            "confidence": 7,
-            "source": "public-apis"
-          },
-          {
-            "field": "category",
-            "confidence": 2,
-            "source": "public-apis",
-            "note": "Unknown public-apis category: Index"
-          },
-          {
-            "field": "auth",
-            "confidence": 2,
-            "source": "public-apis"
-          },
-          {
-            "field": "cors",
-            "confidence": 9,
-            "source": "public-apis"
-          },
-          {
-            "field": "pricing",
-            "confidence": 6,
-            "source": "public-apis"
-          }
-        ],
-        "notes": [
-          "Unknown public-apis category: Index"
-        ],
-        "id": "weatherapi",
-        "fit": {
-          "frontend": 5,
-          "backend": 5,
-          "prototype": 5,
-          "production": 5,
-          "mobile": 5,
-          "dashboard": 5,
-          "automation": 5
-        },
-        "updatedAt": "2026-05-13T00:00:00Z",
-        "createdAt": "2026-05-13T00:00:00Z"
-      },
-      "score": 106,
-      "matched_fields": [
-        "name",
-        "description"
-      ],
-      "matched_terms": [
-        "weather"
-      ],
-      "warnings": [
-        "weatherapi: missing docsUrl",
-        "weatherapi: low average confidence 5.7",
-        "weatherapi: needs review before production use"
-      ]
-    }
-  ],
-  "alternatives": [
-    {
-      "record": {
         "name": "Yandex.Weather",
         "description": "Assesses weather condition in specific locations",
         "category": "data",
@@ -1005,7 +961,9 @@ $ npm run registry -- export "weather dashboard" --format json
         "yandexweather: low average confidence 5.7",
         "yandexweather: needs review before production use"
       ]
-    },
+    }
+  ],
+  "alternatives": [
     {
       "record": {
         "name": "AviationWeather",
@@ -1755,96 +1713,6 @@ $ npm run registry -- export "weather dashboard" --format json
       "warnings": [
         "aviationapi: missing docsUrl",
         "aviationapi: needs review before production use"
-      ]
-    },
-    {
-      "record": {
-        "name": "Open-Meteo",
-        "description": "Global weather forecast API for non-commercial use",
-        "category": "data",
-        "tags": [
-          "index"
-        ],
-        "homepage": "https://open-meteo.com/",
-        "auth": "No",
-        "cors": "yes",
-        "pricing": "free",
-        "status": "needs_review",
-        "consumerProfiles": [
-          "prototype"
-        ],
-        "source": {
-          "name": "public-apis",
-          "url": "https://github.com/public-apis/public-apis",
-          "importedAt": "2026-05-13T00:00:00Z"
-        },
-        "evidence": [
-          {
-            "url": "https://open-meteo.com/",
-            "title": "Open-Meteo",
-            "checkedAt": "2026-05-13T00:00:00Z",
-            "excerpt": "| [Open-Meteo](https://open-meteo.com/) | Global weather forecast API for non-commercial use | No | Yes | Yes |"
-          }
-        ],
-        "confidence": [
-          {
-            "field": "name",
-            "confidence": 8,
-            "source": "public-apis"
-          },
-          {
-            "field": "description",
-            "confidence": 7,
-            "source": "public-apis"
-          },
-          {
-            "field": "category",
-            "confidence": 2,
-            "source": "public-apis",
-            "note": "Unknown public-apis category: Index"
-          },
-          {
-            "field": "auth",
-            "confidence": 9,
-            "source": "public-apis"
-          },
-          {
-            "field": "cors",
-            "confidence": 9,
-            "source": "public-apis"
-          },
-          {
-            "field": "pricing",
-            "confidence": 6,
-            "source": "public-apis"
-          }
-        ],
-        "notes": [
-          "Unknown public-apis category: Index"
-        ],
-        "id": "open-meteo",
-        "fit": {
-          "frontend": 5,
-          "backend": 5,
-          "prototype": 5,
-          "production": 5,
-          "mobile": 5,
-          "dashboard": 5,
-          "automation": 5
-        },
-        "updatedAt": "2026-05-13T00:00:00Z",
-        "createdAt": "2026-05-13T00:00:00Z"
-      },
-      "score": 78.5,
-      "matched_fields": [
-        "description"
-      ],
-      "matched_terms": [
-        "weather"
-      ],
-      "warnings": [
-        "open-meteo: missing docsUrl",
-        "open-meteo: needs review before production use"
       ]
     },
     {
@@ -3419,9 +3287,6 @@ $ npm run registry -- export "weather dashboard" --format json
     "qweather: missing docsUrl",
     "qweather: low average confidence 5.7",
     "qweather: needs review before production use",
-    "weatherapi: missing docsUrl",
-    "weatherapi: low average confidence 5.7",
-    "weatherapi: needs review before production use",
     "yandexweather: missing docsUrl",
     "yandexweather: low average confidence 5.7",
     "yandexweather: needs review before production use",
@@ -3455,8 +3320,6 @@ $ npm run registry -- export "weather dashboard" --format json
     "weatherstack: needs review before production use",
     "aviationapi: missing docsUrl",
     "aviationapi: needs review before production use",
-    "open-meteo: missing docsUrl",
-    "open-meteo: needs review before production use",
     "opensensemap: missing docsUrl",
     "opensensemap: needs review before production use",
     "wttrin: missing docsUrl",
@@ -3521,8 +3384,8 @@ $ npm run registry -- export "weather dashboard" --format json
     "last_imported_at": "2026-05-13",
     "last_audited_at": "2026-05-13",
     "freshness_days": 90,
-    "health": "ok",
-    "health_score": 8.7
+    "health": "warning",
+    "health_score": 0
   },
   "contract": {
     "type": "object",

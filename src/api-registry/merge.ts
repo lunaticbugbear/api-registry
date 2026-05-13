@@ -74,6 +74,16 @@ function latestTimestamp(a: string, b: string): string {
 }
 
 export function findDuplicate(existing: ApiRecord[], candidate: ApiRecord): DuplicateMatch | undefined {
+  const idMatch = existing.find((record) => record.id === candidate.id);
+  if (idMatch) {
+    return {
+      type: 'possible-duplicate',
+      existingId: idMatch.id,
+      candidateId: candidate.id,
+      reason: `same id: ${candidate.id}`,
+    };
+  }
+
   if (candidate.docsUrl) {
     const docsMatch = existing.find((record) => record.docsUrl && record.docsUrl === candidate.docsUrl);
     if (docsMatch) {

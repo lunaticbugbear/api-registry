@@ -2,6 +2,8 @@
 
 ## Claude Code
 
+**Prerequisite:** Node.js 18 or later.
+
 Clone repository and install dependencies:
 
 ```bash

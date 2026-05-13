@@ -120,10 +120,11 @@ async function cmdRefresh(cwd: string): Promise<string> {
   return lines.join('\n');
 }
 
-async function cmdAudit(cwd: string): Promise<string> {
+async function cmdAudit(flags: Record<string, string>, cwd: string): Promise<string> {
   const { records, manifest, categories } = await loadRegistry(cwd);
   const today = new Date().toISOString().slice(0, 10);
-  const summary = auditRegistry({ records, manifest, categories, now: today, cwd, updateManifest: true });
+  const updateManifest = flags['update-manifest'] === 'true';
+  const summary = auditRegistry({ records, manifest, categories, now: today, cwd, updateManifest });
   const health = summary.health;
   return `audit: records=${summary.recordCount} errors=${summary.errorCount} warnings=${summary.warningCount} health=${health} score=${summary.healthScore}`;
 }
@@ -153,7 +154,7 @@ export async function runCli(argv: string[], cwd = process.cwd()): Promise<strin
     case 'search': return cmdSearch(args, flags, cwd);
     case 'import': return cmdImport(args, cwd);
     case 'refresh': return cmdRefresh(cwd);
-    case 'audit': return cmdAudit(cwd);
+    case 'audit': return cmdAudit(flags, cwd);
     case 'export': return cmdExport(args, flags, cwd);
     case 'demo': return cmdDemo(cwd);
     default: throw new Error(`Unknown command: ${command}. Available: add, search, import, refresh, audit, export, demo`);

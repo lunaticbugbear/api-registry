@@ -29,6 +29,19 @@ describe('merge', () => {
   });
 
   describe('findDuplicate', () => {
+    it('detects same-id duplicate before comparing softer identity fields', () => {
+      const existing = [baseRecord({ id: 'test-api', docsUrl: 'https://docs.example.com' })];
+      const candidate = baseRecord({ id: 'test-api', name: 'Different API', docsUrl: 'https://other.example.com' });
+
+      const match = findDuplicate(existing, candidate);
+      expect(match).toMatchObject({
+        type: 'possible-duplicate',
+        existingId: 'test-api',
+        candidateId: 'test-api',
+        reason: 'same id: test-api',
+      });
+    });
+
     it('detects same-docs duplicate', () => {
       const existing = [baseRecord({ docsUrl: 'https://docs.example.com' })];
       const candidate = baseRecord({ id: 'test-api-2', docsUrl: 'https://docs.example.com' });

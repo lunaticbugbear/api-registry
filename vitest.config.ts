@@ -4,6 +4,7 @@ export default defineConfig({
   test: {
     globals: false,
     environment: 'node',
-    restoreMocks: true
+    restoreMocks: true,
+    exclude: ['**/node_modules/**', '**/dist/**', '**/.claude/worktrees/**']
   }
 });
