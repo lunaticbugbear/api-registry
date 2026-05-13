@@ -6,13 +6,13 @@ AI app builders need reliable public API choices before implementation starts. P
 
 ## Value proposition
 
-API Registry turns an app idea into a ranked, reusable API shortlist with fit scores, auth, CORS, pricing, confidence, and source provenance. It stores everything locally and exports normalized results for other Claude Code skills or agents.
+API Registry turns an app idea into a ranked, reusable API shortlist with fit scores, auth, CORS, pricing, confidence, and source provenance. It starts with a curated 32+ API seed set, can import the full public-apis catalog, stores everything locally, and exports normalized results for other Claude Code skills or agents.
 
 ## Quick start
 
 1. Clone and install: `git clone [repo-url] && cd api-registry && npm install`.
-2. Run seed/audit check: `npm run registry -- audit`.
-3. Search: `npm run registry -- search "anime app" --profile frontend-only`.
+2. Search the bundled curated seed: `npm run registry -- search "anime app" --profile frontend-only`.
+3. Import the full public-apis catalog when you want broader coverage: `npm run registry -- import public-apis`.
 
 ## Demo transcript
 

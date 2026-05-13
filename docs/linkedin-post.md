@@ -2,7 +2,7 @@
 
 Building a new Claude Code session? You hit an API that needs auth, turns out it's paid, swap it out, find another manually. Repeat.
 
-So I built an API Registry skill that auto-loads 32+ curated public APIs on first run — no manual import needed.
+So I built an API Registry skill that starts with 32+ curated public APIs — and can import the full 1000+ from public-apis/public-apis.
 
 Describe your app idea:
 ```
@@ -12,6 +12,11 @@ Describe your app idea:
 Get a ranked list scored by auth type, CORS, pricing, and fit. All free, all public, all verified.
 
 Everything stored locally. Reusable across any Claude Code skill that needs to plan API-backed apps.
+
+Import more:
+```
+/api-registry import public-apis
+```
 
 Open source → github.com/lunaticbugbear/api-registry
 

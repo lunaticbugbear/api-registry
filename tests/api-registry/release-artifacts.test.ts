@@ -25,7 +25,7 @@ function readRegistry(): { records: ApiRecord[]; aliases: Aliases; manifest: Reg
 
 const LINKEDIN_TEMPLATE = `Building a new Claude Code session? You hit an API that needs auth, turns out it's paid, swap it out, find another manually. Repeat.
 
-So I built an API Registry skill that auto-loads 32+ curated public APIs on first run — no manual import needed.
+So I built an API Registry skill that starts with 32+ curated public APIs — and can import the full 1000+ from public-apis/public-apis.
 
 Describe your app idea:
 \`\`\`
@@ -35,6 +35,11 @@ Describe your app idea:
 Get a ranked list scored by auth type, CORS, pricing, and fit. All free, all public, all verified.
 
 Everything stored locally. Reusable across any Claude Code skill that needs to plan API-backed apps.
+
+Import more:
+\`\`\`
+/api-registry import public-apis
+\`\`\`
 
 Open source → github.com/lunaticbugbear/api-registry
 
@@ -186,8 +191,8 @@ describe('release artifacts', () => {
       const quickStart = readme.match(/## Quick start\n([\s\S]*?)\n## /)?.[1] ?? '';
       expect((quickStart.match(/^\d+\./gm) ?? []).length).toBeLessThanOrEqual(3);
       expect(quickStart).toContain('npm install');
-      expect(quickStart).toContain('npm run registry -- audit');
       expect(quickStart).toContain('npm run registry -- search "anime app" --profile frontend-only');
+      expect(quickStart).toContain('npm run registry -- import public-apis');
       expect(readme).toContain(transcript);
       expect(readme).toContain('## Command reference');
       for (const command of ['add', 'search', 'import', 'refresh', 'audit', 'export']) {
@@ -203,7 +208,7 @@ describe('release artifacts', () => {
         'agent-contract.md': ['api-researcher', 'input contract', 'output contract', 'malformed output'],
         'source-policy.md': ['official public/free API catalogs', 'source provenance', 'concrete quality problem'],
         'release-checklist.md': ['npm test', 'npm run typecheck', 'registry audit', 'example validation', 'documentation freshness'],
-        'linkedin-post.md': ['API Registry skill that auto-loads 32+ curated public APIs on first run', LINKEDIN_TEMPLATE],
+        'linkedin-post.md': ['starts with 32+ curated public APIs', 'import the full 1000+ from public-apis/public-apis', LINKEDIN_TEMPLATE],
       };
 
       for (const [fileName, requiredText] of Object.entries(docs)) {

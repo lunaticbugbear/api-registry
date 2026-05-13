@@ -1,4 +1,4 @@
-import { describe, expect, it, beforeEach, afterEach } from 'vitest';
+import { describe, expect, it, beforeEach, afterEach, vi } from 'vitest';
 import { mkdtempSync, rmSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { tmpdir } from 'node:os';
@@ -66,6 +66,22 @@ describe('runCli', () => {
     const output = await runCli(['import', importPath], tempDir);
 
     expect(output).toBe('import: source=public-apis added=1 updated=0 skipped=0 duplicate=0 needs_review=0');
+  });
+
+  it('imports public-apis markdown from GitHub source alias', async () => {
+    const fetchMock = vi.spyOn(globalThis, 'fetch').mockResolvedValue({
+      ok: true,
+      text: async () => '| API | Description | Auth | HTTPS | CORS | Link | Category |\n| --- | --- | --- | --- | --- | --- | --- |\n| Dog Facts | Daily dog facts | No | Yes | Yes | https://dog.example.com | Animals |',
+    } as Response);
+
+    try {
+      const output = await runCli(['import', 'public-apis'], tempDir);
+
+      expect(fetchMock).toHaveBeenCalledWith('https://raw.githubusercontent.com/public-apis/public-apis/master/README.md');
+      expect(output).toBe('import: source=public-apis added=1 updated=0 skipped=0 duplicate=0 needs_review=0');
+    } finally {
+      fetchMock.mockRestore();
+    }
   });
 
   it('refresh reports stale records without changing network state', async () => {

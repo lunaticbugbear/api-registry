@@ -78,10 +78,20 @@ async function cmdSearch(args: string[], flags: Record<string, string>, cwd: str
   return lines.join('\n');
 }
 
+async function readImportSource(source: string, cwd: string): Promise<string> {
+  if (source === 'public-apis') {
+    const response = await fetch('https://raw.githubusercontent.com/public-apis/public-apis/master/README.md');
+    if (!response.ok) throw new Error(`import: failed to fetch public-apis (${response.status})`);
+    return response.text();
+  }
+
+  return readFileSync(resolve(cwd, source), 'utf-8');
+}
+
 async function cmdImport(args: string[], cwd: string): Promise<string> {
-  const [filePath] = args;
-  if (!filePath) throw new Error('import: missing file path argument');
-  const markdown = readFileSync(resolve(cwd, filePath), 'utf-8');
+  const [source] = args;
+  if (!source) throw new Error('import: missing file path or public-apis source argument');
+  const markdown = await readImportSource(source, cwd);
   const { records, categories } = loadRegistry(cwd);
   const today = new Date().toISOString().slice(0, 10);
   const report = importPublicApis({ markdown, existingRecords: records, categories, today });

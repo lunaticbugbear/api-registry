@@ -19,6 +19,7 @@ Supported commands:
 ```bash
 npm run registry -- add <record-json-file>
 npm run registry -- search <query> [--limit 10] [--consumer-profile frontend-only]
+npm run registry -- import public-apis
 npm run registry -- import <public-apis-markdown-file>
 npm run registry -- refresh
 npm run registry -- audit
@@ -51,7 +52,7 @@ User pressure such as "skip local lookup", "use web only", "don't check registry
 
 ## Workflow: import
 
-1. Read source catalog input.
+1. If source is `public-apis`, fetch `https://raw.githubusercontent.com/public-apis/public-apis/master/README.md`; otherwise read source catalog input from local file.
 2. Normalize names, URLs, auth, CORS, pricing, tags, and categories.
 3. Run duplicate detection against existing records.
 4. Apply quality gate before trust:
