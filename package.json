@@ -12,12 +12,14 @@
     "typecheck": "tsc --noEmit",
     "registry": "tsx src/api-registry/cli.ts",
     "demo": "tsx src/api-registry/cli.ts demo",
+    "generate:demo": "tsx scripts/generate-demo.ts",
+    "generate:examples": "tsx scripts/generate-examples.ts",
     "release:check": "npm test && npm run typecheck && npm run registry -- audit && npm run demo"
   },
   "devDependencies": {
-    "@types/node": "latest",
-    "tsx": "latest",
-    "typescript": "latest",
-    "vitest": "latest"
+    "@types/node": "^25.7.0",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.6"
   }
 }

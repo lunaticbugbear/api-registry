@@ -4,7 +4,8 @@ import { join } from 'node:path';
 import { tmpdir } from 'node:os';
 import { mkdtempSync, rmSync } from 'node:fs';
 import { validateAgentOutput } from '../../src/api-registry/agent-contract.js';
-import { bootstrapRegistry, registryFilePath } from '../../src/api-registry/bootstrap.js';
+import { bootstrapRegistry } from '../../src/api-registry/bootstrap.js';
+import { registryFilePath } from '../../src/api-registry/paths.js';
 import type { AgentOutput, ApiRecord } from '../../src/api-registry/types.js';
 
 describe('skill pressure scenarios', () => {

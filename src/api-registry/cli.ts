@@ -1,6 +1,7 @@
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
-import { bootstrapRegistry, registryFilePath, readJsonFile } from './bootstrap.js';
+import { bootstrapRegistry } from './bootstrap.js';
+import { registryFilePath, readJsonFile } from './paths.js';
 import { validateApiRecord } from './validation.js';
 import { writeJsonAtomically } from './safe-write.js';
 import { searchApis } from './search.js';
@@ -8,7 +9,7 @@ import { exportShortlist } from './export.js';
 import { importPublicApis } from './import-public-apis.js';
 import { selectStaleRecords } from './refresh.js';
 import { auditRegistry } from './audit.js';
-import type { Aliases, ApiRecord, Contracts, RegistryManifest } from './types.js';
+import type { Aliases, ApiRecord, ConsumerProfile, Contracts, RegistryManifest } from './types.js';
 
 async function fetchPublicApisMarkdown(): Promise<string> {
   const response = await fetch('https://raw.githubusercontent.com/public-apis/public-apis/master/README.md');
@@ -82,7 +83,7 @@ async function cmdSearch(args: string[], flags: Record<string, string>, cwd: str
   if (!query) throw new Error('search: missing query');
   const { records, manifest, aliases } = await loadRegistry(cwd);
   const limit = flags.limit ? parseInt(flags.limit, 10) : 10;
-  const consumer_profile = flags.profile as any;
+  const consumer_profile = flags.profile as ConsumerProfile | undefined;
   const result = searchApis({ query, limit, consumer_profile }, records, aliases, manifest);
   const lines = [`search: ${query}`];
   result.recommended.forEach((match, i) => {

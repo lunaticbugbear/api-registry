@@ -4,99 +4,107 @@
   "recommended": [
     {
       "record": {
-        "id": "alpha-vantage",
-        "name": "Alpha Vantage",
-        "description": "Market data API for stocks, forex, and crypto.",
-        "category": "finance",
+        "name": "Yahoo Finance",
+        "description": "Real time low latency Yahoo Finance API for stock market, crypto currencies, and currency exchange",
+        "category": "data",
         "tags": [
-          "stocks",
-          "forex",
-          "crypto"
+          "index"
         ],
-        "homepage": "https://www.alphavantage.co",
-        "docsUrl": "https://www.alphavantage.co/documentation/",
-        "auth": "apiKey",
+        "homepage": "https://www.yahoofinanceapi.com/",
+        "auth": "unknown",
         "cors": "yes",
-        "pricing": "free_tier",
-        "status": "trusted",
-        "fit": {
-          "frontend": 8,
-          "backend": 9,
-          "prototype": 9,
-          "production": 8,
-          "mobile": 8,
-          "dashboard": 8,
-          "automation": 8
-        },
+        "pricing": "free",
+        "status": "needs_review",
         "consumerProfiles": [
-          "backend-required",
-          "dashboard",
-          "automation"
+          "prototype"
         ],
         "source": {
-          "name": "curated-seed",
-          "url": "https://www.alphavantage.co/documentation/",
-          "importedAt": "2026-05-13"
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
         },
         "evidence": [
           {
-            "url": "https://www.alphavantage.co/documentation/",
-            "title": "Alpha Vantage documentation",
-            "checkedAt": "2026-05-13",
-            "excerpt": "Official API documentation or developer reference confirms public API details."
+            "url": "https://www.yahoofinanceapi.com/",
+            "title": "Yahoo Finance",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Yahoo Finance](https://www.yahoofinanceapi.com/) | Real time low latency Yahoo Finance API for stock market, crypto currencies, and currency exchange | `apiKey` | Yes | Yes | |"
           }
         ],
         "confidence": [
           {
-            "field": "homepage",
-            "confidence": 9,
-            "source": "https://www.alphavantage.co/documentation/"
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
           },
           {
-            "field": "docsUrl",
-            "confidence": 9,
-            "source": "https://www.alphavantage.co/documentation/"
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
           },
           {
             "field": "auth",
-            "confidence": 8,
-            "source": "https://www.alphavantage.co/documentation/"
+            "confidence": 2,
+            "source": "public-apis"
           },
           {
             "field": "cors",
-            "confidence": 7,
-            "source": "https://www.alphavantage.co/documentation/"
+            "confidence": 9,
+            "source": "public-apis"
           },
           {
             "field": "pricing",
-            "confidence": 7,
-            "source": "https://www.alphavantage.co/documentation/"
+            "confidence": 6,
+            "source": "public-apis"
           }
         ],
-        "updatedAt": "2026-05-13",
-        "createdAt": "2026-05-13"
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "yahoo-finance",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
       },
-      "score": 160,
+      "score": 131,
       "matched_fields": [
-        "category",
-        "description",
-        "tags"
+        "name",
+        "description"
       ],
       "matched_terms": [
         "finance",
-        "stocks"
+        "currency"
       ],
-      "warnings": []
+      "warnings": [
+        "yahoo-finance: missing docsUrl",
+        "yahoo-finance: low average confidence 5.7",
+        "yahoo-finance: needs review before production use"
+      ]
     },
     {
       "record": {
         "id": "frankfurter",
         "name": "Frankfurter",
-        "description": "Open-source exchange rates and currency conversion API.",
-        "category": "finance",
+        "description": "Exchange rates, currency conversion and time series",
+        "category": "data",
         "tags": [
           "currency",
-          "exchange-rates"
+          "exchange-rates",
+          "index"
         ],
         "homepage": "https://www.frankfurter.app",
         "docsUrl": "https://www.frankfurter.app/docs/",
@@ -105,18 +113,19 @@
         "pricing": "free",
         "status": "trusted",
         "fit": {
-          "frontend": 8,
-          "backend": 9,
-          "prototype": 9,
-          "production": 8,
-          "mobile": 8,
-          "dashboard": 8,
-          "automation": 8
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
         },
         "consumerProfiles": [
           "backend-required",
           "dashboard",
-          "automation"
+          "automation",
+          "prototype"
         ],
         "source": {
           "name": "curated-seed",
@@ -129,6 +138,12 @@
             "title": "Frankfurter documentation",
             "checkedAt": "2026-05-13",
             "excerpt": "Official API documentation or developer reference confirms public API details."
+          },
+          {
+            "url": "https://www.frankfurter.app/docs",
+            "title": "Frankfurter",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Frankfurter](https://www.frankfurter.app/docs) | Exchange rates, currency conversion and time series | No | Yes | Yes |"
           }
         ],
         "confidence": [
@@ -144,64 +159,561 @@
           },
           {
             "field": "auth",
-            "confidence": 8,
-            "source": "https://www.frankfurter.app/docs/"
+            "confidence": 9,
+            "source": "public-apis"
           },
           {
             "field": "cors",
-            "confidence": 7,
-            "source": "https://www.frankfurter.app/docs/"
+            "confidence": 9,
+            "source": "public-apis"
           },
           {
             "field": "pricing",
             "confidence": 7,
             "source": "https://www.frankfurter.app/docs/"
+          },
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
           }
         ],
-        "updatedAt": "2026-05-13",
-        "createdAt": "2026-05-13"
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13",
+        "notes": [
+          "Unknown public-apis category: Index"
+        ]
       },
-      "score": 160,
+      "score": 128.5,
       "matched_fields": [
-        "category",
         "description",
         "tags"
       ],
       "matched_terms": [
-        "finance",
         "currency"
       ],
       "warnings": []
     },
     {
       "record": {
-        "id": "coingecko",
-        "name": "CoinGecko",
-        "description": "Cryptocurrency price, market, and metadata API.",
-        "category": "finance",
+        "name": "Currency-api",
+        "description": "Free Currency Exchange Rates API with 150+ Currencies & No Rate Limits",
+        "category": "data",
         "tags": [
-          "crypto",
-          "markets"
+          "index"
         ],
-        "homepage": "https://www.coingecko.com/en/api",
-        "docsUrl": "https://docs.coingecko.com/reference/introduction",
+        "homepage": "https://github.com/fawazahmed0/currency-api#readme",
+        "auth": "No",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://github.com/fawazahmed0/currency-api#readme",
+            "title": "Currency-api",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Currency-api](https://github.com/fawazahmed0/currency-api#readme) | Free Currency Exchange Rates API with 150+ Currencies & No Rate Limits | No | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "currency-api",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 113.5,
+      "matched_fields": [
+        "name",
+        "description"
+      ],
+      "matched_terms": [
+        "currency"
+      ],
+      "warnings": [
+        "currency-api: missing docsUrl",
+        "currency-api: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "CurrencyFreaks",
+        "description": "Provides current and historical currency exchange rates with free plan 1K requests/month",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://currencyfreaks.com/",
+        "auth": "unknown",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://currencyfreaks.com/",
+            "title": "CurrencyFreaks",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [CurrencyFreaks](https://currencyfreaks.com/) | Provides current and historical currency exchange rates with free plan 1K requests/month | `apiKey` | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "currencyfreaks",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 106,
+      "matched_fields": [
+        "name",
+        "description"
+      ],
+      "matched_terms": [
+        "currency"
+      ],
+      "warnings": [
+        "currencyfreaks: missing docsUrl",
+        "currencyfreaks: low average confidence 5.7",
+        "currencyfreaks: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "CurrencyScoop",
+        "description": "Real-time and historical currency rates JSON API",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://currencyscoop.com/api-documentation",
+        "auth": "unknown",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://currencyscoop.com/api-documentation",
+            "title": "CurrencyScoop",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [CurrencyScoop](https://currencyscoop.com/api-documentation) | Real-time and historical currency rates JSON API | `apiKey` | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "currencyscoop",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 106,
+      "matched_fields": [
+        "name",
+        "description"
+      ],
+      "matched_terms": [
+        "currency"
+      ],
+      "warnings": [
+        "currencyscoop: missing docsUrl",
+        "currencyscoop: low average confidence 5.7",
+        "currencyscoop: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "id": "alpha-vantage",
+        "name": "Alpha Vantage",
+        "description": "Realtime and historical stock data",
+        "category": "data",
+        "tags": [
+          "stocks",
+          "forex",
+          "crypto",
+          "index"
+        ],
+        "homepage": "https://www.alphavantage.co",
+        "docsUrl": "https://www.alphavantage.co/documentation/",
         "auth": "apiKey",
         "cors": "yes",
         "pricing": "free_tier",
         "status": "trusted",
         "fit": {
-          "frontend": 8,
-          "backend": 9,
-          "prototype": 9,
-          "production": 8,
-          "mobile": 8,
-          "dashboard": 8,
-          "automation": 8
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
         },
         "consumerProfiles": [
           "backend-required",
           "dashboard",
-          "automation"
+          "automation",
+          "prototype"
+        ],
+        "source": {
+          "name": "curated-seed",
+          "url": "https://www.alphavantage.co/documentation/",
+          "importedAt": "2026-05-13"
+        },
+        "evidence": [
+          {
+            "url": "https://www.alphavantage.co/documentation/",
+            "title": "Alpha Vantage documentation",
+            "checkedAt": "2026-05-13",
+            "excerpt": "Official API documentation or developer reference confirms public API details."
+          },
+          {
+            "url": "https://www.alphavantage.co/",
+            "title": "Alpha Vantage",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Alpha Vantage](https://www.alphavantage.co/) | Realtime and historical stock data | `apiKey` | Yes | Unknown | |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "homepage",
+            "confidence": 9,
+            "source": "https://www.alphavantage.co/documentation/"
+          },
+          {
+            "field": "docsUrl",
+            "confidence": 9,
+            "source": "https://www.alphavantage.co/documentation/"
+          },
+          {
+            "field": "auth",
+            "confidence": 8,
+            "source": "https://www.alphavantage.co/documentation/"
+          },
+          {
+            "field": "cors",
+            "confidence": 7,
+            "source": "https://www.alphavantage.co/documentation/"
+          },
+          {
+            "field": "pricing",
+            "confidence": 7,
+            "source": "https://www.alphavantage.co/documentation/"
+          },
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          }
+        ],
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13",
+        "notes": [
+          "Unknown public-apis category: Index"
+        ]
+      },
+      "score": 102.375,
+      "matched_fields": [
+        "tags"
+      ],
+      "matched_terms": [
+        "stocks"
+      ],
+      "warnings": []
+    },
+    {
+      "record": {
+        "name": "Currencylayer",
+        "description": "Exchange rates and currency conversion",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://currencylayer.com?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://currencylayer.com?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers",
+            "title": "Currencylayer",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Currencylayer](https://currencylayer.com?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers) | Exchange rates and currency conversion | `apiKey` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "currencylayer",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 98.5,
+      "matched_fields": [
+        "name",
+        "description"
+      ],
+      "matched_terms": [
+        "currency"
+      ],
+      "warnings": [
+        "currencylayer: missing docsUrl",
+        "currencylayer: low average confidence 4.5",
+        "currencylayer: cors is unknown",
+        "currencylayer: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "id": "coingecko",
+        "name": "CoinGecko",
+        "description": "Cryptocurrency Price, Market, and Developer/Social Data",
+        "category": "data",
+        "tags": [
+          "crypto",
+          "markets",
+          "index"
+        ],
+        "homepage": "https://www.coingecko.com/en/api",
+        "docsUrl": "https://docs.coingecko.com/reference/introduction",
+        "auth": "No",
+        "cors": "yes",
+        "pricing": "free_tier",
+        "status": "needs_review",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "consumerProfiles": [
+          "backend-required",
+          "dashboard",
+          "automation",
+          "prototype"
         ],
         "source": {
           "name": "curated-seed",
@@ -214,6 +726,12 @@
             "title": "CoinGecko documentation",
             "checkedAt": "2026-05-13",
             "excerpt": "Official API documentation or developer reference confirms public API details."
+          },
+          {
+            "url": "http://www.coingecko.com/api",
+            "title": "CoinGecko",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [CoinGecko](http://www.coingecko.com/api) | Cryptocurrency Price, Market, and Developer/Social Data | No | Yes | Yes |"
           }
         ],
         "confidence": [
@@ -229,38 +747,4261 @@
           },
           {
             "field": "auth",
-            "confidence": 8,
-            "source": "https://docs.coingecko.com/reference/introduction"
+            "confidence": 9,
+            "source": "public-apis"
           },
           {
             "field": "cors",
-            "confidence": 7,
-            "source": "https://docs.coingecko.com/reference/introduction"
+            "confidence": 9,
+            "source": "public-apis"
           },
           {
             "field": "pricing",
             "confidence": 7,
             "source": "https://docs.coingecko.com/reference/introduction"
+          },
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
           }
         ],
-        "updatedAt": "2026-05-13",
-        "createdAt": "2026-05-13"
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13",
+        "notes": [
+          "Unknown public-apis category: Index"
+        ]
       },
-      "score": 140,
+      "score": 89.5,
       "matched_fields": [
-        "category",
         "description"
       ],
       "matched_terms": [
-        "finance",
         "currency"
       ],
-      "warnings": []
+      "warnings": [
+        "coingecko: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Covid-19 Government Response",
+        "description": "Government measures tracker to fight against the Covid-19 pandemic",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://covidtracker.bsg.ox.ac.uk",
+        "auth": "No",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://covidtracker.bsg.ox.ac.uk",
+            "title": "Covid-19 Government Response",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Covid-19 Government Response](https://covidtracker.bsg.ox.ac.uk) | Government measures tracker to fight against the Covid-19 pandemic | No | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "covid-19-government-response",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 78.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "tracker"
+      ],
+      "warnings": [
+        "covid-19-government-response: missing docsUrl",
+        "covid-19-government-response: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "FreeForexAPI",
+        "description": "Real-time foreign exchange rates for major currency pairs",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://freeforexapi.com/Home/Api",
+        "auth": "No",
+        "cors": "no",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://freeforexapi.com/Home/Api",
+            "title": "FreeForexAPI",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [FreeForexAPI](https://freeforexapi.com/Home/Api) | Real-time foreign exchange rates for major currency pairs | No | Yes | No |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "freeforexapi",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 78.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "currency"
+      ],
+      "warnings": [
+        "freeforexapi: missing docsUrl",
+        "freeforexapi: needs review before production use"
+      ]
     }
   ],
-  "alternatives": [],
+  "alternatives": [
+    {
+      "record": {
+        "name": "GamerPower",
+        "description": "Game Giveaways Tracker",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://www.gamerpower.com/api-read",
+        "auth": "No",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://www.gamerpower.com/api-read",
+            "title": "GamerPower",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [GamerPower](https://www.gamerpower.com/api-read) | Game Giveaways Tracker | No | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "gamerpower",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 78.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "tracker"
+      ],
+      "warnings": [
+        "gamerpower: missing docsUrl",
+        "gamerpower: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "geoPlugin",
+        "description": "IP geolocation and currency conversion",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://www.geoplugin.com",
+        "auth": "No",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://www.geoplugin.com",
+            "title": "geoPlugin",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [geoPlugin](https://www.geoplugin.com) | IP geolocation and currency conversion | No | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "geoplugin",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 78.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "currency"
+      ],
+      "warnings": [
+        "geoplugin: missing docsUrl",
+        "geoplugin: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "National Bank of Poland",
+        "description": "A collection of currency exchange rates (data in XML and JSON)",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "http://api.nbp.pl/en.html",
+        "auth": "No",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "http://api.nbp.pl/en.html",
+            "title": "National Bank of Poland",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [National Bank of Poland](http://api.nbp.pl/en.html) | A collection of currency exchange rates (data in XML and JSON) | No | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "national-bank-of-poland",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 78.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "currency"
+      ],
+      "warnings": [
+        "national-bank-of-poland: missing docsUrl",
+        "national-bank-of-poland: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Nexchange",
+        "description": "Automated cryptocurrency exchange service",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://nexchange2.docs.apiary.io/",
+        "auth": "No",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://nexchange2.docs.apiary.io/",
+            "title": "Nexchange",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Nexchange](https://nexchange2.docs.apiary.io/) | Automated cryptocurrency exchange service | No | No | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "public-apis HTTPS is not Yes",
+          "Unknown public-apis category: Index"
+        ],
+        "id": "nexchange",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 78.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "currency"
+      ],
+      "warnings": [
+        "nexchange: missing docsUrl",
+        "nexchange: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "COVID-19 Tracker Canada",
+        "description": "Details on Covid-19 cases across Canada",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://api.covid19tracker.ca/docs/1.0/overview",
+        "auth": "No",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://api.covid19tracker.ca/docs/1.0/overview",
+            "title": "COVID-19 Tracker Canada",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [COVID-19 Tracker Canada](https://api.covid19tracker.ca/docs/1.0/overview) | Details on Covid-19 cases across Canada | No | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "covid-19-tracker-canada",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 77,
+      "matched_fields": [
+        "name"
+      ],
+      "matched_terms": [
+        "tracker"
+      ],
+      "warnings": [
+        "covid-19-tracker-canada: missing docsUrl",
+        "covid-19-tracker-canada: low average confidence 5.7",
+        "covid-19-tracker-canada: cors is unknown",
+        "covid-19-tracker-canada: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "COVID-19 Tracker Sri Lanka",
+        "description": "Provides situation of the COVID-19 patients reported in Sri Lanka",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://www.hpb.health.gov.lk/en/api-documentation",
+        "auth": "No",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://www.hpb.health.gov.lk/en/api-documentation",
+            "title": "COVID-19 Tracker Sri Lanka",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [COVID-19 Tracker Sri Lanka](https://www.hpb.health.gov.lk/en/api-documentation) | Provides situation of the COVID-19 patients reported in Sri Lanka | No | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "covid-19-tracker-sri-lanka",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 77,
+      "matched_fields": [
+        "name"
+      ],
+      "matched_terms": [
+        "tracker"
+      ],
+      "warnings": [
+        "covid-19-tracker-sri-lanka: missing docsUrl",
+        "covid-19-tracker-sri-lanka: low average confidence 5.7",
+        "covid-19-tracker-sri-lanka: cors is unknown",
+        "covid-19-tracker-sri-lanka: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Real Time Finance",
+        "description": "Websocket API to access realtime stock data",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://github.com/Real-time-finance/finance-websocket-API/",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://github.com/Real-time-finance/finance-websocket-API/",
+            "title": "Real Time Finance",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Real Time Finance](https://github.com/Real-time-finance/finance-websocket-API/) | Websocket API to access realtime stock data | `apiKey` | No | Unknown | |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "public-apis HTTPS is not Yes",
+          "Unknown public-apis category: Index"
+        ],
+        "id": "real-time-finance",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 73.5,
+      "matched_fields": [
+        "name"
+      ],
+      "matched_terms": [
+        "finance"
+      ],
+      "warnings": [
+        "real-time-finance: missing docsUrl",
+        "real-time-finance: low average confidence 4.5",
+        "real-time-finance: cors is unknown",
+        "real-time-finance: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "AniAPI",
+        "description": "Anime discovery, streaming & syncing with trackers",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://aniapi.com/docs/",
+        "auth": "unknown",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://aniapi.com/docs/",
+            "title": "AniAPI",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [AniAPI](https://aniapi.com/docs/) | Anime discovery, streaming & syncing with trackers | `OAuth` | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "aniapi",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 71,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "tracker"
+      ],
+      "warnings": [
+        "aniapi: missing docsUrl",
+        "aniapi: low average confidence 5.7",
+        "aniapi: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "BtcTurk",
+        "description": "Real-time cryptocurrency data, graphs and API that allows buy&sell",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://docs.btcturk.com/",
+        "auth": "unknown",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://docs.btcturk.com/",
+            "title": "BtcTurk",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [BtcTurk](https://docs.btcturk.com/) | Real-time cryptocurrency data, graphs and API that allows buy&sell | `apiKey` | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "btcturk",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 71,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "currency"
+      ],
+      "warnings": [
+        "btcturk: missing docsUrl",
+        "btcturk: low average confidence 5.7",
+        "btcturk: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "CoinAPI",
+        "description": "All Currency Exchanges integrate under a single api",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://docs.coinapi.io/",
+        "auth": "unknown",
+        "cors": "no",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://docs.coinapi.io/",
+            "title": "CoinAPI",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [CoinAPI](https://docs.coinapi.io/) | All Currency Exchanges integrate under a single api | `apiKey` | Yes | No |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "coinapi",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 71,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "currency"
+      ],
+      "warnings": [
+        "coinapi: missing docsUrl",
+        "coinapi: low average confidence 5.7",
+        "coinapi: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "ExchangeRate-API",
+        "description": "Free currency conversion",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://www.exchangerate-api.com",
+        "auth": "unknown",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://www.exchangerate-api.com",
+            "title": "ExchangeRate-API",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [ExchangeRate-API](https://www.exchangerate-api.com) | Free currency conversion | `apiKey` | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "exchangerate-api",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 71,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "currency"
+      ],
+      "warnings": [
+        "exchangerate-api: missing docsUrl",
+        "exchangerate-api: low average confidence 5.7",
+        "exchangerate-api: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Exchangeratesapi.io",
+        "description": "Exchange rates with currency conversion",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://exchangeratesapi.io?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers",
+        "auth": "unknown",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://exchangeratesapi.io?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers",
+            "title": "Exchangeratesapi.io",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Exchangeratesapi.io](https://exchangeratesapi.io?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers) | Exchange rates with currency conversion | `apiKey` | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "exchangeratesapiio",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 71,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "currency"
+      ],
+      "warnings": [
+        "exchangeratesapiio: missing docsUrl",
+        "exchangeratesapiio: low average confidence 5.7",
+        "exchangeratesapiio: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Front Accounting APIs",
+        "description": "Front accounting is multilingual and multicurrency software for small businesses",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://frontaccounting.com/fawiki/index.php?n=Devel.SimpleAPIModule",
+        "auth": "unknown",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://frontaccounting.com/fawiki/index.php?n=Devel.SimpleAPIModule",
+            "title": "Front Accounting APIs",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Front Accounting APIs](https://frontaccounting.com/fawiki/index.php?n=Devel.SimpleAPIModule) | Front accounting is multilingual and multicurrency software for small businesses | `OAuth` | Yes | Yes | |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "front-accounting-apis",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 71,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "currency"
+      ],
+      "warnings": [
+        "front-accounting-apis: missing docsUrl",
+        "front-accounting-apis: low average confidence 5.7",
+        "front-accounting-apis: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Nomics",
+        "description": "Historical and realtime cryptocurrency prices and market data",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://nomics.com/docs/",
+        "auth": "unknown",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://nomics.com/docs/",
+            "title": "Nomics",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Nomics](https://nomics.com/docs/) | Historical and realtime cryptocurrency prices and market data | `apiKey` | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "nomics",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 71,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "currency"
+      ],
+      "warnings": [
+        "nomics: missing docsUrl",
+        "nomics: low average confidence 5.7",
+        "nomics: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Technical Analysis",
+        "description": "Cryptocurrency prices and technical analysis",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://technical-analysis-api.com",
+        "auth": "unknown",
+        "cors": "no",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://technical-analysis-api.com",
+            "title": "Technical Analysis",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Technical Analysis](https://technical-analysis-api.com) | Cryptocurrency prices and technical analysis | `apiKey` | Yes | No |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "technical-analysis",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 71,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "currency"
+      ],
+      "warnings": [
+        "technical-analysis: missing docsUrl",
+        "technical-analysis: low average confidence 5.7",
+        "technical-analysis: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "arXiv",
+        "description": "Curated research-sharing platform: physics, mathematics, quantitative finance, and economics",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://arxiv.org/help/api/user-manual",
+        "auth": "No",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://arxiv.org/help/api/user-manual",
+            "title": "arXiv",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [arXiv](https://arxiv.org/help/api/user-manual) | Curated research-sharing platform: physics, mathematics, quantitative finance, and economics | No | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "arxiv",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 67,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "finance"
+      ],
+      "warnings": [
+        "arxiv: missing docsUrl",
+        "arxiv: low average confidence 5.7",
+        "arxiv: cors is unknown",
+        "arxiv: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Bank of Russia",
+        "description": "Exchange rates and currency conversion",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://www.cbr.ru/development/SXML/",
+        "auth": "No",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://www.cbr.ru/development/SXML/",
+            "title": "Bank of Russia",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Bank of Russia](https://www.cbr.ru/development/SXML/) | Exchange rates and currency conversion | No | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "bank-of-russia",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 67,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "currency"
+      ],
+      "warnings": [
+        "bank-of-russia: missing docsUrl",
+        "bank-of-russia: low average confidence 5.7",
+        "bank-of-russia: cors is unknown",
+        "bank-of-russia: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "CoinCap",
+        "description": "Real time Cryptocurrency prices through a RESTful API",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://docs.coincap.io/",
+        "auth": "No",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://docs.coincap.io/",
+            "title": "CoinCap",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [CoinCap](https://docs.coincap.io/) | Real time Cryptocurrency prices through a RESTful API | No | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "coincap",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 67,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "currency"
+      ],
+      "warnings": [
+        "coincap: missing docsUrl",
+        "coincap: low average confidence 5.7",
+        "coincap: cors is unknown",
+        "coincap: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "CoinStats",
+        "description": "Crypto Tracker",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://documenter.getpostman.com/view/5734027/RzZ6Hzr3?version=latest",
+        "auth": "No",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://documenter.getpostman.com/view/5734027/RzZ6Hzr3?version=latest",
+            "title": "CoinStats",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [CoinStats](https://documenter.getpostman.com/view/5734027/RzZ6Hzr3?version=latest) | Crypto Tracker | No | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "coinstats",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 67,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "tracker"
+      ],
+      "warnings": [
+        "coinstats: missing docsUrl",
+        "coinstats: low average confidence 5.7",
+        "coinstats: cors is unknown",
+        "coinstats: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "CryptAPI",
+        "description": "Cryptocurrency Payment Processor",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://docs.cryptapi.io/",
+        "auth": "No",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://docs.cryptapi.io/",
+            "title": "CryptAPI",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [CryptAPI](https://docs.cryptapi.io/) | Cryptocurrency Payment Processor | No | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "cryptapi",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 67,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "currency"
+      ],
+      "warnings": [
+        "cryptapi: missing docsUrl",
+        "cryptapi: low average confidence 5.7",
+        "cryptapi: cors is unknown",
+        "cryptapi: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "CryptingUp",
+        "description": "Cryptocurrency data",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://www.cryptingup.com/apidoc/#introduction",
+        "auth": "No",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://www.cryptingup.com/apidoc/#introduction",
+            "title": "CryptingUp",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [CryptingUp](https://www.cryptingup.com/apidoc/#introduction) | Cryptocurrency data | No | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "cryptingup",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 67,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "currency"
+      ],
+      "warnings": [
+        "cryptingup: missing docsUrl",
+        "cryptingup: low average confidence 5.7",
+        "cryptingup: cors is unknown",
+        "cryptingup: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Economia.Awesome",
+        "description": "Portuguese free currency prices and conversion with no rate limits",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://docs.awesomeapi.com.br/api-de-moedas",
+        "auth": "No",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://docs.awesomeapi.com.br/api-de-moedas",
+            "title": "Economia.Awesome",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Economia.Awesome](https://docs.awesomeapi.com.br/api-de-moedas) | Portuguese free currency prices and conversion with no rate limits | No | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "economiaawesome",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 67,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "currency"
+      ],
+      "warnings": [
+        "economiaawesome: missing docsUrl",
+        "economiaawesome: low average confidence 5.7",
+        "economiaawesome: cors is unknown",
+        "economiaawesome: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "MercadoBitcoin",
+        "description": "Brazilian Cryptocurrency Information",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://www.mercadobitcoin.com.br/api-doc/",
+        "auth": "No",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://www.mercadobitcoin.com.br/api-doc/",
+            "title": "MercadoBitcoin",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [MercadoBitcoin](https://www.mercadobitcoin.com.br/api-doc/) | Brazilian Cryptocurrency Information | No | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "mercadobitcoin",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 67,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "currency"
+      ],
+      "warnings": [
+        "mercadobitcoin: missing docsUrl",
+        "mercadobitcoin: low average confidence 5.7",
+        "mercadobitcoin: cors is unknown",
+        "mercadobitcoin: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "1Forge",
+        "description": "Forex currency market data",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://1forge.com/forex-data-api/api-documentation",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://1forge.com/forex-data-api/api-documentation",
+            "title": "1Forge",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [1Forge](https://1forge.com/forex-data-api/api-documentation) | Forex currency market data | `apiKey` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "1forge",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 63.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "currency"
+      ],
+      "warnings": [
+        "1forge: missing docsUrl",
+        "1forge: low average confidence 4.5",
+        "1forge: cors is unknown",
+        "1forge: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Amdoren",
+        "description": "Free currency API with over 150 currencies",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://www.amdoren.com/currency-api/",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://www.amdoren.com/currency-api/",
+            "title": "Amdoren",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Amdoren](https://www.amdoren.com/currency-api/) | Free currency API with over 150 currencies | `apiKey` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "amdoren",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 63.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "currency"
+      ],
+      "warnings": [
+        "amdoren: missing docsUrl",
+        "amdoren: low average confidence 4.5",
+        "amdoren: cors is unknown",
+        "amdoren: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Bitfinex",
+        "description": "Cryptocurrency Trading Platform",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://docs.bitfinex.com/docs",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://docs.bitfinex.com/docs",
+            "title": "Bitfinex",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Bitfinex](https://docs.bitfinex.com/docs) | Cryptocurrency Trading Platform | `apiKey` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "bitfinex",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 63.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "currency"
+      ],
+      "warnings": [
+        "bitfinex: missing docsUrl",
+        "bitfinex: low average confidence 4.5",
+        "bitfinex: cors is unknown",
+        "bitfinex: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Bitmex",
+        "description": "Real-Time Cryptocurrency derivatives trading platform based in Hong Kong",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://www.bitmex.com/app/apiOverview",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://www.bitmex.com/app/apiOverview",
+            "title": "Bitmex",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Bitmex](https://www.bitmex.com/app/apiOverview) | Real-Time Cryptocurrency derivatives trading platform based in Hong Kong | `apiKey` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "bitmex",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 63.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "currency"
+      ],
+      "warnings": [
+        "bitmex: missing docsUrl",
+        "bitmex: low average confidence 4.5",
+        "bitmex: cors is unknown",
+        "bitmex: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Bybit",
+        "description": "Cryptocurrency data feed and algorithmic trading",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://bybit-exchange.github.io/docs/linear/#t-introduction",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://bybit-exchange.github.io/docs/linear/#t-introduction",
+            "title": "Bybit",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Bybit](https://bybit-exchange.github.io/docs/linear/#t-introduction) | Cryptocurrency data feed and algorithmic trading | `apiKey` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "bybit",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 63.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "currency"
+      ],
+      "warnings": [
+        "bybit: missing docsUrl",
+        "bybit: low average confidence 4.5",
+        "bybit: cors is unknown",
+        "bybit: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Coinbase Pro",
+        "description": "Cryptocurrency Trading Platform",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://docs.pro.coinbase.com/#api",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://docs.pro.coinbase.com/#api",
+            "title": "Coinbase Pro",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Coinbase Pro](https://docs.pro.coinbase.com/#api) | Cryptocurrency Trading Platform | `apiKey` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "coinbase-pro",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 63.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "currency"
+      ],
+      "warnings": [
+        "coinbase-pro: missing docsUrl",
+        "coinbase-pro: low average confidence 4.5",
+        "coinbase-pro: cors is unknown",
+        "coinbase-pro: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "CoinDCX",
+        "description": "Cryptocurrency Trading Platform",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://docs.coindcx.com/",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://docs.coindcx.com/",
+            "title": "CoinDCX",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [CoinDCX](https://docs.coindcx.com/) | Cryptocurrency Trading Platform | `apiKey` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "coindcx",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 63.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "currency"
+      ],
+      "warnings": [
+        "coindcx: missing docsUrl",
+        "coindcx: low average confidence 4.5",
+        "coindcx: cors is unknown",
+        "coindcx: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Coinlayer",
+        "description": "Real-time Crypto Currency Exchange Rates",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://coinlayer.com?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://coinlayer.com?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers",
+            "title": "Coinlayer",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Coinlayer](https://coinlayer.com?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers) | Real-time Crypto Currency Exchange Rates | `apiKey` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "coinlayer",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 63.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "currency"
+      ],
+      "warnings": [
+        "coinlayer: missing docsUrl",
+        "coinlayer: low average confidence 4.5",
+        "coinlayer: cors is unknown",
+        "coinlayer: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Coinlib",
+        "description": "Crypto Currency Prices",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://coinlib.io/apidocs",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://coinlib.io/apidocs",
+            "title": "Coinlib",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Coinlib](https://coinlib.io/apidocs) | Crypto Currency Prices | `apiKey` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "coinlib",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 63.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "currency"
+      ],
+      "warnings": [
+        "coinlib: missing docsUrl",
+        "coinlib: low average confidence 4.5",
+        "coinlib: cors is unknown",
+        "coinlib: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "CoinRanking",
+        "description": "Live Cryptocurrency data",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://developers.coinranking.com/api/documentation",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://developers.coinranking.com/api/documentation",
+            "title": "CoinRanking",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [CoinRanking](https://developers.coinranking.com/api/documentation) | Live Cryptocurrency data | `apiKey` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "coinranking",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 63.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "currency"
+      ],
+      "warnings": [
+        "coinranking: missing docsUrl",
+        "coinranking: low average confidence 4.5",
+        "coinranking: cors is unknown",
+        "coinranking: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "dYdX",
+        "description": "Decentralized cryptocurrency exchange",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://docs.dydx.exchange/",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://docs.dydx.exchange/",
+            "title": "dYdX",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [dYdX](https://docs.dydx.exchange/) | Decentralized cryptocurrency exchange | `apiKey` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "dydx",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 63.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "currency"
+      ],
+      "warnings": [
+        "dydx: missing docsUrl",
+        "dydx: low average confidence 4.5",
+        "dydx: cors is unknown",
+        "dydx: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Finage",
+        "description": "Finage is a stock, currency, cryptocurrency, indices, and ETFs real-time & historical data provider",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://finage.co.uk",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://finage.co.uk",
+            "title": "Finage",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Finage](https://finage.co.uk) | Finage is a stock, currency, cryptocurrency, indices, and ETFs real-time & historical data provider | `apiKey` | Yes | Unknown | |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "finage",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 63.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "currency"
+      ],
+      "warnings": [
+        "finage: missing docsUrl",
+        "finage: low average confidence 4.5",
+        "finage: cors is unknown",
+        "finage: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Finnhub",
+        "description": "Real-Time RESTful APIs and Websocket for Stocks, Currencies, and Crypto",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://finnhub.io/docs/api",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://finnhub.io/docs/api",
+            "title": "Finnhub",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Finnhub](https://finnhub.io/docs/api) | Real-Time RESTful APIs and Websocket for Stocks, Currencies, and Crypto | `apiKey` | Yes | Unknown | |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "finnhub",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 63.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "stocks"
+      ],
+      "warnings": [
+        "finnhub: missing docsUrl",
+        "finnhub: low average confidence 4.5",
+        "finnhub: cors is unknown",
+        "finnhub: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Hirak Exchange Rates",
+        "description": "Exchange rates between 162 currency & 300 crypto currency update each 5 min, accurate, no limits",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://rates.hirak.site/",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://rates.hirak.site/",
+            "title": "Hirak Exchange Rates",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Hirak Exchange Rates](https://rates.hirak.site/) | Exchange rates between 162 currency & 300 crypto currency update each 5 min, accurate, no limits | `apiKey` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "hirak-exchange-rates",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 63.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "currency"
+      ],
+      "warnings": [
+        "hirak-exchange-rates: missing docsUrl",
+        "hirak-exchange-rates: low average confidence 4.5",
+        "hirak-exchange-rates: cors is unknown",
+        "hirak-exchange-rates: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Hirak IP to Country",
+        "description": "Ip to location with country code, currency code & currency name, fast response, unlimited requests",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://iplocation.hirak.site/",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://iplocation.hirak.site/",
+            "title": "Hirak IP to Country",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Hirak IP to Country](https://iplocation.hirak.site/) | Ip to location with country code, currency code & currency name, fast response, unlimited requests | `apiKey` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "hirak-ip-to-country",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 63.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "currency"
+      ],
+      "warnings": [
+        "hirak-ip-to-country: missing docsUrl",
+        "hirak-ip-to-country: low average confidence 4.5",
+        "hirak-ip-to-country: cors is unknown",
+        "hirak-ip-to-country: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Huobi",
+        "description": "Seychelles based cryptocurrency exchange",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://huobiapi.github.io/docs/spot/v1/en/",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://huobiapi.github.io/docs/spot/v1/en/",
+            "title": "Huobi",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Huobi](https://huobiapi.github.io/docs/spot/v1/en/) | Seychelles based cryptocurrency exchange | `apiKey` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "huobi",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 63.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "currency"
+      ],
+      "warnings": [
+        "huobi: missing docsUrl",
+        "huobi: low average confidence 4.5",
+        "huobi: cors is unknown",
+        "huobi: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "KuCoin",
+        "description": "Cryptocurrency Trading Platform",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://docs.kucoin.com/",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://docs.kucoin.com/",
+            "title": "KuCoin",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [KuCoin](https://docs.kucoin.com/) | Cryptocurrency Trading Platform | `apiKey` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "kucoin",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 63.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "currency"
+      ],
+      "warnings": [
+        "kucoin: missing docsUrl",
+        "kucoin: low average confidence 4.5",
+        "kucoin: cors is unknown",
+        "kucoin: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "OKEx",
+        "description": "Cryptocurrency exchange based in Seychelles",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://www.okex.com/docs/",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://www.okex.com/docs/",
+            "title": "OKEx",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [OKEx](https://www.okex.com/docs/) | Cryptocurrency exchange based in Seychelles | `apiKey` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "okex",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 63.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "currency"
+      ],
+      "warnings": [
+        "okex: missing docsUrl",
+        "okex: low average confidence 4.5",
+        "okex: cors is unknown",
+        "okex: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "VALR",
+        "description": "Cryptocurrency Exchange based in South Africa",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://docs.valr.com/",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://docs.valr.com/",
+            "title": "VALR",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [VALR](https://docs.valr.com/) | Cryptocurrency Exchange based in South Africa | `apiKey` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "valr",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 63.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "currency"
+      ],
+      "warnings": [
+        "valr: missing docsUrl",
+        "valr: low average confidence 4.5",
+        "valr: cors is unknown",
+        "valr: needs review before production use"
+      ]
+    }
+  ],
   "rejected": [],
-  "warnings": [],
+  "warnings": [
+    "yahoo-finance: missing docsUrl",
+    "yahoo-finance: low average confidence 5.7",
+    "yahoo-finance: needs review before production use",
+    "currency-api: missing docsUrl",
+    "currency-api: needs review before production use",
+    "currencyfreaks: missing docsUrl",
+    "currencyfreaks: low average confidence 5.7",
+    "currencyfreaks: needs review before production use",
+    "currencyscoop: missing docsUrl",
+    "currencyscoop: low average confidence 5.7",
+    "currencyscoop: needs review before production use",
+    "currencylayer: missing docsUrl",
+    "currencylayer: low average confidence 4.5",
+    "currencylayer: cors is unknown",
+    "currencylayer: needs review before production use",
+    "coingecko: needs review before production use",
+    "covid-19-government-response: missing docsUrl",
+    "covid-19-government-response: needs review before production use",
+    "freeforexapi: missing docsUrl",
+    "freeforexapi: needs review before production use",
+    "gamerpower: missing docsUrl",
+    "gamerpower: needs review before production use",
+    "geoplugin: missing docsUrl",
+    "geoplugin: needs review before production use",
+    "national-bank-of-poland: missing docsUrl",
+    "national-bank-of-poland: needs review before production use",
+    "nexchange: missing docsUrl",
+    "nexchange: needs review before production use",
+    "covid-19-tracker-canada: missing docsUrl",
+    "covid-19-tracker-canada: low average confidence 5.7",
+    "covid-19-tracker-canada: cors is unknown",
+    "covid-19-tracker-canada: needs review before production use",
+    "covid-19-tracker-sri-lanka: missing docsUrl",
+    "covid-19-tracker-sri-lanka: low average confidence 5.7",
+    "covid-19-tracker-sri-lanka: cors is unknown",
+    "covid-19-tracker-sri-lanka: needs review before production use",
+    "real-time-finance: missing docsUrl",
+    "real-time-finance: low average confidence 4.5",
+    "real-time-finance: cors is unknown",
+    "real-time-finance: needs review before production use",
+    "aniapi: missing docsUrl",
+    "aniapi: low average confidence 5.7",
+    "aniapi: needs review before production use",
+    "btcturk: missing docsUrl",
+    "btcturk: low average confidence 5.7",
+    "btcturk: needs review before production use",
+    "coinapi: missing docsUrl",
+    "coinapi: low average confidence 5.7",
+    "coinapi: needs review before production use",
+    "exchangerate-api: missing docsUrl",
+    "exchangerate-api: low average confidence 5.7",
+    "exchangerate-api: needs review before production use",
+    "exchangeratesapiio: missing docsUrl",
+    "exchangeratesapiio: low average confidence 5.7",
+    "exchangeratesapiio: needs review before production use",
+    "front-accounting-apis: missing docsUrl",
+    "front-accounting-apis: low average confidence 5.7",
+    "front-accounting-apis: needs review before production use",
+    "nomics: missing docsUrl",
+    "nomics: low average confidence 5.7",
+    "nomics: needs review before production use",
+    "technical-analysis: missing docsUrl",
+    "technical-analysis: low average confidence 5.7",
+    "technical-analysis: needs review before production use",
+    "arxiv: missing docsUrl",
+    "arxiv: low average confidence 5.7",
+    "arxiv: cors is unknown",
+    "arxiv: needs review before production use",
+    "bank-of-russia: missing docsUrl",
+    "bank-of-russia: low average confidence 5.7",
+    "bank-of-russia: cors is unknown",
+    "bank-of-russia: needs review before production use",
+    "coincap: missing docsUrl",
+    "coincap: low average confidence 5.7",
+    "coincap: cors is unknown",
+    "coincap: needs review before production use",
+    "coinstats: missing docsUrl",
+    "coinstats: low average confidence 5.7",
+    "coinstats: cors is unknown",
+    "coinstats: needs review before production use",
+    "cryptapi: missing docsUrl",
+    "cryptapi: low average confidence 5.7",
+    "cryptapi: cors is unknown",
+    "cryptapi: needs review before production use",
+    "cryptingup: missing docsUrl",
+    "cryptingup: low average confidence 5.7",
+    "cryptingup: cors is unknown",
+    "cryptingup: needs review before production use",
+    "economiaawesome: missing docsUrl",
+    "economiaawesome: low average confidence 5.7",
+    "economiaawesome: cors is unknown",
+    "economiaawesome: needs review before production use",
+    "mercadobitcoin: missing docsUrl",
+    "mercadobitcoin: low average confidence 5.7",
+    "mercadobitcoin: cors is unknown",
+    "mercadobitcoin: needs review before production use",
+    "1forge: missing docsUrl",
+    "1forge: low average confidence 4.5",
+    "1forge: cors is unknown",
+    "1forge: needs review before production use",
+    "amdoren: missing docsUrl",
+    "amdoren: low average confidence 4.5",
+    "amdoren: cors is unknown",
+    "amdoren: needs review before production use",
+    "bitfinex: missing docsUrl",
+    "bitfinex: low average confidence 4.5",
+    "bitfinex: cors is unknown",
+    "bitfinex: needs review before production use",
+    "bitmex: missing docsUrl",
+    "bitmex: low average confidence 4.5",
+    "bitmex: cors is unknown",
+    "bitmex: needs review before production use",
+    "bybit: missing docsUrl",
+    "bybit: low average confidence 4.5",
+    "bybit: cors is unknown",
+    "bybit: needs review before production use",
+    "coinbase-pro: missing docsUrl",
+    "coinbase-pro: low average confidence 4.5",
+    "coinbase-pro: cors is unknown",
+    "coinbase-pro: needs review before production use",
+    "coindcx: missing docsUrl",
+    "coindcx: low average confidence 4.5",
+    "coindcx: cors is unknown",
+    "coindcx: needs review before production use",
+    "coinlayer: missing docsUrl",
+    "coinlayer: low average confidence 4.5",
+    "coinlayer: cors is unknown",
+    "coinlayer: needs review before production use",
+    "coinlib: missing docsUrl",
+    "coinlib: low average confidence 4.5",
+    "coinlib: cors is unknown",
+    "coinlib: needs review before production use",
+    "coinranking: missing docsUrl",
+    "coinranking: low average confidence 4.5",
+    "coinranking: cors is unknown",
+    "coinranking: needs review before production use",
+    "dydx: missing docsUrl",
+    "dydx: low average confidence 4.5",
+    "dydx: cors is unknown",
+    "dydx: needs review before production use",
+    "finage: missing docsUrl",
+    "finage: low average confidence 4.5",
+    "finage: cors is unknown",
+    "finage: needs review before production use",
+    "finnhub: missing docsUrl",
+    "finnhub: low average confidence 4.5",
+    "finnhub: cors is unknown",
+    "finnhub: needs review before production use",
+    "hirak-exchange-rates: missing docsUrl",
+    "hirak-exchange-rates: low average confidence 4.5",
+    "hirak-exchange-rates: cors is unknown",
+    "hirak-exchange-rates: needs review before production use",
+    "hirak-ip-to-country: missing docsUrl",
+    "hirak-ip-to-country: low average confidence 4.5",
+    "hirak-ip-to-country: cors is unknown",
+    "hirak-ip-to-country: needs review before production use",
+    "huobi: missing docsUrl",
+    "huobi: low average confidence 4.5",
+    "huobi: cors is unknown",
+    "huobi: needs review before production use",
+    "kucoin: missing docsUrl",
+    "kucoin: low average confidence 4.5",
+    "kucoin: cors is unknown",
+    "kucoin: needs review before production use",
+    "okex: missing docsUrl",
+    "okex: low average confidence 4.5",
+    "okex: cors is unknown",
+    "okex: needs review before production use",
+    "valr: missing docsUrl",
+    "valr: low average confidence 4.5",
+    "valr: cors is unknown",
+    "valr: needs review before production use"
+  ],
   "registry_health": {
     "schema_version": "api-registry",
     "last_imported_at": "2026-05-13",

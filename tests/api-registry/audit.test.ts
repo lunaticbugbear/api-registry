@@ -3,7 +3,8 @@ import { existsSync, mkdtempSync, rmSync, readFileSync, writeFileSync } from 'no
 import { join } from 'node:path';
 import { tmpdir } from 'node:os';
 import { auditRegistry } from '../../src/api-registry/audit.js';
-import { bootstrapRegistry, registryFilePath } from '../../src/api-registry/bootstrap.js';
+import { bootstrapRegistry } from '../../src/api-registry/bootstrap.js';
+import { registryFilePath } from '../../src/api-registry/paths.js';
 import type { ApiRecord, RegistryManifest } from '../../src/api-registry/types.js';
 
 const manifest: RegistryManifest = {

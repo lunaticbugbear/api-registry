@@ -1,25 +1,5 @@
-import { AUTH_VALUES, CORS_VALUES, PRICING_VALUES, STATUS_VALUES, CONSUMER_PROFILES, FIT_KEYS } from './constants.js';
+import { AUTH_VALUES, CORS_VALUES, PRICING_VALUES, STATUS_VALUES, CONSUMER_PROFILES, FIT_KEYS, CANONICAL_CATEGORIES } from './constants.js';
 import type { ApiRecord, RegistryManifest, Contracts, Aliases } from './types.js';
-
-const CANONICAL_CATEGORIES = [
-  'entertainment',
-  'weather',
-  'finance',
-  'maps',
-  'jobs',
-  'news',
-  'ai',
-  'productivity',
-  'government',
-  'health',
-  'education',
-  'sports',
-  'games',
-  'developer-tools',
-  'images',
-  'text',
-  'data',
-];
 
 function isStringInReadonlyArray(value: unknown, allowed: readonly string[]): value is string {
   return typeof value === 'string' && allowed.includes(value);

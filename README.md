@@ -61,7 +61,7 @@ See `examples/anime-app.json`, `examples/weather-dashboard.json`, `examples/fina
 - `docs/agent-contract.md`
 - `docs/source-policy.md`
 - `docs/release-checklist.md`
-- `docs/linkedin-post.md`
+- `marketing/linkedin-post.md`
 
 ## Contributing
 

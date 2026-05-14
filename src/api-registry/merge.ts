@@ -124,7 +124,7 @@ export function mergeApiRecord(existing: ApiRecord, candidate: ApiRecord): ApiRe
   };
 
   for (const field of MERGE_FIELDS) {
-    (merged as any)[field] = chooseField(field, existing, candidate);
+    (merged as unknown as Record<string, unknown>)[field] = chooseField(field, existing, candidate);
   }
 
   if (hasHighConfidenceConflict(existing, candidate)) {

@@ -3,7 +3,8 @@ import { existsSync, mkdtempSync, rmSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { tmpdir } from 'node:os';
 import { runCli } from '../../src/api-registry/cli.js';
-import { bootstrapRegistry, registryFilePath } from '../../src/api-registry/bootstrap.js';
+import { bootstrapRegistry } from '../../src/api-registry/bootstrap.js';
+import { registryFilePath } from '../../src/api-registry/paths.js';
 import type { ApiRecord } from '../../src/api-registry/types.js';
 
 function record(overrides: Partial<ApiRecord> = {}): ApiRecord {

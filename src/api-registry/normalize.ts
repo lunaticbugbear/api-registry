@@ -103,7 +103,7 @@ export function normalizeApiRecord(input: Partial<ApiRecord>, categories: string
     status: input.status ?? 'trusted',
     fit: normalizeFit(input.fit),
     consumerProfiles: Array.isArray(input.consumerProfiles)
-      ? input.consumerProfiles.filter((profile): profile is ApiRecord['consumerProfiles'][number] => CONSUMER_PROFILES.includes(profile as any))
+      ? input.consumerProfiles.filter((profile): profile is ApiRecord['consumerProfiles'][number] => (CONSUMER_PROFILES as readonly string[]).includes(profile))
       : [],
     source: input.source ?? { name: 'unknown', url: input.homepage, importedAt: now },
     evidence: Array.isArray(input.evidence) ? input.evidence : [],

@@ -169,88 +169,6 @@
     },
     {
       "record": {
-        "id": "npm-registry",
-        "name": "npm Registry",
-        "description": "Package metadata and download API for npm packages.",
-        "category": "developer-tools",
-        "tags": [
-          "packages",
-          "javascript"
-        ],
-        "homepage": "https://registry.npmjs.org",
-        "docsUrl": "https://github.com/npm/registry/blob/master/docs/REGISTRY-API.md",
-        "auth": "No",
-        "cors": "yes",
-        "pricing": "free",
-        "status": "trusted",
-        "fit": {
-          "frontend": 8,
-          "backend": 9,
-          "prototype": 9,
-          "production": 8,
-          "mobile": 8,
-          "dashboard": 8,
-          "automation": 8
-        },
-        "consumerProfiles": [
-          "backend-required",
-          "automation",
-          "production"
-        ],
-        "source": {
-          "name": "curated-seed",
-          "url": "https://github.com/npm/registry/blob/master/docs/REGISTRY-API.md",
-          "importedAt": "2026-05-13"
-        },
-        "evidence": [
-          {
-            "url": "https://github.com/npm/registry/blob/master/docs/REGISTRY-API.md",
-            "title": "npm Registry documentation",
-            "checkedAt": "2026-05-13",
-            "excerpt": "Official API documentation or developer reference confirms public API details."
-          }
-        ],
-        "confidence": [
-          {
-            "field": "homepage",
-            "confidence": 9,
-            "source": "https://github.com/npm/registry/blob/master/docs/REGISTRY-API.md"
-          },
-          {
-            "field": "docsUrl",
-            "confidence": 9,
-            "source": "https://github.com/npm/registry/blob/master/docs/REGISTRY-API.md"
-          },
-          {
-            "field": "auth",
-            "confidence": 8,
-            "source": "https://github.com/npm/registry/blob/master/docs/REGISTRY-API.md"
-          },
-          {
-            "field": "cors",
-            "confidence": 7,
-            "source": "https://github.com/npm/registry/blob/master/docs/REGISTRY-API.md"
-          },
-          {
-            "field": "pricing",
-            "confidence": 7,
-            "source": "https://github.com/npm/registry/blob/master/docs/REGISTRY-API.md"
-          }
-        ],
-        "updatedAt": "2026-05-13",
-        "createdAt": "2026-05-13"
-      },
-      "score": 115,
-      "matched_fields": [
-        "category"
-      ],
-      "matched_terms": [
-        "developer-tools"
-      ],
-      "warnings": []
-    },
-    {
-      "record": {
         "id": "stack-exchange",
         "name": "Stack Exchange",
         "description": "Q&A network API for Stack Overflow and related sites.",
@@ -412,11 +330,2788 @@
         "developer-tools"
       ],
       "warnings": []
+    },
+    {
+      "record": {
+        "name": "Programming Quotes",
+        "description": "Programming Quotes API for open source projects",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://github.com/skolakoda/programming-quotes-api",
+        "auth": "No",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://github.com/skolakoda/programming-quotes-api",
+            "title": "Programming Quotes",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Programming Quotes](https://github.com/skolakoda/programming-quotes-api) | Programming Quotes API for open source projects | No | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "programming-quotes",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 102,
+      "matched_fields": [
+        "name",
+        "description"
+      ],
+      "matched_terms": [
+        "programming"
+      ],
+      "warnings": [
+        "programming-quotes: missing docsUrl",
+        "programming-quotes: low average confidence 5.7",
+        "programming-quotes: cors is unknown",
+        "programming-quotes: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "id": "coingecko",
+        "name": "CoinGecko",
+        "description": "Cryptocurrency Price, Market, and Developer/Social Data",
+        "category": "data",
+        "tags": [
+          "crypto",
+          "markets",
+          "index"
+        ],
+        "homepage": "https://www.coingecko.com/en/api",
+        "docsUrl": "https://docs.coingecko.com/reference/introduction",
+        "auth": "No",
+        "cors": "yes",
+        "pricing": "free_tier",
+        "status": "needs_review",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "consumerProfiles": [
+          "backend-required",
+          "dashboard",
+          "automation",
+          "prototype"
+        ],
+        "source": {
+          "name": "curated-seed",
+          "url": "https://docs.coingecko.com/reference/introduction",
+          "importedAt": "2026-05-13"
+        },
+        "evidence": [
+          {
+            "url": "https://docs.coingecko.com/reference/introduction",
+            "title": "CoinGecko documentation",
+            "checkedAt": "2026-05-13",
+            "excerpt": "Official API documentation or developer reference confirms public API details."
+          },
+          {
+            "url": "http://www.coingecko.com/api",
+            "title": "CoinGecko",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [CoinGecko](http://www.coingecko.com/api) | Cryptocurrency Price, Market, and Developer/Social Data | No | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "homepage",
+            "confidence": 9,
+            "source": "https://docs.coingecko.com/reference/introduction"
+          },
+          {
+            "field": "docsUrl",
+            "confidence": 9,
+            "source": "https://docs.coingecko.com/reference/introduction"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 7,
+            "source": "https://docs.coingecko.com/reference/introduction"
+          },
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          }
+        ],
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13",
+        "notes": [
+          "Unknown public-apis category: Index"
+        ]
+      },
+      "score": 89.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "developer"
+      ],
+      "warnings": [
+        "coingecko: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Geek-Jokes",
+        "description": "Fetch a random geeky/programming related joke for use in all sorts of applications",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://github.com/sameerkumar18/geek-joke-api",
+        "auth": "No",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://github.com/sameerkumar18/geek-joke-api",
+            "title": "Geek-Jokes",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Geek-Jokes](https://github.com/sameerkumar18/geek-joke-api) | Fetch a random geeky/programming related joke for use in all sorts of applications | No | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "geek-jokes",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 78.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "programming"
+      ],
+      "warnings": [
+        "geek-jokes: missing docsUrl",
+        "geek-jokes: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "GoTiny",
+        "description": "A lightweight URL shortener, focused on ease-of-use for the developer and end-user",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://github.com/robvanbakel/gotiny-api",
+        "auth": "No",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://github.com/robvanbakel/gotiny-api",
+            "title": "GoTiny",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [GoTiny](https://github.com/robvanbakel/gotiny-api) | A lightweight URL shortener, focused on ease-of-use for the developer and end-user | No | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "gotiny",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 78.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "developer"
+      ],
+      "warnings": [
+        "gotiny: missing docsUrl",
+        "gotiny: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "JokeAPI",
+        "description": "Programming, Miscellaneous and Dark Jokes",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://sv443.net/jokeapi/v2/",
+        "auth": "No",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://sv443.net/jokeapi/v2/",
+            "title": "JokeAPI",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [JokeAPI](https://sv443.net/jokeapi/v2/) | Programming, Miscellaneous and Dark Jokes | No | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "jokeapi",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 78.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "programming"
+      ],
+      "warnings": [
+        "jokeapi: missing docsUrl",
+        "jokeapi: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "NetworkCalc",
+        "description": "Network calculators, including subnets, DNS, binary, and security tools",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://networkcalc.com/api/docs",
+        "auth": "No",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://networkcalc.com/api/docs",
+            "title": "NetworkCalc",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [NetworkCalc](https://networkcalc.com/api/docs) | Network calculators, including subnets, DNS, binary, and security tools | No | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "networkcalc",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 78.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "tools"
+      ],
+      "warnings": [
+        "networkcalc: missing docsUrl",
+        "networkcalc: needs review before production use"
+      ]
     }
   ],
-  "alternatives": [],
+  "alternatives": [
+    {
+      "record": {
+        "name": "Rustybeer",
+        "description": "Beer brewing tools",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://rustybeer.herokuapp.com/",
+        "auth": "No",
+        "cors": "no",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://rustybeer.herokuapp.com/",
+            "title": "Rustybeer",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Rustybeer](https://rustybeer.herokuapp.com/) | Beer brewing tools | No | Yes | No |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "rustybeer",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 78.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "tools"
+      ],
+      "warnings": [
+        "rustybeer: missing docsUrl",
+        "rustybeer: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Statically",
+        "description": "A free CDN for developers",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://statically.io/",
+        "auth": "No",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://statically.io/",
+            "title": "Statically",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Statically](https://statically.io/) | A free CDN for developers | No | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "statically",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 78.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "developer"
+      ],
+      "warnings": [
+        "statically: missing docsUrl",
+        "statically: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "transport.rest",
+        "description": "Community maintained, developer-friendly public transport API",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://transport.rest",
+        "auth": "No",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://transport.rest",
+            "title": "transport.rest",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [transport.rest](https://transport.rest) | Community maintained, developer-friendly public transport API | No | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "transportrest",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 78.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "developer"
+      ],
+      "warnings": [
+        "transportrest: missing docsUrl",
+        "transportrest: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Amadeus for Developers",
+        "description": "Travel Search - Limited usage",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://developers.amadeus.com/self-service",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://developers.amadeus.com/self-service",
+            "title": "Amadeus for Developers",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Amadeus for Developers](https://developers.amadeus.com/self-service) | Travel Search - Limited usage | `OAuth` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "amadeus-for-developers",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 73.5,
+      "matched_fields": [
+        "name"
+      ],
+      "matched_terms": [
+        "developer"
+      ],
+      "warnings": [
+        "amadeus-for-developers: missing docsUrl",
+        "amadeus-for-developers: low average confidence 4.5",
+        "amadeus-for-developers: cors is unknown",
+        "amadeus-for-developers: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "icy.tools",
+        "description": "GraphQL based NFT API",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://developers.icy.tools/",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://developers.icy.tools/",
+            "title": "icy.tools",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [icy.tools](https://developers.icy.tools/) | GraphQL based NFT API | `apiKey` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "icytools",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 73.5,
+      "matched_fields": [
+        "name"
+      ],
+      "matched_terms": [
+        "tools"
+      ],
+      "warnings": [
+        "icytools: missing docsUrl",
+        "icytools: low average confidence 4.5",
+        "icytools: cors is unknown",
+        "icytools: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Sabre for Developers",
+        "description": "Travel Search - Limited usage",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://developer.sabre.com/guides/travel-agency/quickstart/getting-started-in-travel",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://developer.sabre.com/guides/travel-agency/quickstart/getting-started-in-travel",
+            "title": "Sabre for Developers",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Sabre for Developers](https://developer.sabre.com/guides/travel-agency/quickstart/getting-started-in-travel) | Travel Search - Limited usage | `apiKey` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "sabre-for-developers",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 73.5,
+      "matched_fields": [
+        "name"
+      ],
+      "matched_terms": [
+        "developer"
+      ],
+      "warnings": [
+        "sabre-for-developers: missing docsUrl",
+        "sabre-for-developers: low average confidence 4.5",
+        "sabre-for-developers: cors is unknown",
+        "sabre-for-developers: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Host.io",
+        "description": "Domains Data API for Developers",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://host.io",
+        "auth": "unknown",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://host.io",
+            "title": "Host.io",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Host.io](https://host.io) | Domains Data API for Developers | `apiKey` | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "hostio",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 71,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "developer"
+      ],
+      "warnings": [
+        "hostio: missing docsUrl",
+        "hostio: low average confidence 5.7",
+        "hostio: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "MapQuest",
+        "description": "To access tools and resources to map the world",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://developer.mapquest.com/",
+        "auth": "unknown",
+        "cors": "no",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://developer.mapquest.com/",
+            "title": "MapQuest",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [MapQuest](https://developer.mapquest.com/) | To access tools and resources to map the world | `apiKey` | Yes | No | Yes"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "mapquest",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 71,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "tools"
+      ],
+      "warnings": [
+        "mapquest: missing docsUrl",
+        "mapquest: low average confidence 5.7",
+        "mapquest: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "MessengerX.io",
+        "description": "A FREE API for developers to build and monetize personalized ML based chat apps",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://messengerx.rtfd.io",
+        "auth": "unknown",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://messengerx.rtfd.io",
+            "title": "MessengerX.io",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [MessengerX.io](https://messengerx.rtfd.io) | A FREE API for developers to build and monetize personalized ML based chat apps | `apiKey` | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "messengerxio",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 71,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "developer"
+      ],
+      "warnings": [
+        "messengerxio: missing docsUrl",
+        "messengerxio: low average confidence 5.7",
+        "messengerxio: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Hashnode",
+        "description": "A blogging platform built for developers",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://hashnode.com",
+        "auth": "No",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://hashnode.com",
+            "title": "Hashnode",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Hashnode](https://hashnode.com) | A blogging platform built for developers | No | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "hashnode",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 67,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "developer"
+      ],
+      "warnings": [
+        "hashnode: missing docsUrl",
+        "hashnode: low average confidence 5.7",
+        "hashnode: cors is unknown",
+        "hashnode: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "MicroENV",
+        "description": "Fake Rest API for developers",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://microenv.com/",
+        "auth": "No",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://microenv.com/",
+            "title": "MicroENV",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [MicroENV](https://microenv.com/) | Fake Rest API for developers | No | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "microenv",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 67,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "developer"
+      ],
+      "warnings": [
+        "microenv: missing docsUrl",
+        "microenv: low average confidence 5.7",
+        "microenv: cors is unknown",
+        "microenv: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "ApiFlash",
+        "description": "Chrome based screenshot API for developers",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://apiflash.com/",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://apiflash.com/",
+            "title": "ApiFlash",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [ApiFlash](https://apiflash.com/) | Chrome based screenshot API for developers | `apiKey` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "apiflash",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 63.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "developer"
+      ],
+      "warnings": [
+        "apiflash: missing docsUrl",
+        "apiflash: low average confidence 4.5",
+        "apiflash: cors is unknown",
+        "apiflash: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Dailymotion",
+        "description": "Dailymotion Developer API",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://developer.dailymotion.com/",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://developer.dailymotion.com/",
+            "title": "Dailymotion",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Dailymotion](https://developer.dailymotion.com/) | Dailymotion Developer API | `OAuth` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "dailymotion",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 63.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "developer"
+      ],
+      "warnings": [
+        "dailymotion: missing docsUrl",
+        "dailymotion: low average confidence 4.5",
+        "dailymotion: cors is unknown",
+        "dailymotion: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "ELI",
+        "description": "Natural Language Processing Tools for Thai Language",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://nlp.insightera.co.th/docs/v1.0",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://nlp.insightera.co.th/docs/v1.0",
+            "title": "ELI",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [ELI](https://nlp.insightera.co.th/docs/v1.0) | Natural Language Processing Tools for Thai Language | `apiKey` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "eli",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 63.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "tools"
+      ],
+      "warnings": [
+        "eli: missing docsUrl",
+        "eli: low average confidence 4.5",
+        "eli: cors is unknown",
+        "eli: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Eve Online",
+        "description": "Third-Party Developer Documentation",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://esi.evetech.net/ui",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://esi.evetech.net/ui",
+            "title": "Eve Online",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Eve Online](https://esi.evetech.net/ui) | Third-Party Developer Documentation | `OAuth` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "eve-online",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 63.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "developer"
+      ],
+      "warnings": [
+        "eve-online: missing docsUrl",
+        "eve-online: low average confidence 4.5",
+        "eve-online: cors is unknown",
+        "eve-online: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Gitter",
+        "description": "Chat for Developers",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://developer.gitter.im/docs/welcome",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://developer.gitter.im/docs/welcome",
+            "title": "Gitter",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Gitter](https://developer.gitter.im/docs/welcome) | Chat for Developers | `OAuth` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "gitter",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 63.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "developer"
+      ],
+      "warnings": [
+        "gitter: missing docsUrl",
+        "gitter: low average confidence 4.5",
+        "gitter: cors is unknown",
+        "gitter: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "IPInfoDB",
+        "description": "Free Geolocation tools and APIs for country, region, city and time zone lookup by IP address",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://www.ipinfodb.com/api",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://www.ipinfodb.com/api",
+            "title": "IPInfoDB",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [IPInfoDB](https://www.ipinfodb.com/api) | Free Geolocation tools and APIs for country, region, city and time zone lookup by IP address | `apiKey` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "ipinfodb",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 63.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "tools"
+      ],
+      "warnings": [
+        "ipinfodb: missing docsUrl",
+        "ipinfodb: low average confidence 4.5",
+        "ipinfodb: cors is unknown",
+        "ipinfodb: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Mailboxlayer",
+        "description": "Email Validation & Verification JSON API for Developers",
+        "category": "data",
+        "tags": [
+          "apilayer apis",
+          "index"
+        ],
+        "homepage": "https://mailboxlayer.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://mailboxlayer.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers",
+            "title": "Mailboxlayer",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Mailboxlayer](https://mailboxlayer.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers) | Email Validation & Verification JSON API for Developers |[Documentation](https://docs.apilayer.com/mailboxlayer/docs/api-documentation?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers)|"
+          },
+          {
+            "url": "https://mailboxlayer.com?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers",
+            "title": "mailboxlayer",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [mailboxlayer](https://mailboxlayer.com?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers) | Email address validation | `apiKey` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: APILayer APIs"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: APILayer APIs",
+          "Unknown public-apis category: Index"
+        ],
+        "id": "mailboxlayer",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 63.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "developer"
+      ],
+      "warnings": [
+        "mailboxlayer: missing docsUrl",
+        "mailboxlayer: low average confidence 4.5",
+        "mailboxlayer: cors is unknown",
+        "mailboxlayer: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Mattermost",
+        "description": "An open source platform for developer collaboration",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://api.mattermost.com/",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://api.mattermost.com/",
+            "title": "Mattermost",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Mattermost](https://api.mattermost.com/) | An open source platform for developer collaboration | `OAuth` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "mattermost",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 63.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "developer"
+      ],
+      "warnings": [
+        "mattermost: missing docsUrl",
+        "mattermost: low average confidence 4.5",
+        "mattermost: cors is unknown",
+        "mattermost: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "New York Times",
+        "description": "The New York Times Developer Network",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://developer.nytimes.com/",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://developer.nytimes.com/",
+            "title": "New York Times",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [New York Times](https://developer.nytimes.com/) | The New York Times Developer Network | `apiKey` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "new-york-times",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 63.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "developer"
+      ],
+      "warnings": [
+        "new-york-times: missing docsUrl",
+        "new-york-times: low average confidence 4.5",
+        "new-york-times: cors is unknown",
+        "new-york-times: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "StackExchange",
+        "description": "Q&A forum for developers",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://api.stackexchange.com/",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://api.stackexchange.com/",
+            "title": "StackExchange",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [StackExchange](https://api.stackexchange.com/) | Q&A forum for developers | `OAuth` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "stackexchange",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 63.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "developer"
+      ],
+      "warnings": [
+        "stackexchange: missing docsUrl",
+        "stackexchange: low average confidence 4.5",
+        "stackexchange: cors is unknown",
+        "stackexchange: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Vimeo",
+        "description": "Vimeo Developer API",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://developer.vimeo.com/",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://developer.vimeo.com/",
+            "title": "Vimeo",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Vimeo](https://developer.vimeo.com/) | Vimeo Developer API | `OAuth` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "vimeo",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 63.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "developer"
+      ],
+      "warnings": [
+        "vimeo: missing docsUrl",
+        "vimeo: low average confidence 4.5",
+        "vimeo: cors is unknown",
+        "vimeo: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Zenserp",
+        "description": "Fast, Accurate Google Search Data Built for Developers",
+        "category": "data",
+        "tags": [
+          "apilayer apis"
+        ],
+        "homepage": "https://zenserp.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://zenserp.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers",
+            "title": "Zenserp",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Zenserp](https://zenserp.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers) | Fast, Accurate Google Search Data Built for Developers |[<img src=\"https://run.pstmn.io/button.svg\" alt=\"Run In Postman\" style=\"width: 128px; height: 32px;\">](https://god.gw.postman.com/run-collection/10131015-a3d63243-081e-4961-a2f0-39c7a9394b8d?action=collection/fork)|"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: APILayer APIs"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: APILayer APIs"
+        ],
+        "id": "zenserp",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 63.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "developer"
+      ],
+      "warnings": [
+        "zenserp: missing docsUrl",
+        "zenserp: low average confidence 4.5",
+        "zenserp: cors is unknown",
+        "zenserp: needs review before production use"
+      ]
+    }
+  ],
   "rejected": [],
-  "warnings": [],
+  "warnings": [
+    "programming-quotes: missing docsUrl",
+    "programming-quotes: low average confidence 5.7",
+    "programming-quotes: cors is unknown",
+    "programming-quotes: needs review before production use",
+    "coingecko: needs review before production use",
+    "geek-jokes: missing docsUrl",
+    "geek-jokes: needs review before production use",
+    "gotiny: missing docsUrl",
+    "gotiny: needs review before production use",
+    "jokeapi: missing docsUrl",
+    "jokeapi: needs review before production use",
+    "networkcalc: missing docsUrl",
+    "networkcalc: needs review before production use",
+    "rustybeer: missing docsUrl",
+    "rustybeer: needs review before production use",
+    "statically: missing docsUrl",
+    "statically: needs review before production use",
+    "transportrest: missing docsUrl",
+    "transportrest: needs review before production use",
+    "amadeus-for-developers: missing docsUrl",
+    "amadeus-for-developers: low average confidence 4.5",
+    "amadeus-for-developers: cors is unknown",
+    "amadeus-for-developers: needs review before production use",
+    "icytools: missing docsUrl",
+    "icytools: low average confidence 4.5",
+    "icytools: cors is unknown",
+    "icytools: needs review before production use",
+    "sabre-for-developers: missing docsUrl",
+    "sabre-for-developers: low average confidence 4.5",
+    "sabre-for-developers: cors is unknown",
+    "sabre-for-developers: needs review before production use",
+    "hostio: missing docsUrl",
+    "hostio: low average confidence 5.7",
+    "hostio: needs review before production use",
+    "mapquest: missing docsUrl",
+    "mapquest: low average confidence 5.7",
+    "mapquest: needs review before production use",
+    "messengerxio: missing docsUrl",
+    "messengerxio: low average confidence 5.7",
+    "messengerxio: needs review before production use",
+    "hashnode: missing docsUrl",
+    "hashnode: low average confidence 5.7",
+    "hashnode: cors is unknown",
+    "hashnode: needs review before production use",
+    "microenv: missing docsUrl",
+    "microenv: low average confidence 5.7",
+    "microenv: cors is unknown",
+    "microenv: needs review before production use",
+    "apiflash: missing docsUrl",
+    "apiflash: low average confidence 4.5",
+    "apiflash: cors is unknown",
+    "apiflash: needs review before production use",
+    "dailymotion: missing docsUrl",
+    "dailymotion: low average confidence 4.5",
+    "dailymotion: cors is unknown",
+    "dailymotion: needs review before production use",
+    "eli: missing docsUrl",
+    "eli: low average confidence 4.5",
+    "eli: cors is unknown",
+    "eli: needs review before production use",
+    "eve-online: missing docsUrl",
+    "eve-online: low average confidence 4.5",
+    "eve-online: cors is unknown",
+    "eve-online: needs review before production use",
+    "gitter: missing docsUrl",
+    "gitter: low average confidence 4.5",
+    "gitter: cors is unknown",
+    "gitter: needs review before production use",
+    "ipinfodb: missing docsUrl",
+    "ipinfodb: low average confidence 4.5",
+    "ipinfodb: cors is unknown",
+    "ipinfodb: needs review before production use",
+    "mailboxlayer: missing docsUrl",
+    "mailboxlayer: low average confidence 4.5",
+    "mailboxlayer: cors is unknown",
+    "mailboxlayer: needs review before production use",
+    "mattermost: missing docsUrl",
+    "mattermost: low average confidence 4.5",
+    "mattermost: cors is unknown",
+    "mattermost: needs review before production use",
+    "new-york-times: missing docsUrl",
+    "new-york-times: low average confidence 4.5",
+    "new-york-times: cors is unknown",
+    "new-york-times: needs review before production use",
+    "stackexchange: missing docsUrl",
+    "stackexchange: low average confidence 4.5",
+    "stackexchange: cors is unknown",
+    "stackexchange: needs review before production use",
+    "vimeo: missing docsUrl",
+    "vimeo: low average confidence 4.5",
+    "vimeo: cors is unknown",
+    "vimeo: needs review before production use",
+    "zenserp: missing docsUrl",
+    "zenserp: low average confidence 4.5",
+    "zenserp: cors is unknown",
+    "zenserp: needs review before production use"
+  ],
   "registry_health": {
     "schema_version": "api-registry",
     "last_imported_at": "2026-05-13",

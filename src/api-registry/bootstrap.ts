@@ -1,10 +1,9 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { registryFilePath, registryRoot, readJsonFile } from './paths.js';
-import { AUTH_VALUES, CORS_VALUES, PRICING_VALUES, STATUS_VALUES, CONSUMER_PROFILES, FIT_KEYS, CURRENT_DATE, DEFAULT_FRESHNESS_DAYS } from './constants.js';
+import { AUTH_VALUES, CORS_VALUES, PRICING_VALUES, STATUS_VALUES, CONSUMER_PROFILES, FIT_KEYS, currentDate, DEFAULT_FRESHNESS_DAYS } from './constants.js';
 import type { Aliases, Contracts } from './types.js';
 
-export { registryFilePath, registryRoot, readJsonFile } from './paths.js';
 export { validateApiRecord, validateRegistryManifest, validateContracts, validateCategories, validateAliases } from './validation.js';
 
 function bundledApisPath(): string {
@@ -35,8 +34,8 @@ export function bootstrapRegistry(cwd = process.cwd()): void {
   if (!existsSync(registryPath)) {
     const registry = {
       schema_version: 'api-registry',
-      last_imported_at: CURRENT_DATE,
-      last_audited_at: CURRENT_DATE,
+      last_imported_at: currentDate(),
+      last_audited_at: currentDate(),
       freshness_days: DEFAULT_FRESHNESS_DAYS,
       health: 'ok',
       health_score: 8.7,
@@ -121,11 +120,11 @@ export function bootstrapRegistry(cwd = process.cwd()): void {
         {
           name: 'public-apis',
           url: 'https://github.com/public-apis/public-apis',
-          importedAt: CURRENT_DATE,
+          importedAt: currentDate(),
           license: 'MIT',
         },
       ],
-      updatedAt: CURRENT_DATE,
+      updatedAt: currentDate(),
     };
     writeFileSync(sourcesPath, JSON.stringify(sources, null, 2));
   }

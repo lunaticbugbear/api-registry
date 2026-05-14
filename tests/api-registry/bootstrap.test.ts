@@ -2,10 +2,8 @@ import { describe, expect, it, beforeEach, afterEach } from 'vitest';
 import { existsSync, mkdtempSync, rmSync, readFileSync, writeFileSync } from 'fs';
 import { join } from 'path';
 import { tmpdir } from 'os';
+import { registryRoot, registryFilePath, readJsonFile } from '../../src/api-registry/paths.js';
 import {
-  registryRoot,
-  registryFilePath,
-  readJsonFile,
   bootstrapRegistry,
   validateApiRecord,
   validateRegistryManifest,

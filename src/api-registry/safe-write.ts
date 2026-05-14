@@ -30,7 +30,7 @@ function registryWriteError(error: string, cause: string, result: SafeWriteResul
       error,
       cause: `${cause}\nfilePath: ${result.filePath}\nbackupPath: ${result.backupPath}\ntempPath: ${result.tempPath}`,
       fix: 'Fix source content, then retry safe write.',
-      docs: 'docs/superpowers/specs/2026-05-13-api-registry-design.md',
+      docs: 'docs/schema.md',
     })
   );
 }

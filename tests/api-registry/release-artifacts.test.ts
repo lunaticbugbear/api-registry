@@ -1,7 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { exportShortlist } from '../../src/api-registry/export.js';
 import { runCli } from '../../src/api-registry/cli.js';
 import { validateApiRecord } from '../../src/api-registry/validation.js';
 import { generateIndex } from '../../src/api-registry/index-generator.js';
@@ -9,6 +8,7 @@ import type { Aliases, ApiRecord, Contracts, RegistryManifest } from '../../src/
 
 const DATA_DIR = join(process.cwd(), 'data', 'api-registry');
 const DOCS_DIR = join(process.cwd(), 'docs');
+const MARKETING_DIR = join(process.cwd(), 'marketing');
 const EXAMPLES_DIR = join(process.cwd(), 'examples');
 const README_PATH = join(process.cwd(), 'README.md');
 const CONTRIBUTING_PATH = join(process.cwd(), 'CONTRIBUTING.md');
@@ -185,7 +185,7 @@ describe('release artifacts', () => {
       expect(readme).toContain('## Value proposition');
       expect(readme).toContain('ranked, reusable API shortlist');
       expect(readme).toContain('## Quick start');
-      const quickStart = readme.match(/## Quick start\n([\s\S]*?)\n## /)?.[1] ?? '';
+      const quickStart = readme.match(/## Quick start\r?\n([\s\S]*?)\r?\n## /)?.[1] ?? '';
       expect((quickStart.match(/^\d+\./gm) ?? []).length).toBeLessThanOrEqual(3);
       expect(quickStart).toContain('npm install');
       expect(quickStart).toContain('npm run registry -- search "anime app" --profile frontend-only');
@@ -202,23 +202,27 @@ describe('release artifacts', () => {
     });
 
     it('required docs exist and cover release topics', () => {
-      const docs = {
+      const docs: Record<string, string[]> = {
         'schema.md': ['ApiRecord', 'field-level confidence', 'evidence', 'registry health'],
         'commands.md': ['add', 'search', 'import', 'refresh', 'audit', 'export'],
         'agent-contract.md': ['api-researcher', 'input contract', 'output contract', 'malformed output'],
         'source-policy.md': ['official public/free API catalogs', 'source provenance', 'concrete quality problem'],
         'release-checklist.md': ['npm test', 'npm run typecheck', 'registry audit', 'example validation', 'documentation freshness'],
-        'linkedin-post.md': ['automatically imports the full public-apis/public-apis catalog on first run', LINKEDIN_TEMPLATE],
       };
 
       for (const [fileName, requiredText] of Object.entries(docs)) {
         const content = readFileSync(join(DOCS_DIR, fileName), 'utf-8');
         for (const text of requiredText) expect(content).toContain(text);
       }
+
+      // LinkedIn post is in marketing/ directory
+      const linkedinContent = readFileSync(join(MARKETING_DIR, 'linkedin-post.md'), 'utf-8');
+      expect(linkedinContent).toContain('automatically imports the full public-apis/public-apis catalog on first run');
+      expect(linkedinContent.replace(/\r\n/g, '\n')).toContain(LINKEDIN_TEMPLATE);
     });
 
-    it('examples are real JSON CLI export output matching the export contract', () => {
-      const { records, aliases, manifest, contracts } = readRegistry();
+    it('examples are real JSON CLI export output matching the export contract', async () => {
+      const { contracts } = readRegistry();
       const examples = [
         ['anime-app.json', 'anime app'],
         ['weather-dashboard.json', 'weather dashboard'],
@@ -230,7 +234,8 @@ describe('release artifacts', () => {
       for (const [fileName, query] of examples) {
         const content = readFileSync(join(EXAMPLES_DIR, fileName), 'utf-8');
         const parsed = JSON.parse(content);
-        const expected = JSON.parse(exportShortlist({ query, format: 'json' }, records, aliases, manifest, contracts));
+        const expectedOutput = await runCli(['export', query, '--format', 'json'], process.cwd());
+        const expected = JSON.parse(expectedOutput);
         expect(parsed).toMatchObject({
           query,
           consumer_profile: null,

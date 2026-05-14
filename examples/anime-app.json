@@ -4,101 +4,15 @@
   "recommended": [
     {
       "record": {
-        "id": "anilist",
-        "name": "AniList",
-        "description": "GraphQL anime and manga database API.",
-        "category": "entertainment",
-        "tags": [
-          "anime",
-          "manga",
-          "graphql"
-        ],
-        "homepage": "https://anilist.co",
-        "docsUrl": "https://docs.anilist.co",
-        "auth": "OAuth",
-        "cors": "yes",
-        "pricing": "free",
-        "status": "trusted",
-        "fit": {
-          "frontend": 8,
-          "backend": 9,
-          "prototype": 9,
-          "production": 8,
-          "mobile": 8,
-          "dashboard": 8,
-          "automation": 8
-        },
-        "consumerProfiles": [
-          "frontend-only",
-          "prototype",
-          "mobile-app"
-        ],
-        "source": {
-          "name": "curated-seed",
-          "url": "https://docs.anilist.co",
-          "importedAt": "2026-05-13"
-        },
-        "evidence": [
-          {
-            "url": "https://docs.anilist.co",
-            "title": "AniList documentation",
-            "checkedAt": "2026-05-13",
-            "excerpt": "Official API documentation or developer reference confirms public API details."
-          }
-        ],
-        "confidence": [
-          {
-            "field": "homepage",
-            "confidence": 9,
-            "source": "https://docs.anilist.co"
-          },
-          {
-            "field": "docsUrl",
-            "confidence": 9,
-            "source": "https://docs.anilist.co"
-          },
-          {
-            "field": "auth",
-            "confidence": 8,
-            "source": "https://docs.anilist.co"
-          },
-          {
-            "field": "cors",
-            "confidence": 7,
-            "source": "https://docs.anilist.co"
-          },
-          {
-            "field": "pricing",
-            "confidence": 7,
-            "source": "https://docs.anilist.co"
-          }
-        ],
-        "updatedAt": "2026-05-13",
-        "createdAt": "2026-05-13"
-      },
-      "score": 205,
-      "matched_fields": [
-        "description",
-        "tags",
-        "category"
-      ],
-      "matched_terms": [
-        "anime",
-        "manga",
-        "entertainment"
-      ],
-      "warnings": []
-    },
-    {
-      "record": {
         "id": "jikan",
         "name": "Jikan",
-        "description": "Unofficial MyAnimeList API for anime and manga metadata.",
-        "category": "entertainment",
+        "description": "Unofficial MyAnimeList API",
+        "category": "data",
         "tags": [
           "anime",
           "manga",
-          "rest"
+          "rest",
+          "index"
         ],
         "homepage": "https://jikan.moe",
         "docsUrl": "https://docs.api.jikan.moe",
@@ -107,13 +21,13 @@
         "pricing": "free",
         "status": "trusted",
         "fit": {
-          "frontend": 8,
-          "backend": 9,
-          "prototype": 9,
-          "production": 8,
-          "mobile": 8,
-          "dashboard": 8,
-          "automation": 8
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
         },
         "consumerProfiles": [
           "frontend-only",
@@ -131,6 +45,12 @@
             "title": "Jikan documentation",
             "checkedAt": "2026-05-13",
             "excerpt": "Official API documentation or developer reference confirms public API details."
+          },
+          {
+            "url": "https://jikan.moe",
+            "title": "Jikan",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Jikan](https://jikan.moe) | Unofficial MyAnimeList API | No | Yes | Yes |"
           }
         ],
         "confidence": [
@@ -146,61 +66,79 @@
           },
           {
             "field": "auth",
-            "confidence": 8,
-            "source": "https://docs.api.jikan.moe"
+            "confidence": 9,
+            "source": "public-apis"
           },
           {
             "field": "cors",
-            "confidence": 7,
-            "source": "https://docs.api.jikan.moe"
+            "confidence": 9,
+            "source": "public-apis"
           },
           {
             "field": "pricing",
             "confidence": 7,
             "source": "https://docs.api.jikan.moe"
+          },
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
           }
         ],
-        "updatedAt": "2026-05-13",
-        "createdAt": "2026-05-13"
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13",
+        "notes": [
+          "Unknown public-apis category: Index"
+        ]
       },
-      "score": 205,
+      "score": 148.5,
       "matched_fields": [
         "description",
-        "tags",
-        "category"
+        "tags"
       ],
       "matched_terms": [
         "anime",
-        "manga",
-        "entertainment"
+        "manga"
       ],
       "warnings": []
     },
     {
       "record": {
-        "id": "tvmaze",
-        "name": "TVMaze",
-        "description": "TV show schedule, episode, and cast API.",
-        "category": "entertainment",
+        "id": "anilist",
+        "name": "AniList",
+        "description": "Anime discovery & tracking",
+        "category": "data",
         "tags": [
-          "tv",
-          "shows",
-          "metadata"
+          "anime",
+          "manga",
+          "graphql",
+          "index"
         ],
-        "homepage": "https://www.tvmaze.com/api",
-        "docsUrl": "https://www.tvmaze.com/api",
-        "auth": "No",
+        "homepage": "https://anilist.co",
+        "docsUrl": "https://docs.anilist.co",
+        "auth": "OAuth",
         "cors": "yes",
         "pricing": "free",
         "status": "trusted",
         "fit": {
-          "frontend": 8,
-          "backend": 9,
-          "prototype": 9,
-          "production": 8,
-          "mobile": 8,
-          "dashboard": 8,
-          "automation": 8
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
         },
         "consumerProfiles": [
           "frontend-only",
@@ -209,60 +147,4733 @@
         ],
         "source": {
           "name": "curated-seed",
-          "url": "https://www.tvmaze.com/api",
+          "url": "https://docs.anilist.co",
           "importedAt": "2026-05-13"
         },
         "evidence": [
           {
-            "url": "https://www.tvmaze.com/api",
-            "title": "TVMaze documentation",
+            "url": "https://docs.anilist.co",
+            "title": "AniList documentation",
             "checkedAt": "2026-05-13",
             "excerpt": "Official API documentation or developer reference confirms public API details."
+          },
+          {
+            "url": "https://github.com/AniList/ApiV2-GraphQL-Docs",
+            "title": "AniList",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [AniList](https://github.com/AniList/ApiV2-GraphQL-Docs) | Anime discovery & tracking | `OAuth` | Yes | Unknown |"
           }
         ],
         "confidence": [
           {
             "field": "homepage",
             "confidence": 9,
-            "source": "https://www.tvmaze.com/api"
+            "source": "https://docs.anilist.co"
           },
           {
             "field": "docsUrl",
             "confidence": 9,
-            "source": "https://www.tvmaze.com/api"
+            "source": "https://docs.anilist.co"
           },
           {
             "field": "auth",
             "confidence": 8,
-            "source": "https://www.tvmaze.com/api"
+            "source": "https://docs.anilist.co"
           },
           {
             "field": "cors",
             "confidence": 7,
-            "source": "https://www.tvmaze.com/api"
+            "source": "https://docs.anilist.co"
           },
           {
             "field": "pricing",
             "confidence": 7,
-            "source": "https://www.tvmaze.com/api"
+            "source": "https://docs.anilist.co"
+          },
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
           }
         ],
-        "updatedAt": "2026-05-13",
-        "createdAt": "2026-05-13"
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13",
+        "notes": [
+          "Unknown public-apis category: Index"
+        ]
       },
-      "score": 115,
+      "score": 147.375,
       "matched_fields": [
-        "category"
+        "description",
+        "tags"
       ],
       "matched_terms": [
-        "entertainment"
+        "anime",
+        "manga"
       ],
       "warnings": []
+    },
+    {
+      "record": {
+        "name": "MyAnimeList",
+        "description": "Anime and Manga Database and Community",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://myanimelist.net/clubs.php?cid=13727",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://myanimelist.net/clubs.php?cid=13727",
+            "title": "MyAnimeList",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [MyAnimeList](https://myanimelist.net/clubs.php?cid=13727) | Anime and Manga Database and Community | `OAuth` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "myanimelist",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 123.5,
+      "matched_fields": [
+        "name",
+        "description"
+      ],
+      "matched_terms": [
+        "anime",
+        "manga"
+      ],
+      "warnings": [
+        "myanimelist: missing docsUrl",
+        "myanimelist: low average confidence 4.5",
+        "myanimelist: cors is unknown",
+        "myanimelist: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "AnimeChan",
+        "description": "Anime quotes (over 10k+)",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://github.com/RocktimSaikia/anime-chan",
+        "auth": "No",
+        "cors": "no",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://github.com/RocktimSaikia/anime-chan",
+            "title": "AnimeChan",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [AnimeChan](https://github.com/RocktimSaikia/anime-chan) | Anime quotes (over 10k+) | No | Yes | No |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "animechan",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 113.5,
+      "matched_fields": [
+        "name",
+        "description"
+      ],
+      "matched_terms": [
+        "anime"
+      ],
+      "warnings": [
+        "animechan: missing docsUrl",
+        "animechan: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "AnimeFacts",
+        "description": "Anime Facts (over 100+)",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://chandan-02.github.io/anime-facts-rest-api/",
+        "auth": "No",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://chandan-02.github.io/anime-facts-rest-api/",
+            "title": "AnimeFacts",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [AnimeFacts](https://chandan-02.github.io/anime-facts-rest-api/) | Anime Facts (over 100+) | No | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "animefacts",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 113.5,
+      "matched_fields": [
+        "name",
+        "description"
+      ],
+      "matched_terms": [
+        "anime"
+      ],
+      "warnings": [
+        "animefacts: missing docsUrl",
+        "animefacts: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "AnimeNewsNetwork",
+        "description": "Anime industry news",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://www.animenewsnetwork.com/encyclopedia/api.php",
+        "auth": "No",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://www.animenewsnetwork.com/encyclopedia/api.php",
+            "title": "AnimeNewsNetwork",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [AnimeNewsNetwork](https://www.animenewsnetwork.com/encyclopedia/api.php) | Anime industry news | No | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "animenewsnetwork",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 113.5,
+      "matched_fields": [
+        "name",
+        "description"
+      ],
+      "matched_terms": [
+        "anime"
+      ],
+      "warnings": [
+        "animenewsnetwork: missing docsUrl",
+        "animenewsnetwork: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Danbooru Anime",
+        "description": "Thousands of anime artist database to find good anime art",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://danbooru.donmai.us/wiki_pages/help:api",
+        "auth": "unknown",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://danbooru.donmai.us/wiki_pages/help:api",
+            "title": "Danbooru Anime",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Danbooru Anime](https://danbooru.donmai.us/wiki_pages/help:api) | Thousands of anime artist database to find good anime art | `apiKey` | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "danbooru-anime",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 106,
+      "matched_fields": [
+        "name",
+        "description"
+      ],
+      "matched_terms": [
+        "anime"
+      ],
+      "warnings": [
+        "danbooru-anime: missing docsUrl",
+        "danbooru-anime: low average confidence 5.7",
+        "danbooru-anime: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "MangaDex",
+        "description": "Manga Database and Community",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://api.mangadex.org/docs.html",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://api.mangadex.org/docs.html",
+            "title": "MangaDex",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [MangaDex](https://api.mangadex.org/docs.html) | Manga Database and Community | `apiKey` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "mangadex",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 98.5,
+      "matched_fields": [
+        "name",
+        "description"
+      ],
+      "matched_terms": [
+        "manga"
+      ],
+      "warnings": [
+        "mangadex: missing docsUrl",
+        "mangadex: low average confidence 4.5",
+        "mangadex: cors is unknown",
+        "mangadex: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Mangapi",
+        "description": "Translate manga pages from one language to another",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://rapidapi.com/pierre.carcellermeunier/api/mangapi3/",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://rapidapi.com/pierre.carcellermeunier/api/mangapi3/",
+            "title": "Mangapi",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Mangapi](https://rapidapi.com/pierre.carcellermeunier/api/mangapi3/) | Translate manga pages from one language to another | `apiKey` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "mangapi",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 98.5,
+      "matched_fields": [
+        "name",
+        "description"
+      ],
+      "matched_terms": [
+        "manga"
+      ],
+      "warnings": [
+        "mangapi: missing docsUrl",
+        "mangapi: low average confidence 4.5",
+        "mangapi: cors is unknown",
+        "mangapi: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Rappi",
+        "description": "Manage orders from Rappi's app",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://dev-portal.rappi.com/",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://dev-portal.rappi.com/",
+            "title": "Rappi",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Rappi](https://dev-portal.rappi.com/) | Manage orders from Rappi's app | `OAuth` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "rappi",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 98.5,
+      "matched_fields": [
+        "name",
+        "description"
+      ],
+      "matched_terms": [
+        "app"
+      ],
+      "warnings": [
+        "rappi: missing docsUrl",
+        "rappi: low average confidence 4.5",
+        "rappi: cors is unknown",
+        "rappi: needs review before production use"
+      ]
     }
   ],
-  "alternatives": [],
+  "alternatives": [
+    {
+      "record": {
+        "name": "Application Environment Verification",
+        "description": "Android library and API to verify the safety of user devices, detect rooted devices and other risks",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://github.com/fingerprintjs/aev",
+        "auth": "unknown",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://github.com/fingerprintjs/aev",
+            "title": "Application Environment Verification",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Application Environment Verification](https://github.com/fingerprintjs/aev) | Android library and API to verify the safety of user devices, detect rooted devices and other risks | `apiKey` | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "application-environment-verification",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 81,
+      "matched_fields": [
+        "name"
+      ],
+      "matched_terms": [
+        "app"
+      ],
+      "warnings": [
+        "application-environment-verification: missing docsUrl",
+        "application-environment-verification: low average confidence 5.7",
+        "application-environment-verification: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Geek-Jokes",
+        "description": "Fetch a random geeky/programming related joke for use in all sorts of applications",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://github.com/sameerkumar18/geek-joke-api",
+        "auth": "No",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://github.com/sameerkumar18/geek-joke-api",
+            "title": "Geek-Jokes",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Geek-Jokes](https://github.com/sameerkumar18/geek-joke-api) | Fetch a random geeky/programming related joke for use in all sorts of applications | No | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "geek-jokes",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 78.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "app"
+      ],
+      "warnings": [
+        "geek-jokes: missing docsUrl",
+        "geek-jokes: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Lordicon",
+        "description": "Icons with predone Animations",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://lordicon.com/",
+        "auth": "No",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://lordicon.com/",
+            "title": "Lordicon",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Lordicon](https://lordicon.com/) | Icons with predone Animations | No | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "lordicon",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 78.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "animation"
+      ],
+      "warnings": [
+        "lordicon: missing docsUrl",
+        "lordicon: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "ModelPartFinder Error Codes",
+        "description": "Lookup appliance and equipment error codes by brand and code, with recommended replacement parts",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://modelpartfinder.com/docs/api",
+        "auth": "No",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://modelpartfinder.com/docs/api",
+            "title": "ModelPartFinder Error Codes",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [ModelPartFinder Error Codes](https://modelpartfinder.com/docs/api) | Lookup appliance and equipment error codes by brand and code, with recommended replacement parts | No | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "modelpartfinder-error-codes",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 78.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "app"
+      ],
+      "warnings": [
+        "modelpartfinder-error-codes: missing docsUrl",
+        "modelpartfinder-error-codes: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "NekosBest",
+        "description": "Neko Images & Anime roleplaying GIFs",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://docs.nekos.best",
+        "auth": "No",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://docs.nekos.best",
+            "title": "NekosBest",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [NekosBest](https://docs.nekos.best) | Neko Images & Anime roleplaying GIFs | No | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "nekosbest",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 78.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "anime"
+      ],
+      "warnings": [
+        "nekosbest: missing docsUrl",
+        "nekosbest: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Trace Moe",
+        "description": "A useful tool to get the exact scene of an anime from a screenshot",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://soruly.github.io/trace.moe-api/#/",
+        "auth": "No",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://soruly.github.io/trace.moe-api/#/",
+            "title": "Trace Moe",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Trace Moe](https://soruly.github.io/trace.moe-api/#/) | A useful tool to get the exact scene of an anime from a screenshot | No | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "trace-moe",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 78.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "anime"
+      ],
+      "warnings": [
+        "trace-moe: missing docsUrl",
+        "trace-moe: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Waifu.pics",
+        "description": "Image sharing platform for anime images",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://waifu.pics/docs",
+        "auth": "No",
+        "cors": "no",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://waifu.pics/docs",
+            "title": "Waifu.pics",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Waifu.pics](https://waifu.pics/docs) | Image sharing platform for anime images | No | Yes | No |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "waifupics",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 78.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "anime"
+      ],
+      "warnings": [
+        "waifupics: missing docsUrl",
+        "waifupics: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Blitapp",
+        "description": "Schedule screenshots of web pages and sync them to your cloud",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://blitapp.com/api/",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://blitapp.com/api/",
+            "title": "Blitapp",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Blitapp](https://blitapp.com/api/) | Schedule screenshots of web pages and sync them to your cloud | `apiKey` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "blitapp",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 73.5,
+      "matched_fields": [
+        "name"
+      ],
+      "matched_terms": [
+        "app"
+      ],
+      "warnings": [
+        "blitapp: missing docsUrl",
+        "blitapp: low average confidence 4.5",
+        "blitapp: cors is unknown",
+        "blitapp: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Untappd",
+        "description": "Social beer sharing",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://untappd.com/api/docs",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://untappd.com/api/docs",
+            "title": "Untappd",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Untappd](https://untappd.com/api/docs) | Social beer sharing | `OAuth` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "untappd",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 73.5,
+      "matched_fields": [
+        "name"
+      ],
+      "matched_terms": [
+        "app"
+      ],
+      "warnings": [
+        "untappd: missing docsUrl",
+        "untappd: low average confidence 4.5",
+        "untappd: cors is unknown",
+        "untappd: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "AniAPI",
+        "description": "Anime discovery, streaming & syncing with trackers",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://aniapi.com/docs/",
+        "auth": "unknown",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://aniapi.com/docs/",
+            "title": "AniAPI",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [AniAPI](https://aniapi.com/docs/) | Anime discovery, streaming & syncing with trackers | `OAuth` | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "aniapi",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 71,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "anime"
+      ],
+      "warnings": [
+        "aniapi: missing docsUrl",
+        "aniapi: low average confidence 5.7",
+        "aniapi: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Contentful Images",
+        "description": "Used to retrieve and apply transformations to images",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://www.contentful.com/developers/docs/references/images-api/",
+        "auth": "unknown",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://www.contentful.com/developers/docs/references/images-api/",
+            "title": "Contentful Images",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Contentful Images](https://www.contentful.com/developers/docs/references/images-api/) | Used to retrieve and apply transformations to images | `apiKey` | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "contentful-images",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 71,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "app"
+      ],
+      "warnings": [
+        "contentful-images: missing docsUrl",
+        "contentful-images: low average confidence 5.7",
+        "contentful-images: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Ghost",
+        "description": "Get Published content into your Website, App or other embedded media",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://ghost.org/",
+        "auth": "unknown",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://ghost.org/",
+            "title": "Ghost",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Ghost](https://ghost.org/) | Get Published content into your Website, App or other embedded media | `apiKey` | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "ghost",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 71,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "app"
+      ],
+      "warnings": [
+        "ghost: missing docsUrl",
+        "ghost: low average confidence 5.7",
+        "ghost: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Google Firebase",
+        "description": "Google's mobile application development platform that helps build, improve, and grow app",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://firebase.google.com/docs",
+        "auth": "unknown",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://firebase.google.com/docs",
+            "title": "Google Firebase",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Google Firebase](https://firebase.google.com/docs) | Google's mobile application development platform that helps build, improve, and grow app | `apiKey` | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "google-firebase",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 71,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "app"
+      ],
+      "warnings": [
+        "google-firebase: missing docsUrl",
+        "google-firebase: low average confidence 5.7",
+        "google-firebase: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Heroku",
+        "description": "REST API to programmatically create apps, provision add-ons and perform other task on Heroku",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://devcenter.heroku.com/articles/platform-api-reference/",
+        "auth": "unknown",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://devcenter.heroku.com/articles/platform-api-reference/",
+            "title": "Heroku",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Heroku](https://devcenter.heroku.com/articles/platform-api-reference/) | REST API to programmatically create apps, provision add-ons and perform other task on Heroku | `OAuth` | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "heroku",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 71,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "app"
+      ],
+      "warnings": [
+        "heroku: missing docsUrl",
+        "heroku: low average confidence 5.7",
+        "heroku: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "JSON2Video",
+        "description": "Create and edit videos programmatically: watermarks,resizing,slideshows,voice-over,text animations",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://json2video.com",
+        "auth": "unknown",
+        "cors": "no",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://json2video.com",
+            "title": "JSON2Video",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [JSON2Video](https://json2video.com) | Create and edit videos programmatically: watermarks,resizing,slideshows,voice-over,text animations | `apiKey` | Yes | No |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "json2video",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 71,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "animation"
+      ],
+      "warnings": [
+        "json2video: missing docsUrl",
+        "json2video: low average confidence 5.7",
+        "json2video: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "JSONbin.io",
+        "description": "Free JSON storage service. Ideal for small scale Web apps, Websites and Mobile apps",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://jsonbin.io",
+        "auth": "unknown",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://jsonbin.io",
+            "title": "JSONbin.io",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [JSONbin.io](https://jsonbin.io) | Free JSON storage service. Ideal for small scale Web apps, Websites and Mobile apps | `apiKey` | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "jsonbinio",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 71,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "app"
+      ],
+      "warnings": [
+        "jsonbinio: missing docsUrl",
+        "jsonbinio: low average confidence 5.7",
+        "jsonbinio: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Kitsu",
+        "description": "Anime discovery platform",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://kitsu.docs.apiary.io/",
+        "auth": "unknown",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://kitsu.docs.apiary.io/",
+            "title": "Kitsu",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Kitsu](https://kitsu.docs.apiary.io/) | Anime discovery platform | `OAuth` | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "kitsu",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 71,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "anime"
+      ],
+      "warnings": [
+        "kitsu: missing docsUrl",
+        "kitsu: low average confidence 5.7",
+        "kitsu: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "MessengerX.io",
+        "description": "A FREE API for developers to build and monetize personalized ML based chat apps",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://messengerx.rtfd.io",
+        "auth": "unknown",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://messengerx.rtfd.io",
+            "title": "MessengerX.io",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [MessengerX.io](https://messengerx.rtfd.io) | A FREE API for developers to build and monetize personalized ML based chat apps | `apiKey` | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "messengerxio",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 71,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "app"
+      ],
+      "warnings": [
+        "messengerxio: missing docsUrl",
+        "messengerxio: low average confidence 5.7",
+        "messengerxio: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "SAWO Labs",
+        "description": "Simplify login and improve user experience by integrating passwordless authentication in your app",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://sawolabs.com",
+        "auth": "unknown",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://sawolabs.com",
+            "title": "SAWO Labs",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [SAWO Labs](https://sawolabs.com) | Simplify login and improve user experience by integrating passwordless authentication in your app | `apiKey` | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "sawo-labs",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 71,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "app"
+      ],
+      "warnings": [
+        "sawo-labs: missing docsUrl",
+        "sawo-labs: low average confidence 5.7",
+        "sawo-labs: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Stytch",
+        "description": "User infrastructure for modern applications",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://stytch.com/",
+        "auth": "unknown",
+        "cors": "no",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://stytch.com/",
+            "title": "Stytch",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Stytch](https://stytch.com/) | User infrastructure for modern applications | `apiKey` | Yes | No |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "stytch",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 71,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "app"
+      ],
+      "warnings": [
+        "stytch: missing docsUrl",
+        "stytch: low average confidence 5.7",
+        "stytch: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "The Dog",
+        "description": "A public service all about Dogs, free to use when making your fancy new App, Website or Service",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://thedogapi.com/",
+        "auth": "unknown",
+        "cors": "no",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://thedogapi.com/",
+            "title": "The Dog",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [The Dog](https://thedogapi.com/) | A public service all about Dogs, free to use when making your fancy new App, Website or Service | `apiKey` | Yes | No |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "the-dog",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 71,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "app"
+      ],
+      "warnings": [
+        "the-dog: missing docsUrl",
+        "the-dog: low average confidence 5.7",
+        "the-dog: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Tisane",
+        "description": "Text Analytics with focus on detection of abusive content and law enforcement applications",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://tisane.ai/",
+        "auth": "unknown",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://tisane.ai/",
+            "title": "Tisane",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Tisane](https://tisane.ai/) | Text Analytics with focus on detection of abusive content and law enforcement applications | `OAuth` | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "tisane",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 71,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "app"
+      ],
+      "warnings": [
+        "tisane: missing docsUrl",
+        "tisane: low average confidence 5.7",
+        "tisane: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "US Street Address",
+        "description": "Validate and append data for any US postal address",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://www.smarty.com/docs/cloud/us-street-api",
+        "auth": "unknown",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://www.smarty.com/docs/cloud/us-street-api",
+            "title": "US Street Address",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [US Street Address](https://www.smarty.com/docs/cloud/us-street-api) | Validate and append data for any US postal address | `apiKey` | Yes | Yes | |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "us-street-address",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 71,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "app"
+      ],
+      "warnings": [
+        "us-street-address: missing docsUrl",
+        "us-street-address: low average confidence 5.7",
+        "us-street-address: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "US ZipCode",
+        "description": "Validate and append data for any US ZipCode",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://www.smarty.com/docs/cloud/us-zipcode-api",
+        "auth": "unknown",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://www.smarty.com/docs/cloud/us-zipcode-api",
+            "title": "US ZipCode",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [US ZipCode](https://www.smarty.com/docs/cloud/us-zipcode-api) | Validate and append data for any US ZipCode | `apiKey` | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "us-zipcode",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 71,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "app"
+      ],
+      "warnings": [
+        "us-zipcode: missing docsUrl",
+        "us-zipcode: low average confidence 5.7",
+        "us-zipcode: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Covid-19 Datenhub",
+        "description": "Maps, datasets, applications and more in the context of COVID-19",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://npgeo-corona-npgeo-de.hub.arcgis.com",
+        "auth": "No",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://npgeo-corona-npgeo-de.hub.arcgis.com",
+            "title": "Covid-19 Datenhub",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Covid-19 Datenhub](https://npgeo-corona-npgeo-de.hub.arcgis.com) | Maps, datasets, applications and more in the context of COVID-19 | No | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "covid-19-datenhub",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 67,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "app"
+      ],
+      "warnings": [
+        "covid-19-datenhub: missing docsUrl",
+        "covid-19-datenhub: low average confidence 5.7",
+        "covid-19-datenhub: cors is unknown",
+        "covid-19-datenhub: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "WhatPulse",
+        "description": "Small application that measures your keyboard/mouse usage",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://developer.whatpulse.org/#web-api",
+        "auth": "No",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://developer.whatpulse.org/#web-api",
+            "title": "WhatPulse",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [WhatPulse](https://developer.whatpulse.org/#web-api) | Small application that measures your keyboard/mouse usage | No | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "whatpulse",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 67,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "app"
+      ],
+      "warnings": [
+        "whatpulse: missing docsUrl",
+        "whatpulse: low average confidence 5.7",
+        "whatpulse: cors is unknown",
+        "whatpulse: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "AniDB",
+        "description": "Anime Database",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://wiki.anidb.net/HTTP_API_Definition",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://wiki.anidb.net/HTTP_API_Definition",
+            "title": "AniDB",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [AniDB](https://wiki.anidb.net/HTTP_API_Definition) | Anime Database | `apiKey` | No | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "public-apis HTTPS is not Yes",
+          "Unknown public-apis category: Index"
+        ],
+        "id": "anidb",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 63.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "anime"
+      ],
+      "warnings": [
+        "anidb: missing docsUrl",
+        "anidb: low average confidence 4.5",
+        "anidb: cors is unknown",
+        "anidb: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Blogger",
+        "description": "The Blogger APIs allows client applications to view and update Blogger content",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://developers.google.com/blogger/",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://developers.google.com/blogger/",
+            "title": "Blogger",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Blogger](https://developers.google.com/blogger/) | The Blogger APIs allows client applications to view and update Blogger content | `OAuth` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "blogger",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 63.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "app"
+      ],
+      "warnings": [
+        "blogger: missing docsUrl",
+        "blogger: low average confidence 4.5",
+        "blogger: cors is unknown",
+        "blogger: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Code Detection API",
+        "description": "Detect, label, format and enrich the code in your app or in your data pipeline",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://codedetectionapi.runtime.dev",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://codedetectionapi.runtime.dev",
+            "title": "Code Detection API",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Code Detection API](https://codedetectionapi.runtime.dev) | Detect, label, format and enrich the code in your app or in your data pipeline | `OAuth` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "code-detection-api",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 63.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "app"
+      ],
+      "warnings": [
+        "code-detection-api: missing docsUrl",
+        "code-detection-api: low average confidence 4.5",
+        "code-detection-api: cors is unknown",
+        "code-detection-api: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Getty Images",
+        "description": "Build applications using the world's most powerful imagery",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "http://developers.gettyimages.com/en/",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "http://developers.gettyimages.com/en/",
+            "title": "Getty Images",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Getty Images](http://developers.gettyimages.com/en/) | Build applications using the world's most powerful imagery | `OAuth` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "getty-images",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 63.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "app"
+      ],
+      "warnings": [
+        "getty-images: missing docsUrl",
+        "getty-images: low average confidence 4.5",
+        "getty-images: cors is unknown",
+        "getty-images: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Google Photos",
+        "description": "Integrate Google Photos with your apps or devices",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://developers.google.com/photos",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://developers.google.com/photos",
+            "title": "Google Photos",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Google Photos](https://developers.google.com/photos) | Integrate Google Photos with your apps or devices | `OAuth` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "google-photos",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 63.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "app"
+      ],
+      "warnings": [
+        "google-photos: missing docsUrl",
+        "google-photos: low average confidence 4.5",
+        "google-photos: cors is unknown",
+        "google-photos: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "OneSignal",
+        "description": "Self-serve customer engagement solution for Push Notifications, Email, SMS & In-App",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://documentation.onesignal.com/docs/onesignal-api",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://documentation.onesignal.com/docs/onesignal-api",
+            "title": "OneSignal",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [OneSignal](https://documentation.onesignal.com/docs/onesignal-api) | Self-serve customer engagement solution for Push Notifications, Email, SMS & In-App | `apiKey` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "onesignal",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 63.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "app"
+      ],
+      "warnings": [
+        "onesignal: missing docsUrl",
+        "onesignal: low average confidence 4.5",
+        "onesignal: cors is unknown",
+        "onesignal: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Orion Health",
+        "description": "Medical platform which allows the development of applications for different healthcare scenarios",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://developer.orionhealth.io/",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://developer.orionhealth.io/",
+            "title": "Orion Health",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Orion Health](https://developer.orionhealth.io/) | Medical platform which allows the development of applications for different healthcare scenarios | `OAuth` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "orion-health",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 63.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "app"
+      ],
+      "warnings": [
+        "orion-health: missing docsUrl",
+        "orion-health: low average confidence 4.5",
+        "orion-health: cors is unknown",
+        "orion-health: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Shikimori",
+        "description": "Anime discovery, tracking, forum, rates",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://shikimori.one/api/doc",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://shikimori.one/api/doc",
+            "title": "Shikimori",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Shikimori](https://shikimori.one/api/doc) | Anime discovery, tracking, forum, rates | `OAuth` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "shikimori",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 63.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "anime"
+      ],
+      "warnings": [
+        "shikimori: missing docsUrl",
+        "shikimori: low average confidence 4.5",
+        "shikimori: cors is unknown",
+        "shikimori: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Simkl",
+        "description": "Movie, TV and Anime data",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://simkl.docs.apiary.io",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://simkl.docs.apiary.io",
+            "title": "Simkl",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Simkl](https://simkl.docs.apiary.io) | Movie, TV and Anime data | `apiKey` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "simkl",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 63.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "anime"
+      ],
+      "warnings": [
+        "simkl: missing docsUrl",
+        "simkl: low average confidence 4.5",
+        "simkl: cors is unknown",
+        "simkl: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "SoundCloud",
+        "description": "With SoundCloud API you can build applications that will give more power to control your content",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://developers.soundcloud.com/docs/api/guide",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://developers.soundcloud.com/docs/api/guide",
+            "title": "SoundCloud",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [SoundCloud](https://developers.soundcloud.com/docs/api/guide) | With SoundCloud API you can build applications that will give more power to control your content | `OAuth` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "soundcloud",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 63.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "app"
+      ],
+      "warnings": [
+        "soundcloud: missing docsUrl",
+        "soundcloud: low average confidence 4.5",
+        "soundcloud: cors is unknown",
+        "soundcloud: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "SpotSense",
+        "description": "Add location based interactions to your mobile app",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://spotsense.io/",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://spotsense.io/",
+            "title": "SpotSense",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [SpotSense](https://spotsense.io/) | Add location based interactions to your mobile app | `apiKey` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "spotsense",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 63.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "app"
+      ],
+      "warnings": [
+        "spotsense: missing docsUrl",
+        "spotsense: low average confidence 4.5",
+        "spotsense: cors is unknown",
+        "spotsense: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Spyse",
+        "description": "Access data on all Internet assets and build powerful attack surface management applications",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://spyse-dev.readme.io/reference/quick-start",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://spyse-dev.readme.io/reference/quick-start",
+            "title": "Spyse",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Spyse](https://spyse-dev.readme.io/reference/quick-start) | Access data on all Internet assets and build powerful attack surface management applications | `apiKey` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "spyse",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 63.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "app"
+      ],
+      "warnings": [
+        "spyse: missing docsUrl",
+        "spyse: low average confidence 4.5",
+        "spyse: cors is unknown",
+        "spyse: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Thunderbit",
+        "description": "Extract web pages as Markdown or structured data for AI apps",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://thunderbit.com/docs/introduction",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://thunderbit.com/docs/introduction",
+            "title": "Thunderbit",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Thunderbit](https://thunderbit.com/docs/introduction) | Extract web pages as Markdown or structured data for AI apps | `apiKey` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "thunderbit",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 63.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "app"
+      ],
+      "warnings": [
+        "thunderbit: missing docsUrl",
+        "thunderbit: low average confidence 4.5",
+        "thunderbit: cors is unknown",
+        "thunderbit: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "YouTube",
+        "description": "Add YouTube functionality to your sites and apps",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://developers.google.com/youtube/",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://developers.google.com/youtube/",
+            "title": "YouTube",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [YouTube](https://developers.google.com/youtube/) | Add YouTube functionality to your sites and apps | `OAuth` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "youtube",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 63.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "app"
+      ],
+      "warnings": [
+        "youtube: missing docsUrl",
+        "youtube: low average confidence 4.5",
+        "youtube: cors is unknown",
+        "youtube: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "ZipRecruiter",
+        "description": "Job search app and website",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://www.ziprecruiter.com/publishers",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://www.ziprecruiter.com/publishers",
+            "title": "ZipRecruiter",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [ZipRecruiter](https://www.ziprecruiter.com/publishers) | Job search app and website | `apiKey` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "ziprecruiter",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 63.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "app"
+      ],
+      "warnings": [
+        "ziprecruiter: missing docsUrl",
+        "ziprecruiter: low average confidence 4.5",
+        "ziprecruiter: cors is unknown",
+        "ziprecruiter: needs review before production use"
+      ]
+    }
+  ],
   "rejected": [],
-  "warnings": [],
+  "warnings": [
+    "myanimelist: missing docsUrl",
+    "myanimelist: low average confidence 4.5",
+    "myanimelist: cors is unknown",
+    "myanimelist: needs review before production use",
+    "animechan: missing docsUrl",
+    "animechan: needs review before production use",
+    "animefacts: missing docsUrl",
+    "animefacts: needs review before production use",
+    "animenewsnetwork: missing docsUrl",
+    "animenewsnetwork: needs review before production use",
+    "danbooru-anime: missing docsUrl",
+    "danbooru-anime: low average confidence 5.7",
+    "danbooru-anime: needs review before production use",
+    "mangadex: missing docsUrl",
+    "mangadex: low average confidence 4.5",
+    "mangadex: cors is unknown",
+    "mangadex: needs review before production use",
+    "mangapi: missing docsUrl",
+    "mangapi: low average confidence 4.5",
+    "mangapi: cors is unknown",
+    "mangapi: needs review before production use",
+    "rappi: missing docsUrl",
+    "rappi: low average confidence 4.5",
+    "rappi: cors is unknown",
+    "rappi: needs review before production use",
+    "application-environment-verification: missing docsUrl",
+    "application-environment-verification: low average confidence 5.7",
+    "application-environment-verification: needs review before production use",
+    "geek-jokes: missing docsUrl",
+    "geek-jokes: needs review before production use",
+    "lordicon: missing docsUrl",
+    "lordicon: needs review before production use",
+    "modelpartfinder-error-codes: missing docsUrl",
+    "modelpartfinder-error-codes: needs review before production use",
+    "nekosbest: missing docsUrl",
+    "nekosbest: needs review before production use",
+    "trace-moe: missing docsUrl",
+    "trace-moe: needs review before production use",
+    "waifupics: missing docsUrl",
+    "waifupics: needs review before production use",
+    "blitapp: missing docsUrl",
+    "blitapp: low average confidence 4.5",
+    "blitapp: cors is unknown",
+    "blitapp: needs review before production use",
+    "untappd: missing docsUrl",
+    "untappd: low average confidence 4.5",
+    "untappd: cors is unknown",
+    "untappd: needs review before production use",
+    "aniapi: missing docsUrl",
+    "aniapi: low average confidence 5.7",
+    "aniapi: needs review before production use",
+    "contentful-images: missing docsUrl",
+    "contentful-images: low average confidence 5.7",
+    "contentful-images: needs review before production use",
+    "ghost: missing docsUrl",
+    "ghost: low average confidence 5.7",
+    "ghost: needs review before production use",
+    "google-firebase: missing docsUrl",
+    "google-firebase: low average confidence 5.7",
+    "google-firebase: needs review before production use",
+    "heroku: missing docsUrl",
+    "heroku: low average confidence 5.7",
+    "heroku: needs review before production use",
+    "json2video: missing docsUrl",
+    "json2video: low average confidence 5.7",
+    "json2video: needs review before production use",
+    "jsonbinio: missing docsUrl",
+    "jsonbinio: low average confidence 5.7",
+    "jsonbinio: needs review before production use",
+    "kitsu: missing docsUrl",
+    "kitsu: low average confidence 5.7",
+    "kitsu: needs review before production use",
+    "messengerxio: missing docsUrl",
+    "messengerxio: low average confidence 5.7",
+    "messengerxio: needs review before production use",
+    "sawo-labs: missing docsUrl",
+    "sawo-labs: low average confidence 5.7",
+    "sawo-labs: needs review before production use",
+    "stytch: missing docsUrl",
+    "stytch: low average confidence 5.7",
+    "stytch: needs review before production use",
+    "the-dog: missing docsUrl",
+    "the-dog: low average confidence 5.7",
+    "the-dog: needs review before production use",
+    "tisane: missing docsUrl",
+    "tisane: low average confidence 5.7",
+    "tisane: needs review before production use",
+    "us-street-address: missing docsUrl",
+    "us-street-address: low average confidence 5.7",
+    "us-street-address: needs review before production use",
+    "us-zipcode: missing docsUrl",
+    "us-zipcode: low average confidence 5.7",
+    "us-zipcode: needs review before production use",
+    "covid-19-datenhub: missing docsUrl",
+    "covid-19-datenhub: low average confidence 5.7",
+    "covid-19-datenhub: cors is unknown",
+    "covid-19-datenhub: needs review before production use",
+    "whatpulse: missing docsUrl",
+    "whatpulse: low average confidence 5.7",
+    "whatpulse: cors is unknown",
+    "whatpulse: needs review before production use",
+    "anidb: missing docsUrl",
+    "anidb: low average confidence 4.5",
+    "anidb: cors is unknown",
+    "anidb: needs review before production use",
+    "blogger: missing docsUrl",
+    "blogger: low average confidence 4.5",
+    "blogger: cors is unknown",
+    "blogger: needs review before production use",
+    "code-detection-api: missing docsUrl",
+    "code-detection-api: low average confidence 4.5",
+    "code-detection-api: cors is unknown",
+    "code-detection-api: needs review before production use",
+    "getty-images: missing docsUrl",
+    "getty-images: low average confidence 4.5",
+    "getty-images: cors is unknown",
+    "getty-images: needs review before production use",
+    "google-photos: missing docsUrl",
+    "google-photos: low average confidence 4.5",
+    "google-photos: cors is unknown",
+    "google-photos: needs review before production use",
+    "onesignal: missing docsUrl",
+    "onesignal: low average confidence 4.5",
+    "onesignal: cors is unknown",
+    "onesignal: needs review before production use",
+    "orion-health: missing docsUrl",
+    "orion-health: low average confidence 4.5",
+    "orion-health: cors is unknown",
+    "orion-health: needs review before production use",
+    "shikimori: missing docsUrl",
+    "shikimori: low average confidence 4.5",
+    "shikimori: cors is unknown",
+    "shikimori: needs review before production use",
+    "simkl: missing docsUrl",
+    "simkl: low average confidence 4.5",
+    "simkl: cors is unknown",
+    "simkl: needs review before production use",
+    "soundcloud: missing docsUrl",
+    "soundcloud: low average confidence 4.5",
+    "soundcloud: cors is unknown",
+    "soundcloud: needs review before production use",
+    "spotsense: missing docsUrl",
+    "spotsense: low average confidence 4.5",
+    "spotsense: cors is unknown",
+    "spotsense: needs review before production use",
+    "spyse: missing docsUrl",
+    "spyse: low average confidence 4.5",
+    "spyse: cors is unknown",
+    "spyse: needs review before production use",
+    "thunderbit: missing docsUrl",
+    "thunderbit: low average confidence 4.5",
+    "thunderbit: cors is unknown",
+    "thunderbit: needs review before production use",
+    "youtube: missing docsUrl",
+    "youtube: low average confidence 4.5",
+    "youtube: cors is unknown",
+    "youtube: needs review before production use",
+    "ziprecruiter: missing docsUrl",
+    "ziprecruiter: low average confidence 4.5",
+    "ziprecruiter: cors is unknown",
+    "ziprecruiter: needs review before production use"
+  ],
   "registry_health": {
     "schema_version": "api-registry",
     "last_imported_at": "2026-05-13",

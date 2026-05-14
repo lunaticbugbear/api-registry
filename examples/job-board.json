@@ -6,11 +6,12 @@
       "record": {
         "id": "usajobs",
         "name": "USAJOBS",
-        "description": "US federal government jobs API.",
-        "category": "jobs",
+        "description": "US government job board",
+        "category": "data",
         "tags": [
           "jobs",
-          "government"
+          "government",
+          "index"
         ],
         "homepage": "https://developer.usajobs.gov",
         "docsUrl": "https://developer.usajobs.gov/API-Reference",
@@ -19,18 +20,19 @@
         "pricing": "free",
         "status": "trusted",
         "fit": {
-          "frontend": 8,
-          "backend": 9,
-          "prototype": 9,
-          "production": 8,
-          "mobile": 8,
-          "dashboard": 8,
-          "automation": 8
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
         },
         "consumerProfiles": [
           "backend-required",
           "automation",
-          "dashboard"
+          "dashboard",
+          "prototype"
         ],
         "source": {
           "name": "curated-seed",
@@ -43,6 +45,12 @@
             "title": "USAJOBS documentation",
             "checkedAt": "2026-05-13",
             "excerpt": "Official API documentation or developer reference confirms public API details."
+          },
+          {
+            "url": "https://developer.usajobs.gov/",
+            "title": "USAJOBS",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [USAJOBS](https://developer.usajobs.gov/) | US government job board | `apiKey` | Yes | Unknown |"
           }
         ],
         "confidence": [
@@ -70,19 +78,39 @@
             "field": "pricing",
             "confidence": 7,
             "source": "https://developer.usajobs.gov/API-Reference"
+          },
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
           }
         ],
-        "updatedAt": "2026-05-13",
-        "createdAt": "2026-05-13"
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13",
+        "notes": [
+          "Unknown public-apis category: Index"
+        ]
       },
-      "score": 165,
+      "score": 187.375,
       "matched_fields": [
         "name",
         "description",
         "tags"
       ],
       "matched_terms": [
-        "job"
+        "job",
+        "board"
       ],
       "warnings": []
     },
@@ -90,11 +118,12 @@
       "record": {
         "id": "adzuna",
         "name": "Adzuna",
-        "description": "Job search API for job listings and labor market data.",
-        "category": "jobs",
+        "description": "Job board aggregator",
+        "category": "data",
         "tags": [
           "jobs",
-          "search"
+          "search",
+          "index"
         ],
         "homepage": "https://developer.adzuna.com",
         "docsUrl": "https://developer.adzuna.com/docs",
@@ -103,18 +132,19 @@
         "pricing": "free_tier",
         "status": "trusted",
         "fit": {
-          "frontend": 8,
-          "backend": 9,
-          "prototype": 9,
-          "production": 8,
-          "mobile": 8,
-          "dashboard": 8,
-          "automation": 8
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
         },
         "consumerProfiles": [
           "backend-required",
           "automation",
-          "dashboard"
+          "dashboard",
+          "prototype"
         ],
         "source": {
           "name": "curated-seed",
@@ -127,6 +157,12 @@
             "title": "Adzuna documentation",
             "checkedAt": "2026-05-13",
             "excerpt": "Official API documentation or developer reference confirms public API details."
+          },
+          {
+            "url": "https://developer.adzuna.com/overview",
+            "title": "Adzuna",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Adzuna](https://developer.adzuna.com/overview) | Job board aggregator | `apiKey` | Yes | Unknown |"
           }
         ],
         "confidence": [
@@ -154,25 +190,2809 @@
             "field": "pricing",
             "confidence": 7,
             "source": "https://developer.adzuna.com/docs"
+          },
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
           }
         ],
-        "updatedAt": "2026-05-13",
-        "createdAt": "2026-05-13"
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13",
+        "notes": [
+          "Unknown public-apis category: Index"
+        ]
       },
-      "score": 130,
+      "score": 152.375,
       "matched_fields": [
         "description",
         "tags"
       ],
       "matched_terms": [
-        "job"
+        "job",
+        "board"
       ],
       "warnings": []
+    },
+    {
+      "record": {
+        "name": "Jobs2Careers",
+        "description": "Job aggregator",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "http://api.jobs2careers.com/api/spec.pdf",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "http://api.jobs2careers.com/api/spec.pdf",
+            "title": "Jobs2Careers",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Jobs2Careers](http://api.jobs2careers.com/api/spec.pdf) | Job aggregator | `apiKey` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "jobs2careers",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 133.5,
+      "matched_fields": [
+        "name",
+        "description"
+      ],
+      "matched_terms": [
+        "job",
+        "career"
+      ],
+      "warnings": [
+        "jobs2careers: missing docsUrl",
+        "jobs2careers: low average confidence 4.5",
+        "jobs2careers: cors is unknown",
+        "jobs2careers: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "AI Dev Jobs",
+        "description": "AI/ML engineering job aggregator with REST, RSS, and MCP endpoints",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://aidevboard.com/openapi.yaml",
+        "auth": "No",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://aidevboard.com/openapi.yaml",
+            "title": "AI Dev Jobs",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [AI Dev Jobs](https://aidevboard.com/openapi.yaml) | AI/ML engineering job aggregator with REST, RSS, and MCP endpoints | No | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "ai-dev-jobs",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 113.5,
+      "matched_fields": [
+        "name",
+        "description"
+      ],
+      "matched_terms": [
+        "job"
+      ],
+      "warnings": [
+        "ai-dev-jobs: missing docsUrl",
+        "ai-dev-jobs: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Board Game Geek",
+        "description": "Board games, RPG and videogames",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://boardgamegeek.com/wiki/page/BGG_XML_API2",
+        "auth": "No",
+        "cors": "no",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://boardgamegeek.com/wiki/page/BGG_XML_API2",
+            "title": "Board Game Geek",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Board Game Geek](https://boardgamegeek.com/wiki/page/BGG_XML_API2) | Board games, RPG and videogames | No | Yes | No |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "board-game-geek",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 113.5,
+      "matched_fields": [
+        "name",
+        "description"
+      ],
+      "matched_terms": [
+        "board"
+      ],
+      "warnings": [
+        "board-game-geek: missing docsUrl",
+        "board-game-geek: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "DevITjobs UK",
+        "description": "Jobs with GraphQL",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://devitjobs.uk/job_feed.xml",
+        "auth": "No",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://devitjobs.uk/job_feed.xml",
+            "title": "DevITjobs UK",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [DevITjobs UK](https://devitjobs.uk/job_feed.xml) | Jobs with GraphQL | No | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "devitjobs-uk",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 113.5,
+      "matched_fields": [
+        "name",
+        "description"
+      ],
+      "matched_terms": [
+        "job"
+      ],
+      "warnings": [
+        "devitjobs-uk: missing docsUrl",
+        "devitjobs-uk: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "GraphQL Jobs",
+        "description": "Jobs with GraphQL",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://graphql.jobs/docs/api/",
+        "auth": "No",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://graphql.jobs/docs/api/",
+            "title": "GraphQL Jobs",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [GraphQL Jobs](https://graphql.jobs/docs/api/) | Jobs with GraphQL | No | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "graphql-jobs",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 113.5,
+      "matched_fields": [
+        "name",
+        "description"
+      ],
+      "matched_terms": [
+        "job"
+      ],
+      "warnings": [
+        "graphql-jobs: missing docsUrl",
+        "graphql-jobs: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Arbeitnow",
+        "description": "API for Job board aggregator in Europe / Remote",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://documenter.getpostman.com/view/18545278/UVJbJdKh",
+        "auth": "No",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://documenter.getpostman.com/view/18545278/UVJbJdKh",
+            "title": "Arbeitnow",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Arbeitnow](https://documenter.getpostman.com/view/18545278/UVJbJdKh) | API for Job board aggregator in Europe / Remote | No | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "arbeitnow",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 103.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "job",
+        "board"
+      ],
+      "warnings": [
+        "arbeitnow: missing docsUrl",
+        "arbeitnow: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Careerjet",
+        "description": "Job search engine",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://www.careerjet.com/partners/api/",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://www.careerjet.com/partners/api/",
+            "title": "Careerjet",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Careerjet](https://www.careerjet.com/partners/api/) | Job search engine | `apiKey` | No | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "public-apis HTTPS is not Yes",
+          "Unknown public-apis category: Index"
+        ],
+        "id": "careerjet",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 98.5,
+      "matched_fields": [
+        "description",
+        "name"
+      ],
+      "matched_terms": [
+        "job",
+        "career"
+      ],
+      "warnings": [
+        "careerjet: missing docsUrl",
+        "careerjet: low average confidence 4.5",
+        "careerjet: cors is unknown",
+        "careerjet: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "WhatJobs",
+        "description": "Job search engine",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://www.whatjobs.com/affiliates",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://www.whatjobs.com/affiliates",
+            "title": "WhatJobs",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [WhatJobs](https://www.whatjobs.com/affiliates) | Job search engine | `apiKey` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "whatjobs",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 98.5,
+      "matched_fields": [
+        "name",
+        "description"
+      ],
+      "matched_terms": [
+        "job"
+      ],
+      "warnings": [
+        "whatjobs: missing docsUrl",
+        "whatjobs: low average confidence 4.5",
+        "whatjobs: cors is unknown",
+        "whatjobs: needs review before production use"
+      ]
     }
   ],
-  "alternatives": [],
+  "alternatives": [
+    {
+      "record": {
+        "name": "Arbeitsamt",
+        "description": "API for the \"Arbeitsamt\", which is a german Job board aggregator",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://jobsuche.api.bund.dev/",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://jobsuche.api.bund.dev/",
+            "title": "Arbeitsamt",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Arbeitsamt](https://jobsuche.api.bund.dev/) | API for the \"Arbeitsamt\", which is a german Job board aggregator | `OAuth` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "arbeitsamt",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 88.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "job",
+        "board"
+      ],
+      "warnings": [
+        "arbeitsamt: missing docsUrl",
+        "arbeitsamt: low average confidence 4.5",
+        "arbeitsamt: cors is unknown",
+        "arbeitsamt: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Findwork",
+        "description": "Job board",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://findwork.dev/developers/",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://findwork.dev/developers/",
+            "title": "Findwork",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Findwork](https://findwork.dev/developers/) | Job board | `apiKey` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "findwork",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 88.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "job",
+        "board"
+      ],
+      "warnings": [
+        "findwork: missing docsUrl",
+        "findwork: low average confidence 4.5",
+        "findwork: cors is unknown",
+        "findwork: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Reed",
+        "description": "Job board aggregator",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://www.reed.co.uk/developers",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://www.reed.co.uk/developers",
+            "title": "Reed",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Reed](https://www.reed.co.uk/developers) | Job board aggregator | `apiKey` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "reed",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 88.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "job",
+        "board"
+      ],
+      "warnings": [
+        "reed: missing docsUrl",
+        "reed: low average confidence 4.5",
+        "reed: cors is unknown",
+        "reed: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "The Muse",
+        "description": "Job board and company profiles",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://www.themuse.com/developers/api/v2",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://www.themuse.com/developers/api/v2",
+            "title": "The Muse",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [The Muse](https://www.themuse.com/developers/api/v2) | Job board and company profiles | `apiKey` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "the-muse",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 88.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "job",
+        "board"
+      ],
+      "warnings": [
+        "the-muse: missing docsUrl",
+        "the-muse: low average confidence 4.5",
+        "the-muse: cors is unknown",
+        "the-muse: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Upwork",
+        "description": "Freelance job board and management system",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://developers.upwork.com/",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://developers.upwork.com/",
+            "title": "Upwork",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Upwork](https://developers.upwork.com/) | Freelance job board and management system | `OAuth` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "upwork",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 88.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "job",
+        "board"
+      ],
+      "warnings": [
+        "upwork: missing docsUrl",
+        "upwork: low average confidence 4.5",
+        "upwork: cors is unknown",
+        "upwork: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "4chan",
+        "description": "Simple image-based bulletin board dedicated to a variety of topics",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://github.com/4chan/4chan-API",
+        "auth": "No",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://github.com/4chan/4chan-API",
+            "title": "4chan",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [4chan](https://github.com/4chan/4chan-API) | Simple image-based bulletin board dedicated to a variety of topics | No | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "4chan",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 78.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "board"
+      ],
+      "warnings": [
+        "4chan: missing docsUrl",
+        "4chan: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "API Setu",
+        "description": "An Indian Government platform that provides a lot of APIS for KYC, business, education & employment",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://www.apisetu.gov.in/",
+        "auth": "No",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://www.apisetu.gov.in/",
+            "title": "API Setu",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [API Setu](https://www.apisetu.gov.in/) | An Indian Government platform that provides a lot of APIS for KYC, business, education & employment | No | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "api-setu",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 78.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "employment"
+      ],
+      "warnings": [
+        "api-setu: missing docsUrl",
+        "api-setu: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Universalis",
+        "description": "Final Fantasy XIV market board data",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://universalis.app/docs/index.html",
+        "auth": "No",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://universalis.app/docs/index.html",
+            "title": "Universalis",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Universalis](https://universalis.app/docs/index.html) | Final Fantasy XIV market board data | No | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "universalis",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 78.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "board"
+      ],
+      "warnings": [
+        "universalis: missing docsUrl",
+        "universalis: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Apache Superset",
+        "description": "API to manage your BI dashboards and data sources on Superset",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://superset.apache.org/docs/api",
+        "auth": "unknown",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://superset.apache.org/docs/api",
+            "title": "Apache Superset",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Apache Superset](https://superset.apache.org/docs/api) | API to manage your BI dashboards and data sources on Superset | `apiKey` | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "apache-superset",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 71,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "board"
+      ],
+      "warnings": [
+        "apache-superset: missing docsUrl",
+        "apache-superset: low average confidence 5.7",
+        "apache-superset: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Databricks",
+        "description": "Service to manage your databricks account,clusters, notebooks, jobs and workspaces",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://docs.databricks.com/dev-tools/api/latest/index.html",
+        "auth": "unknown",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://docs.databricks.com/dev-tools/api/latest/index.html",
+            "title": "Databricks",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Databricks](https://docs.databricks.com/dev-tools/api/latest/index.html) | Service to manage your databricks account,clusters, notebooks, jobs and workspaces | `apiKey` | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "databricks",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 71,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "job"
+      ],
+      "warnings": [
+        "databricks: missing docsUrl",
+        "databricks: low average confidence 5.7",
+        "databricks: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Redash",
+        "description": "Access your queries and dashboards on Redash",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://redash.io/help/user-guide/integrations-and-api/api",
+        "auth": "unknown",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://redash.io/help/user-guide/integrations-and-api/api",
+            "title": "Redash",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Redash](https://redash.io/help/user-guide/integrations-and-api/api) | Access your queries and dashboards on Redash | `apiKey` | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "redash",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 71,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "board"
+      ],
+      "warnings": [
+        "redash: missing docsUrl",
+        "redash: low average confidence 5.7",
+        "redash: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "staffSign",
+        "description": "Digital employment contract API with QES/eIDAS support for HR and staffing",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://staffsign.de/docs",
+        "auth": "unknown",
+        "cors": "yes",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://staffsign.de/docs",
+            "title": "staffSign",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [staffSign](https://staffsign.de/docs) | Digital employment contract API with QES/eIDAS support for HR and staffing | `apiKey` | Yes | Yes |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "staffsign",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 71,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "employment"
+      ],
+      "warnings": [
+        "staffsign: missing docsUrl",
+        "staffsign: low average confidence 5.7",
+        "staffsign: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Hytale",
+        "description": "Hytale blog posts and jobs",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://hytale-api.com/",
+        "auth": "No",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://hytale-api.com/",
+            "title": "Hytale",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Hytale](https://hytale-api.com/) | Hytale blog posts and jobs | No | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "hytale",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 67,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "job"
+      ],
+      "warnings": [
+        "hytale: missing docsUrl",
+        "hytale: low average confidence 5.7",
+        "hytale: cors is unknown",
+        "hytale: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Onyx Bazaar",
+        "description": "Free public leaderboard of x402 paid HTTP services indexed from Coinbase CDP discovery API",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://onyx-actions.onrender.com/bazaar",
+        "auth": "No",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://onyx-actions.onrender.com/bazaar",
+            "title": "Onyx Bazaar",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Onyx Bazaar](https://onyx-actions.onrender.com/bazaar) | Free public leaderboard of x402 paid HTTP services indexed from Coinbase CDP discovery API | No | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "onyx-bazaar",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 67,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "board"
+      ],
+      "warnings": [
+        "onyx-bazaar: missing docsUrl",
+        "onyx-bazaar: low average confidence 5.7",
+        "onyx-bazaar: cors is unknown",
+        "onyx-bazaar: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Open Skills",
+        "description": "Job titles, skills and related jobs data",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://github.com/workforce-data-initiative/skills-api/wiki/API-Overview",
+        "auth": "No",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://github.com/workforce-data-initiative/skills-api/wiki/API-Overview",
+            "title": "Open Skills",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Open Skills](https://github.com/workforce-data-initiative/skills-api/wiki/API-Overview) | Job titles, skills and related jobs data | No | No | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "public-apis HTTPS is not Yes",
+          "Unknown public-apis category: Index"
+        ],
+        "id": "open-skills",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 67,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "job"
+      ],
+      "warnings": [
+        "open-skills: missing docsUrl",
+        "open-skills: low average confidence 5.7",
+        "open-skills: cors is unknown",
+        "open-skills: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "WakaTime",
+        "description": "Automated time tracking leaderboards for programmers",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://wakatime.com/developers",
+        "auth": "No",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://wakatime.com/developers",
+            "title": "WakaTime",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [WakaTime](https://wakatime.com/developers) | Automated time tracking leaderboards for programmers | No | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "wakatime",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 67,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "board"
+      ],
+      "warnings": [
+        "wakatime: missing docsUrl",
+        "wakatime: low average confidence 5.7",
+        "wakatime: cors is unknown",
+        "wakatime: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "WhatPulse",
+        "description": "Small application that measures your keyboard/mouse usage",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://developer.whatpulse.org/#web-api",
+        "auth": "No",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://developer.whatpulse.org/#web-api",
+            "title": "WhatPulse",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [WhatPulse](https://developer.whatpulse.org/#web-api) | Small application that measures your keyboard/mouse usage | No | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 9,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "whatpulse",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 67,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "board"
+      ],
+      "warnings": [
+        "whatpulse: missing docsUrl",
+        "whatpulse: low average confidence 5.7",
+        "whatpulse: cors is unknown",
+        "whatpulse: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Jooble",
+        "description": "Job search engine",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://jooble.org/api/about",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://jooble.org/api/about",
+            "title": "Jooble",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Jooble](https://jooble.org/api/about) | Job search engine | `apiKey` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "jooble",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 63.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "job"
+      ],
+      "warnings": [
+        "jooble: missing docsUrl",
+        "jooble: low average confidence 4.5",
+        "jooble: cors is unknown",
+        "jooble: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Juju",
+        "description": "Job search engine",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "http://www.juju.com/publisher/spec/",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "http://www.juju.com/publisher/spec/",
+            "title": "Juju",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Juju](http://www.juju.com/publisher/spec/) | Job search engine | `apiKey` | No | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "public-apis HTTPS is not Yes",
+          "Unknown public-apis category: Index"
+        ],
+        "id": "juju",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 63.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "job"
+      ],
+      "warnings": [
+        "juju: missing docsUrl",
+        "juju: low average confidence 4.5",
+        "juju: cors is unknown",
+        "juju: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "Trello",
+        "description": "Boards, lists and cards to help you organize and prioritize your projects",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://developers.trello.com/",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://developers.trello.com/",
+            "title": "Trello",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [Trello](https://developers.trello.com/) | Boards, lists and cards to help you organize and prioritize your projects | `OAuth` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "trello",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 63.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "board"
+      ],
+      "warnings": [
+        "trello: missing docsUrl",
+        "trello: low average confidence 4.5",
+        "trello: cors is unknown",
+        "trello: needs review before production use"
+      ]
+    },
+    {
+      "record": {
+        "name": "ZipRecruiter",
+        "description": "Job search app and website",
+        "category": "data",
+        "tags": [
+          "index"
+        ],
+        "homepage": "https://www.ziprecruiter.com/publishers",
+        "auth": "unknown",
+        "cors": "unknown",
+        "pricing": "free",
+        "status": "needs_review",
+        "consumerProfiles": [
+          "prototype"
+        ],
+        "source": {
+          "name": "public-apis",
+          "url": "https://github.com/public-apis/public-apis",
+          "importedAt": "2026-05-13T00:00:00Z"
+        },
+        "evidence": [
+          {
+            "url": "https://www.ziprecruiter.com/publishers",
+            "title": "ZipRecruiter",
+            "checkedAt": "2026-05-13T00:00:00Z",
+            "excerpt": "| [ZipRecruiter](https://www.ziprecruiter.com/publishers) | Job search app and website | `apiKey` | Yes | Unknown |"
+          }
+        ],
+        "confidence": [
+          {
+            "field": "name",
+            "confidence": 8,
+            "source": "public-apis"
+          },
+          {
+            "field": "description",
+            "confidence": 7,
+            "source": "public-apis"
+          },
+          {
+            "field": "category",
+            "confidence": 2,
+            "source": "public-apis",
+            "note": "Unknown public-apis category: Index"
+          },
+          {
+            "field": "auth",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "cors",
+            "confidence": 2,
+            "source": "public-apis"
+          },
+          {
+            "field": "pricing",
+            "confidence": 6,
+            "source": "public-apis"
+          }
+        ],
+        "notes": [
+          "Unknown public-apis category: Index"
+        ],
+        "id": "ziprecruiter",
+        "fit": {
+          "frontend": 5,
+          "backend": 5,
+          "prototype": 5,
+          "production": 5,
+          "mobile": 5,
+          "dashboard": 5,
+          "automation": 5
+        },
+        "updatedAt": "2026-05-13T00:00:00Z",
+        "createdAt": "2026-05-13T00:00:00Z"
+      },
+      "score": 63.5,
+      "matched_fields": [
+        "description"
+      ],
+      "matched_terms": [
+        "job"
+      ],
+      "warnings": [
+        "ziprecruiter: missing docsUrl",
+        "ziprecruiter: low average confidence 4.5",
+        "ziprecruiter: cors is unknown",
+        "ziprecruiter: needs review before production use"
+      ]
+    }
+  ],
   "rejected": [],
-  "warnings": [],
+  "warnings": [
+    "jobs2careers: missing docsUrl",
+    "jobs2careers: low average confidence 4.5",
+    "jobs2careers: cors is unknown",
+    "jobs2careers: needs review before production use",
+    "ai-dev-jobs: missing docsUrl",
+    "ai-dev-jobs: needs review before production use",
+    "board-game-geek: missing docsUrl",
+    "board-game-geek: needs review before production use",
+    "devitjobs-uk: missing docsUrl",
+    "devitjobs-uk: needs review before production use",
+    "graphql-jobs: missing docsUrl",
+    "graphql-jobs: needs review before production use",
+    "arbeitnow: missing docsUrl",
+    "arbeitnow: needs review before production use",
+    "careerjet: missing docsUrl",
+    "careerjet: low average confidence 4.5",
+    "careerjet: cors is unknown",
+    "careerjet: needs review before production use",
+    "whatjobs: missing docsUrl",
+    "whatjobs: low average confidence 4.5",
+    "whatjobs: cors is unknown",
+    "whatjobs: needs review before production use",
+    "arbeitsamt: missing docsUrl",
+    "arbeitsamt: low average confidence 4.5",
+    "arbeitsamt: cors is unknown",
+    "arbeitsamt: needs review before production use",
+    "findwork: missing docsUrl",
+    "findwork: low average confidence 4.5",
+    "findwork: cors is unknown",
+    "findwork: needs review before production use",
+    "reed: missing docsUrl",
+    "reed: low average confidence 4.5",
+    "reed: cors is unknown",
+    "reed: needs review before production use",
+    "the-muse: missing docsUrl",
+    "the-muse: low average confidence 4.5",
+    "the-muse: cors is unknown",
+    "the-muse: needs review before production use",
+    "upwork: missing docsUrl",
+    "upwork: low average confidence 4.5",
+    "upwork: cors is unknown",
+    "upwork: needs review before production use",
+    "4chan: missing docsUrl",
+    "4chan: needs review before production use",
+    "api-setu: missing docsUrl",
+    "api-setu: needs review before production use",
+    "universalis: missing docsUrl",
+    "universalis: needs review before production use",
+    "apache-superset: missing docsUrl",
+    "apache-superset: low average confidence 5.7",
+    "apache-superset: needs review before production use",
+    "databricks: missing docsUrl",
+    "databricks: low average confidence 5.7",
+    "databricks: needs review before production use",
+    "redash: missing docsUrl",
+    "redash: low average confidence 5.7",
+    "redash: needs review before production use",
+    "staffsign: missing docsUrl",
+    "staffsign: low average confidence 5.7",
+    "staffsign: needs review before production use",
+    "hytale: missing docsUrl",
+    "hytale: low average confidence 5.7",
+    "hytale: cors is unknown",
+    "hytale: needs review before production use",
+    "onyx-bazaar: missing docsUrl",
+    "onyx-bazaar: low average confidence 5.7",
+    "onyx-bazaar: cors is unknown",
+    "onyx-bazaar: needs review before production use",
+    "open-skills: missing docsUrl",
+    "open-skills: low average confidence 5.7",
+    "open-skills: cors is unknown",
+    "open-skills: needs review before production use",
+    "wakatime: missing docsUrl",
+    "wakatime: low average confidence 5.7",
+    "wakatime: cors is unknown",
+    "wakatime: needs review before production use",
+    "whatpulse: missing docsUrl",
+    "whatpulse: low average confidence 5.7",
+    "whatpulse: cors is unknown",
+    "whatpulse: needs review before production use",
+    "jooble: missing docsUrl",
+    "jooble: low average confidence 4.5",
+    "jooble: cors is unknown",
+    "jooble: needs review before production use",
+    "juju: missing docsUrl",
+    "juju: low average confidence 4.5",
+    "juju: cors is unknown",
+    "juju: needs review before production use",
+    "trello: missing docsUrl",
+    "trello: low average confidence 4.5",
+    "trello: cors is unknown",
+    "trello: needs review before production use",
+    "ziprecruiter: missing docsUrl",
+    "ziprecruiter: low average confidence 4.5",
+    "ziprecruiter: cors is unknown",
+    "ziprecruiter: needs review before production use"
+  ],
   "registry_health": {
     "schema_version": "api-registry",
     "last_imported_at": "2026-05-13",

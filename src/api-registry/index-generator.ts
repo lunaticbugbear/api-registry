@@ -1,4 +1,4 @@
-import { CURRENT_DATE } from './constants.js';
+import { currentDate } from './constants.js';
 import type { ApiRecord } from './types.js';
 
 export function generateIndex(records: ApiRecord[]): string {
@@ -17,7 +17,7 @@ export function generateIndex(records: ApiRecord[]): string {
 
   // Build markdown
   let markdown = '# API Registry Index\n\n';
-  markdown += `Generated: ${CURRENT_DATE}\n\n`;
+  markdown += `Generated: ${currentDate()}\n\n`;
 
   for (const category of sortedCategories) {
     const categoryRecords = grouped.get(category)!;

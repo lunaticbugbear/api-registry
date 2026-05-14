@@ -68,11 +68,6 @@ export interface RegistryManifest {
   health_score: number;
 }
 
-export interface SourceCatalog {
-  sources: SourceInfo[];
-  updatedAt: string;
-}
-
 export type Aliases = Record<string, string[]>;
 
 export interface Contracts {

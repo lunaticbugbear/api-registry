@@ -9,3 +9,22 @@ __pycache__/
 .pytest_cache/
 venv/
 .DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Claude/AI workspaces
+.claude/
+
+# OS
+*.tmp
+*.log
+
+# Coverage
+coverage/
