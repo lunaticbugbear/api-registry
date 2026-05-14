@@ -39,6 +39,10 @@ function normalizeVolatileDates<T>(value: T): T {
   return value;
 }
 
+function normalizeTranscriptDates(text: string): string {
+  return text.replace(/\d{4}-\d{2}-\d{2}T00:00:00Z/g, '__normalized_date__');
+}
+
 const LINKEDIN_TEMPLATE = `Building a new Claude Code session? You hit an API that needs auth, turns out it's paid, swap it out, find another manually. Repeat.
 
 So I built an API Registry skill that automatically imports the full public-apis/public-apis catalog on first run, then keeps everything local.
@@ -274,7 +278,7 @@ ${searchOutput}
 $ npm run registry -- export "weather dashboard" --format json
 ${exportOutput}`;
 
-      expect(transcript).toBe(expected);
+      expect(normalizeTranscriptDates(transcript)).toBe(normalizeTranscriptDates(expected));
     });
   });
 });
