@@ -4,6 +4,8 @@
 
 **Turn an app idea into a ranked, evidence-backed API shortlist before you write code.**
 
+![API Registry CLI demo](assets/demo.png)
+
 [![Node.js >=18](https://img.shields.io/badge/node-%3E%3D18-22c55e?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
 [![TypeScript](https://img.shields.io/badge/typescript-strict-3178c6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Vitest](https://img.shields.io/badge/tests-186%20passing-6e9f18?style=for-the-badge&logo=vitest&logoColor=white)](https://vitest.dev/)
@@ -22,54 +24,51 @@ Public API lists are useful, but they rarely answer the question that actually m
 
 ## Value proposition
 
-API Registry is a **local recommendation engine** that turns an app idea into a 
-ranked, reusable API shortlist — scored dynamically by keyword relevance, 
-CORS support, auth complexity, and data freshness. 
+API Registry is a **local recommendation engine** for app planning. It turns a vague idea
+into a ranked, reusable API shortlist — scored dynamically by keyword relevance,
+CORS support, auth complexity, and data freshness.
 
-On first run, it auto-imports the full `public-apis` catalog from GitHub. It then 
-maintains this state locally, allowing you to find, rank, and export normalized 
+On first run, it auto-imports the full `public-apis` catalog from GitHub. It then
+maintains this state locally, allowing you to find, rank, and export normalized
 API metadata for Claude Code or any other AI agent — even when offline.
-
----
-
-## What you get
-
-| Capability | What it does |
-|---|---|
-| **Ranked API shortlists** | A recommendation engine that scores APIs by technical fit, not just keywords. |
-| **Frontend-fit checks** | Automatically filters out CORS-broken APIs during search. |
-| **Local-first registry** | Works entirely offline after bootstrap — keeps your planning fast and private. |
-| **Evidence + confidence** | Tracks exactly *why* a piece of metadata is trusted, with direct source URLs. |
-| **Agent-ready exports** | Emits clean JSON/Markdown for autonomous implementation planning. |
-| **Health Audits** | Catches stale or low-confidence data before it impacts your implementation. |
-
----
-
-## The Scoring Engine
-
-Every result in the registry is ranked by a multi-factor engine to ensure you pick the 
-most reliable API for your project:
-
-- **Relevance (60%)**: Semantic match across name, description, tags, and category.
-- **Runtime Fit (20%)**: Compatibility boost based on your profile (e.g., `--profile frontend-only`).
-- **Trust Signal (20%)**: Bonuses for trusted status, high confidence evidence, and freshness.
-- **Penalty System**: Points are deducted for missing docs, unknown CORS, or stale metadata.
-
-> [!TIP]
-> This engine ensures that a "perfect" keyword match that is stale and lacks docs won't 
-> outrank a "good" match that is trusted and recently verified.
 
 ---
 
 ## Quick start
 
-Prerequisite: Node.js 18 or later.
+### Requirements
+- **Node.js 18 or later** ([Download here](https://nodejs.org/))
+- **Git**
 
 1. Clone and install: `git clone https://github.com/lunaticbugbear/api-registry.git && cd api-registry && npm install`.
 2. Search: `npm run registry -- search "anime app" --profile frontend-only`.
 3. First run auto-imports the full public-apis catalog; offline runs fall back to bundled curated seed records.
 
-> Current distribution is clone-based. npm/package-manager install is planned after public release validation.
+> [!IMPORTANT]
+> First run downloads ~1,400 APIs from the `public-apis/public-apis` catalog. This usually takes 5–10 seconds depending on your connection. After that, searches are near-instant and work offline.
+
+---
+
+## Core Concepts
+
+### Profiles: Choosing your target
+The registry filters results based on *how* you are building your app.
+
+| Profile | Filters & Scoring Behavior |
+|---|---|
+| `frontend-only` | **Strict.** Rejects all APIs without CORS support. |
+| `backend-required` | **Server-side.** Permits APIs that require private keys. |
+| `prototype` | **Fast.** Prioritizes APIs with "Free" pricing and no auth. |
+| `production` | **Stable.** Prioritizes "Trusted" status and high-uptime providers. |
+| `automation` | **Headless.** Prioritizes simple JSON APIs with high rate limits. |
+
+### The Scoring Engine
+Every result is ranked by a multi-factor engine (not just keyword matching):
+
+- **Relevance (60%)**: Semantic match across name, description, tags, and category.
+- **Runtime Fit (20%)**: Compatibility boost based on your chosen `--profile`.
+- **Trust Signal (20%)**: Bonuses for trusted status, high confidence evidence, and freshness.
+- **Penalty System**: Points deducted for missing docs, unknown CORS, or stale data.
 
 ---
 
@@ -83,10 +82,8 @@ search: weather dashboard
 3. Open-Meteo [data] score=128.5
 4. MetaWeather [data] score=113.5
 5. Pirate Weather [data] score=113.5
-6. US Weather [data] score=113.5
-7. weather-api [data] score=113.5
-8. HG Weather [data] score=106
-9. QWeather [data] score=106
+...
+
 $ npm run registry -- export "weather dashboard" --format json
 ```
 
@@ -108,110 +105,41 @@ For the generated full demo, see [examples/demo-transcript.md](examples/demo-tra
 
 ---
 
-## AI Agent Integration
+## Use it with AI agents
 
-### Claude Code
-Use this repo as local API-selection tooling inside your workspace.
+Think of API Registry as a helper your AI coding agent can call before choosing an API.
 
-**Setup**
-
-```bash
-git clone https://github.com/lunaticbugbear/api-registry.git
-cd api-registry
-npm install
-```
-
-**Run it directly**
-
-```bash
-npm run registry -- search "anime app" --profile frontend-only
-npm run registry -- export "weather dashboard" --format json
-npm run registry -- audit
-```
-
-**Use skill + agent files**
-
-- Skill definition: [`skills/api-registry/SKILL.md`](skills/api-registry/SKILL.md)
-- Research agent contract: [`agents/api-researcher/AGENT.md`](agents/api-researcher/AGENT.md)
-
-Recommended flow inside Claude Code:
-
-1. Search local registry first.
-2. Review recommended APIs, warnings, and rejected reasons.
-3. Export shortlist into your planning or build workflow.
-4. Only research externally when local results are weak, stale, or missing.
-
-### Codex / Generic AI Agents
-Tell your agent to call API Registry before picking any third-party API.
-
-**Prompt snippet**
+### Fastest setup: Copy-paste this into your agent
+Paste this into Claude Code, Codex, Cursor, or Gemini:
 
 ```text
-Before selecting external APIs for this app, run:
+Use this project as an API Registry tool.
+Before choosing any third-party API, always run:
+  npm run registry -- search "{app idea}" --profile "frontend-only"
+Then prefer the recommended APIs. Check warnings before implementation.
+```
 
-npm run registry -- search "{app idea}" --profile "{consumer profile}"
-
-If results look good, use recommended APIs first.
-If results are weak, run:
-
-npm run registry -- export "{app idea}" --format markdown --profile "{consumer profile}"
-
-Respect warnings, rejected reasons, auth requirements, pricing, and CORS fit.
+### Claude Code (Deep Integration)
+Tell Claude to use the skill definition:
+```text
+Use skills/api-registry/SKILL.md whenever I ask you to research APIs.
+Before implementing any API, search the local registry first.
 ```
 
 ---
 
-## Example exports
+## Architecture
 
-Real CLI export output lives in [`examples/`](examples/):
-
-- [anime-app.json](examples/anime-app.json)
-- [weather-dashboard.json](examples/weather-dashboard.json)
-- [finance-tracker.json](examples/finance-tracker.json)
-- [job-board.json](examples/job-board.json)
-- [developer-tools.json](examples/developer-tools.json)
-
-Regenerate examples after registry changes:
-
-```bash
-npm run generate:examples
-npm run generate:demo
+```mermaid
+graph TD
+    A[User/Agent Query] --> B[CLI / Search Engine]
+    B --> C{Local Registry}
+    C --> D[Seed Records: apis.json]
+    C --> E[Imported Records: records.json]
+    E -.-> |First Run Sync| F[public-apis catalog]
+    B --> G[Scoring & Validation]
+    G --> H[Shortlist Export: JSON/Markdown]
 ```
-
----
-
-## Quality gates
-
-Before calling the repo release-ready, run:
-
-```bash
-npm test
-npm run typecheck
-npm run registry -- audit
-npm run demo
-```
-
-Current verification status:
-
-- **Tests:** 186 passing
-- **TypeScript:** strict mode clean
-- **Runtime:** Node.js 18+
-- **License:** MIT
-
----
-
-## Project Structure
-
-| Directory | Purpose |
-|---|---|
-| 📂 `agents/` | API Researcher agent contract and refresh/verification rules. |
-| 📂 `data/` | Local registry state, aliases, contracts, and bundled seed records. |
-| 📂 `docs/` | Schema, commands, install guide, and release docs. |
-| 📂 `examples/` | Real generated CLI outputs and shortlist exports. |
-| 📂 `scripts/` | Regeneration scripts for transcript and example artifacts. |
-| 📂 `skills/` | Skill definitions that tell coding agents how to use registry flow. |
-| 📂 `src/` | TypeScript implementation for CLI, search, import, export, refresh, and audit. |
-| 📂 `tests/` | Vitest suite covering contracts, registry behavior, and release artifacts. |
 
 ---
 
@@ -221,7 +149,6 @@ Current verification status:
 - [Schema reference](docs/schema.md)
 - [Command reference](docs/commands.md)
 - [Agent contract](docs/agent-contract.md)
-- [Source policy](docs/source-policy.md)
 - [Release checklist](docs/release-checklist.md)
 
 ---
@@ -229,6 +156,27 @@ Current verification status:
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+### Add your first API
+Help us grow the trusted seed set. Create a JSON file (e.g., `my-api.json`):
+
+```json
+{
+  "id": "my-awesome-api",
+  "name": "My Awesome API",
+  "description": "Provides real-time data for X.",
+  "category": "Data",
+  "auth": "apiKey",
+  "cors": "yes",
+  "pricing": "free",
+  "status": "trusted",
+  "updatedAt": "2026-05-14T07:55:31Z"
+}
+```
+
+Then run: `npm run registry -- add my-api.json` and submit a Pull Request!
+
+---
 
 ## License
 

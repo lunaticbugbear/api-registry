@@ -1,10 +1,26 @@
-# Install API Registry in AI agents
+# Install Guide
 
-## Claude Code
+This guide helps you set up API Registry so your AI coding agent can use it.
+No prior experience with AI agents or coding tools is required.
 
-**Prerequisite:** Node.js 18 or later.
+---
 
-Clone repository and install dependencies:
+## Step 1 — Install Node.js
+
+API Registry requires **Node.js version 18 or later**.
+
+If you are not sure whether you have Node.js installed, open a terminal and run:
+
+```bash
+node --version
+```
+
+If you see something like `v20.x.x`, you are good. If not, download it from:
+👉 https://nodejs.org/ (click the **LTS** button — that is the recommended version)
+
+---
+
+## Step 2 — Download API Registry
 
 ```bash
 git clone https://github.com/lunaticbugbear/api-registry.git
@@ -12,38 +28,62 @@ cd api-registry
 npm install
 ```
 
-Use skill docs from `skills/api-registry/SKILL.md` and agent contract from `agents/api-researcher/AGENT.md`.
+This downloads the project and installs everything it needs. You only do this once.
 
-First command auto-fetches the full `public-apis/public-apis` catalog into local `records.json`. If GitHub is unavailable, it falls back to bundled curated `apis.json`.
+---
+
+## Step 3 — Run your first search
 
 ```bash
 npm run registry -- search "weather dashboard" --profile frontend-only
 ```
 
-## Codex CLI or other coding agents
+**What happens on first run:**
+- The tool downloads ~1,400 free public APIs from GitHub automatically.
+- This takes about 5–10 seconds on a normal internet connection.
+- Every run after that is near-instant and works offline.
 
-Add this repository as a local tool folder in the agent workspace, then call the CLI command from agent instructions:
+You will see a ranked list of APIs matching your search. The number next to each
+result (e.g. `score=195`) tells you how well it matches your app's needs.
 
-```bash
-npm run registry -- search "<app idea>" --profile frontend-only
-npm run registry -- export "<app idea>" --format json
-npm run registry -- audit
-```
+---
 
-Integration rule for agents:
+## Step 4 — Connect it to your AI agent
 
-1. Run search before choosing third-party APIs.
-2. Prefer `recommended` records.
-3. Respect `rejected` reasons and warnings.
-4. If no good result exists, run agent research, validate output against `docs/agent-contract.md`, then add records.
-5. Never hardcode paid/auth-heavy API choices without checking registry result first.
-
-## Generic AI agent prompt snippet
+### Claude Code
+Open this project folder in Claude Code, then tell Claude:
 
 ```text
-Before selecting external APIs for an app, run API Registry:
-
-npm run registry -- search "{app idea}" --profile "{consumer profile}"
-
-Use recommended APIs first. If results are weak, research new APIs, validate against the API Registry schema, and add them before continuing.
+Use skills/api-registry/SKILL.md whenever I need to research or choose APIs.
 ```
+
+Claude will now run registry searches automatically before picking any API.
+
+### Codex CLI
+Add this rule to your `AGENTS.md` file:
+
+```text
+Before choosing any third-party API, run:
+  npm run registry -- search "<what your app does>" --profile "frontend-only"
+Use the recommended APIs first.
+```
+
+### Any other AI agent
+Paste this into your system prompt or project instructions:
+
+```text
+When you need an external API, do not guess. Run API Registry first:
+  npm run registry -- search "{app idea}" --profile "{profile}"
+Use recommended results. Respect warnings.
+```
+
+---
+
+## Troubleshooting
+
+| Problem | Fix |
+|---|---|
+| `command not found: npm` | Install Node.js from https://nodejs.org/ |
+| `command not found: git` | Install Git from https://git-scm.com/ |
+| Search returns 0 results | Check your spelling, or try a broader term (e.g. "weather" instead of "live weather map") |
+| First run seems frozen | Wait 15 seconds. It is downloading API data from GitHub. |
