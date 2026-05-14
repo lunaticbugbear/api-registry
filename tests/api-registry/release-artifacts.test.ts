@@ -23,6 +23,22 @@ function readRegistry(): { records: ApiRecord[]; aliases: Aliases; manifest: Reg
   };
 }
 
+function normalizeVolatileDates<T>(value: T): T {
+  if (Array.isArray(value)) return value.map(normalizeVolatileDates) as T;
+  if (value && typeof value === 'object') {
+    const result: Record<string, unknown> = {};
+    for (const [key, entry] of Object.entries(value as Record<string, unknown>)) {
+      if (['exportedAt', 'updatedAt', 'createdAt', 'checkedAt', 'importedAt', 'last_imported_at', 'last_audited_at'].includes(key)) {
+        result[key] = '__normalized_date__';
+      } else {
+        result[key] = normalizeVolatileDates(entry);
+      }
+    }
+    return result as T;
+  }
+  return value;
+}
+
 const LINKEDIN_TEMPLATE = `Building a new Claude Code session? You hit an API that needs auth, turns out it's paid, swap it out, find another manually. Repeat.
 
 So I built an API Registry skill that automatically imports the full public-apis/public-apis catalog on first run, then keeps everything local.
@@ -243,7 +259,7 @@ describe('release artifacts', () => {
           exportedAt: expect.any(String),
         });
         expect(parsed.recommended.length).toBeGreaterThan(0);
-        expect(parsed).toEqual({ ...expected, exportedAt: parsed.exportedAt });
+        expect(normalizeVolatileDates(parsed)).toEqual(normalizeVolatileDates(expected));
       }
     });
 
