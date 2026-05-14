@@ -3,8 +3,7 @@
   "description": "Local-first API registry skill for Claude Code: ranked API search, profile-aware filtering, and evidence-backed shortlists before you write code.",
   "version": "1.0.0",
   "author": {
-    "name": "lunaticbugbear",
-    "email": "punyadaffareplika1@gmail.com"
+    "name": "lunaticbugbear"
   },
   "homepage": "https://github.com/lunaticbugbear/api-registry",
   "repository": "https://github.com/lunaticbugbear/api-registry",

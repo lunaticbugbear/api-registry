@@ -2,8 +2,7 @@
   "name": "api-registry",
   "description": "Local-first API registry for AI agents: ranked search, profile-aware filtering, and evidence-backed shortlists.",
   "owner": {
-    "name": "lunaticbugbear",
-    "email": "punyadaffareplika1@gmail.com"
+    "name": "lunaticbugbear"
   },
   "plugins": [
     {
@@ -12,8 +11,7 @@
       "version": "1.0.0",
       "source": "./",
       "author": {
-        "name": "lunaticbugbear",
-        "email": "punyadaffareplika1@gmail.com"
+        "name": "lunaticbugbear"
       }
     }
   ]

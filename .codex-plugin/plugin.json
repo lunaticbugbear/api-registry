@@ -4,7 +4,6 @@
   "description": "Local-first API registry skill for Codex: ranked API search, profile-aware filtering, and evidence-backed shortlists before you write code.",
   "author": {
     "name": "lunaticbugbear",
-    "email": "punyadaffareplika1@gmail.com",
     "url": "https://github.com/lunaticbugbear"
   },
   "homepage": "https://github.com/lunaticbugbear/api-registry",

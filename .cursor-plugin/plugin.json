@@ -4,8 +4,7 @@
   "description": "Core skills library: TDD, debugging, collaboration patterns, and proven techniques",
   "version": "5.1.0",
   "author": {
-    "name": "lunaticbugbear",
-    "email": "punyadaffareplika1@gmail.com"
+    "name": "lunaticbugbear"
   },
   "homepage": "https://github.com/lunaticbugbear/api-registry",
   "repository": "https://github.com/lunaticbugbear/api-registry",
