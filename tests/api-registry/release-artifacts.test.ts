@@ -191,7 +191,7 @@ describe('release artifacts', () => {
       expect(quickStart).toContain('npm run registry -- search "anime app" --profile frontend-only');
       expect(quickStart).toContain('First run auto-imports the full public-apis catalog');
       expect(readme).toContain('## Demo transcript');
-      expect(readme).toContain('$ npm run registry -- search "anime app" --profile frontend-only');
+      expect(readme).toContain('$ npm run registry -- search "weather dashboard" --profile frontend-only');
       expect(readme).toContain('$ npm run registry -- export "weather dashboard" --format json');
       expect(transcript).toContain('$ npm run registry -- search "anime app" --profile frontend-only');
       expect(readme).toContain('## Command reference');
