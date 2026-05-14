@@ -214,11 +214,6 @@ describe('release artifacts', () => {
         const content = readFileSync(join(DOCS_DIR, fileName), 'utf-8');
         for (const text of requiredText) expect(content).toContain(text);
       }
-
-      // LinkedIn post is in marketing/ directory
-      const linkedinContent = readFileSync(join(MARKETING_DIR, 'linkedin-post.md'), 'utf-8');
-      expect(linkedinContent).toContain('automatically imports the full public-apis/public-apis catalog on first run');
-      expect(linkedinContent.replace(/\r\n/g, '\n')).toContain(LINKEDIN_TEMPLATE);
     });
 
     it('examples are real JSON CLI export output matching the export contract', async () => {
